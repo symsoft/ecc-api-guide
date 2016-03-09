@@ -30,7 +30,7 @@ Some text
 
 Some text
 
-## Withdraw a Service
+### Withdraw a Service
 
 Some text
 
