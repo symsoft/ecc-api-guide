@@ -7,4 +7,4 @@
    * [Create Subscriber](create_subscriber.md)
    * [Change MSISDN](change_msisdn.md)
 * [Swagger specification](swagger_specification.md)
-
+* [Apache License](LICENSE)
