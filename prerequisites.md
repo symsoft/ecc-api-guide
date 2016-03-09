@@ -1,2 +1,6 @@
 # Prerequisites
 
+## Onboarding
+
+## SIM ordering
+
