@@ -22,5 +22,19 @@ Some text
 
 Some text
 
-## 
+## Assign a Service
+
+Some text
+
+## List assigned Services with usage details
+
+Some text
+
+## Withdraw a Service
+
+Some text
+
+## Delete a Subscriber
+
+Some text
 
