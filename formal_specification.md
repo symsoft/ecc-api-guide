@@ -1,6 +1,6 @@
 # Formal specification
 
-The ECC API formal specification in YAML.
+The formal ECC API specification in YAML.
 
 ```yaml
 ---
