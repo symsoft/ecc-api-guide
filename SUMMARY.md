@@ -2,4 +2,5 @@
 
 * [Introduction](introduction.md)
 * [Formal specification](formal_specification.md)
+* Prerequisites
 
