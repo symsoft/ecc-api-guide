@@ -1,3 +1,3 @@
 ### Delete a Subscriber
 
-TODO: Text.
+__TODO:__ Text.
