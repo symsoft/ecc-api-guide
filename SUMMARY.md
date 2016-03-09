@@ -1,5 +1,5 @@
 # Summary
 
 * [Introduction](introduction.md)
-* Formal specification
+* [Formal specification](formal_specification.md)
 
