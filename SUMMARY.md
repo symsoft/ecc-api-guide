@@ -9,5 +9,5 @@
    * [Change SIM](change_sim.md)
 * [Swagger specification](swagger_specification.md)
 * [Apache License](LICENSE)
-* Get basic Subscriber information
+* [Get basic Subscriber information](get_basic_subscriber_information.md)
 
