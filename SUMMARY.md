@@ -12,5 +12,5 @@
    * [Block - Unblock](block_unblock.md)
 * [Swagger specification](swagger_specification.md)
 * [Apache License](LICENSE)
-* Assign a Service
+* [Assign a Service](assign_a_service.md)
 
