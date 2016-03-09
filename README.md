@@ -2,7 +2,7 @@
 
 Welcome to the ECC API. This book is here to help you getting started.
 
-__Note: this is work in progress__
+__Note: this book is work in progress__
 
 ### About this book
 
