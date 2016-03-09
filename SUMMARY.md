@@ -13,4 +13,5 @@
 * [Swagger specification](swagger_specification.md)
 * [Apache License](LICENSE)
 * [Assign a Service](assign_a_service.md)
+* List assigned Services with usage details
 
