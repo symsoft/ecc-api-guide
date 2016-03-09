@@ -1,6 +1,6 @@
 ## About
 
-__TODO: don't call this chapter "About", figure out something better.__
+__TODO: don't call this chapter "About", figure out something better. Also break up in fragments.__
 
 The ECC API is a REST (ref needed) API. 
 
