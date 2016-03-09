@@ -1,5 +1,7 @@
 ## About
 
+__TODO: don't call this chapter "About", figure out something better.__
+
 The ECC API is a REST (ref needed) API. 
 
 Using HTTP over TLS with JSON payload.
