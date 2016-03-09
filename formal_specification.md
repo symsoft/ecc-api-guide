@@ -1,4 +1,4 @@
-# Formal specification
+## Formal specification
 
 The formal ECC API specification in YAML.
 
