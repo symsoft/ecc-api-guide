@@ -2,6 +2,8 @@
 
 Before an ECC User is able to start using the API there are a few manual steps that must be completed.
 
+__TODO: Break up in fragments.__
+
 ### Onboarding
 
 Manual process currently not part of the API.
