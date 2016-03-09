@@ -1,6 +1,8 @@
 ## About
 
-The ECC API is a REST (ref needed) API. Using HTTP over TLS with JSON payload.
+The ECC API is a REST (ref needed) API. 
+
+Using HTTP over TLS with JSON payload.
 
 The book describes version 0.3.0 of the API. 
 
@@ -13,6 +15,8 @@ Note that before the API reaches a version 1.0.0 release things will be changing
 ### Authentication
 
 Basic Authentication, but also a Cookie based mechanism (describe /login and /logout URLs).
+
+__TODO: 
 
 ### License
 
