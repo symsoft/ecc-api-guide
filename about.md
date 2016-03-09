@@ -1,4 +1,4 @@
-# Introduction
+# About
 
 Some text goes here
 
