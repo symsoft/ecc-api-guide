@@ -9,3 +9,5 @@ __Note: This book is work in progress. Come back frequently and check for update
 Written and published with GitBook tools.
 
 Source on GitHub.
+
+You can help and improve by ...
