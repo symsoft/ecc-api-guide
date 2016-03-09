@@ -8,7 +8,7 @@
    * [Get basic Subscriber information](get_basic_subscriber_information.md)
    * [Change MSISDN](change_msisdn.md)
    * [Change SIM](change_sim.md)
+   * [Block - Unblock](block_unblock.md)
 * [Swagger specification](swagger_specification.md)
 * [Apache License](LICENSE)
-* [Block - Unblock](block_unblock.md)
 
