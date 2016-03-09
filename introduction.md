@@ -6,6 +6,10 @@ Some text goes here
 
 Some text
 
+## Authentication
+
+Some text
+
 ## License
 
 Some text
