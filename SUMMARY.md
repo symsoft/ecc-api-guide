@@ -6,5 +6,5 @@
 * [Use cases](use_cases.md)
    * [Create Subscriber](create_subscriber.md)
 * [Swagger specification](swagger_specification.md)
-* Change MSISDN
+* [Change MSISDN](change_msisdn.md)
 
