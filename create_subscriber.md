@@ -11,3 +11,5 @@ Response:
 ```
 code block
 ```
+
+__Note:__ In the current version of the API it is the responsibility of the User to allocate and keep track of MSISDNs. 
