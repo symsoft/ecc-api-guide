@@ -20,5 +20,7 @@ __TODO: Write a paragraph about cookies, load balancing and expiry.__
 
 ### License
 
-Some text about the Apache License, v2. 
+The API is covered by Apache 2.0 License.
+
+This book is probably some kind of CC (need ref).
 
