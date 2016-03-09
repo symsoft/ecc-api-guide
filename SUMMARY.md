@@ -8,5 +8,5 @@
    * [Change MSISDN](change_msisdn.md)
 * [Swagger specification](swagger_specification.md)
 * [Apache License](LICENSE)
-* Change SIM
+* [Change SIM](change_sim.md)
 
