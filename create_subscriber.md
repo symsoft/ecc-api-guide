@@ -2,3 +2,8 @@
 
 Text and example goes here
 
+Sample request:
+```
+code block
+```
+
