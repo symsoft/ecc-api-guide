@@ -1,6 +1,6 @@
-## Formal specification
+## Swagger specification
 
-The formal ECC API specification in Swagger YAML (ref needed).
+The formal ECC API specification in Swagger YAML format (ref needed).
 
 ```yaml
 ---
