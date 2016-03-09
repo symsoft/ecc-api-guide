@@ -7,3 +7,7 @@ Sample request:
 code block
 ```
 
+Response:
+```
+code block
+```
