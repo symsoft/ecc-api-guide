@@ -1,6 +1,6 @@
 # Summary
 
 * [Introduction](introduction.md)
-* [Formal specification](formal_specification.md)
 * Prerequisites
+* [Formal specification](formal_specification.md)
 
