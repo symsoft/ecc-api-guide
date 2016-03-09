@@ -1,2 +1,3 @@
-# Delete a Subscriber
+### Delete a Subscriber
 
+Text.
