@@ -12,6 +12,8 @@ A default subscription type is set up, including basic HLR & OCS settings.
 
 A number of Services are set up.
 
+TODO: Probably need some example services here.
+
 ## SIM ordering
 
 Manual process currently not part of the API.
