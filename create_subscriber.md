@@ -2,6 +2,8 @@
 
 Text and example goes here
 
+POST on /ecc/v1/subscribers
+
 Sample request:
 ```
 todo: header
