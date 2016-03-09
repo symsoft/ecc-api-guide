@@ -1,8 +1,8 @@
 ## Prerequisites
 
-Some text
+Before an ECC User is able to start using the API there are a few manual steps that must be completed.
 
-## Onboarding
+### Onboarding
 
 Manual process currently not part of the API.
 
@@ -14,7 +14,7 @@ A number of Services are set up.
 
 TODO: Probably need some example services here.
 
-## SIM ordering
+### SIM ordering
 
 Manual process currently not part of the API.
 
