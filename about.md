@@ -16,7 +16,7 @@ __Note that before the API reaches a version 1.0.0 release things will be changi
 
 Basic Authentication, but also a Cookie based mechanism (describe /login and /logout URLs).
 
-__TODO: Write a paragraph about cookies, load balancing and expiry.__
+__TODO: Write a paragraph about cookies, load balancing and token expiry.__
 
 ### License
 
