@@ -4,12 +4,15 @@ Text and example goes here
 
 Sample request:
 ```
-code block
+todo: header
+
+
 ```
 
 Response:
 ```
-code block
+todo: header
+
 ```
 
 __Note:__ In the current version of the API it is the responsibility of the User to allocate and keep track of MSISDNs. 
