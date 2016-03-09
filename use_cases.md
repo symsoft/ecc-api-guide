@@ -1,4 +1,4 @@
-# Use cases
+## Use cases
 
 Some text
 
