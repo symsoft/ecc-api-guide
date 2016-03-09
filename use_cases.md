@@ -10,5 +10,17 @@ Some text
 
 Some text
 
+## Change MSISDN
+
+Some text
+
+## Change SIM
+
+Some text
+
+## Block - Unblock
+
+Some text
+
 ## 
 
