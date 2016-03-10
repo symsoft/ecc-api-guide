@@ -6,7 +6,7 @@
    * [Authentication](authentication.md)
    * [Payload](payload.md)
    * [Parameters](parameters.md)
-   * Error codes
+   * [Error codes](error_codes.md)
 * [Prerequisites](prerequisites.md)
    * [Example Services](example_services.md)
 * [Use cases](use_cases.md)
