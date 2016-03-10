@@ -7,7 +7,7 @@ __Example Command:__
 curl --verbose --header "Accept: application/json" http://user:password@172.16.20.14:8081/ecc/v1/subscriptions/46708421488
 ```
 
-Request:
+__Example Request:__
 ```
 GET /ecc/v1/subscriptions/46708421488 HTTP/1.1
 Host: 172.16.20.14:8081
@@ -16,7 +16,7 @@ User-Agent: curl/7.43.0
 Accept: application/json
 ```
 
-Response:
+__Example Response:__
 ```
 HTTP/1.1 200 OK
 Server: Nobill/5.3.0
