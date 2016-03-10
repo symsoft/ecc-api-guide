@@ -5,7 +5,7 @@
    * [Versioning](versioning.md)
    * [Authentication](authentication.md)
    * [Payload](payload.md)
-   * Parameters
+   * [Parameters](parameters.md)
    * Error codes
 * [Prerequisites](prerequisites.md)
    * [Example Services](example_services.md)
