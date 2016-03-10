@@ -4,7 +4,7 @@ Text and example goes here
 
 POST on /ecc/v1/subscriptions
 
-Sample request:
+Request:
 ```
 todo: header
 
