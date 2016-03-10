@@ -4,6 +4,7 @@ The formal ECC API specification in Swagger YAML format (ref needed).
 
 ```yaml
 ---
+---
 swagger: "2.0"
 info:
   description: "Symsoft Enterprise Communications Cloud API"
@@ -22,7 +23,7 @@ tags:
 - name: "Service"
   description: "Operations related to Services"
 paths:
-  /subscribers:
+  /subscriptions:
     post:
       tags:
       - "Subscription"
@@ -52,7 +53,7 @@ paths:
           description: "An input value (ICCID or MSISDN) is already in use"
       security:
       - basic_auth: []
-  /subscribers/{msisdn}:
+  /subscriptions/{msisdn}:
     get:
       tags:
       - "Subscription"
@@ -131,7 +132,7 @@ paths:
           description: "An input value (ICCID or MSISDN) is already in use"
       security:
       - basic_auth: []
-  /subscribers/{msisdn}/services:
+  /subscriptions/{msisdn}/services:
     get:
       tags:
       - "Subscription"
@@ -156,7 +157,7 @@ paths:
           description: "Subscription not found"
       security:
       - basic_auth: []
-  /subscribers/{msisdn}/services/{sid}:
+  /subscriptions/{msisdn}/services/{sid}:
     post:
       tags:
       - "Subscription"
@@ -242,7 +243,7 @@ definitions:
         description: "The ICCID identifying the new SIM to be used for the Subscription"
       msisdn:
         type: "string"
-        example: "46708621488"
+        example: "46708421488"
         description: "The new MSISDN (E.164 number) of the Subscription"
       blocked:
         type: "boolean"
@@ -261,7 +262,7 @@ definitions:
         description: "The ICCID identifying the SIM to be used for the Subscription"
       msisdn:
         type: "string"
-        example: "46708621488"
+        example: "46708421488"
         description: "The MSISDN (E.164 number) of the Subscription"
     description: "Parameters required at creation of a new Subscription"
   SubscriptionInfo:
@@ -272,7 +273,7 @@ definitions:
     properties:
       msisdn:
         type: "string"
-        example: "46708621488"
+        example: "46708421488"
         description: "The MSISDN (E.164 number) of the Subscription"
       iccid:
         type: "string"
