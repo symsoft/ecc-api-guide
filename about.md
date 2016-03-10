@@ -1,6 +1,6 @@
 ## API philosophy
 
-The ECC API is a REST (ref needed) API.
+The ECC API is a _pragmatic_ REST (ref needed) API.
 
 Using HTTP over TLS with JSON payload.
 
