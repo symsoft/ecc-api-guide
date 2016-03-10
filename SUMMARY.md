@@ -20,4 +20,5 @@
 * [Apache License](license.md)
 * Payload
 * Parameters
+* Error codes
 
