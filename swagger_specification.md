@@ -1,9 +1,8 @@
-## Swagger specification
+## API Specification
 
 The formal ECC API specification in Swagger YAML format (ref needed).
 
 ```yaml
----
 ---
 swagger: "2.0"
 info:
