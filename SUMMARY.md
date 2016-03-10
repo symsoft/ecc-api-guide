@@ -1,7 +1,7 @@
 # Summary
 
 * [Introduction](README.md)
-* [About](about.md)
+* [API Philosophy](about.md)
 * [Prerequisites](prerequisites.md)
    * [Example Services](example_services.md)
 * [Use cases](use_cases.md)
