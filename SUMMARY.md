@@ -3,6 +3,7 @@
 * [Introduction](README.md)
 * [API Philosophy](about.md)
    * [Versioning](versioning.md)
+   * [Authentication](authentication.md)
 * [Prerequisites](prerequisites.md)
    * [Example Services](example_services.md)
 * [Use cases](use_cases.md)
@@ -17,5 +18,4 @@
    * [Delete a Subscription](delete_subscription.md)
 * [API Specification](swagger_specification.md)
 * [Apache License](LICENSE)
-* [Authentication](authentication.md)
 
