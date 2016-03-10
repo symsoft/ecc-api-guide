@@ -16,8 +16,4 @@ Basic Authentication, but also a Cookie based mechanism (describe /login and /lo
 
 __TODO: Write a paragraph about cookies, load balancing and token expiry.__
 
-### License
-
-
-This book is probably some kind of CC (need ref).
 
