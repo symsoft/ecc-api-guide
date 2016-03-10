@@ -4,13 +4,13 @@ Text and example goes here
 
 POST on /ecc/v1/subscriptions
 
-Command:
+Example Command:
 ```
 curl --header "Content-Type: application/json" --data @createReq.json http://user:password@172.16.20.14:8081/ecc/v1/subscribers
 ```
 Where the _createReq.json_ file contains the body of the request.
 
-Request:
+Example Request:
 ```
 POST /ecc/v1/subscribers HTTP/1.1
 Host: 172.16.20.14:8081
@@ -25,7 +25,7 @@ Content-Length: 61
 }
 ```
 
-Response:
+Example Response:
 ```
 HTTP/1.1 202 Accepted
 Server: Nobill/5.3.0
