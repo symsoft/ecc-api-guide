@@ -25,6 +25,7 @@ Content-Length: 61
   "msisdn": "46705123456"
 }
 ```
+
 __Example Response:__
 ```
 HTTP/1.1 202 Accepted
