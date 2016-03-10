@@ -5,7 +5,7 @@
 * [Prerequisites](prerequisites.md)
    * [Example Services](example_services.md)
 * [Use cases](use_cases.md)
-   * [Create a Subscriber](create_subscriber.md)
+   * [Create a Subscription](create_subscription.md)
    * [Get basic Subscription information](get_basic_subscription_information.md)
    * [Change MSISDN](change_msisdn.md)
    * [Change SIM](change_sim.md)
