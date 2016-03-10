@@ -22,4 +22,5 @@
 * [API Specification](swagger_specification.md)
 * [Apache License](license.md)
 * [Onboarding](onboarding.md)
+* SIM ordering
 
