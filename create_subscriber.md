@@ -1,15 +1,15 @@
-### Create a Subscriber
+### Create a Subscription
 
 Text and example goes here
 
-POST on /ecc/v1/subscribers
+POST on /ecc/v1/subscriptions
 
 Sample request:
 ```
 todo: header
 
 {
-  "msisdn": "46708621488",
+  "msisdn": "46708421488",
   "iccid": "89461177710001700003"
 }
 ```
@@ -19,7 +19,7 @@ Response:
 todo: header
 
 {
-  "msisdn": "46708621488",
+  "msisdn": "46708421488",
   "iccid": "89461177710001700003",
   "blocked": false
 }
