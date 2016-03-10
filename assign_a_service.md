@@ -2,9 +2,19 @@
 
 Text
 
+__TODO: Is it wise (stringent) to POST without body?__
+
+
 __Example Command:__
 ```
 curl
+```
+
+__Example Request:__
+```
+POST /ecc/v1/subscriptions/46708421488/services/Data5G HTTP/1.1
+
+TODO
 ```
 
 __Example Response:__
