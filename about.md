@@ -4,7 +4,7 @@ __TODO: Don't call this chapter "About", figure out something better. Also break
 
 The ECC API is a REST (ref needed) API.
 
-Formally described in Swagger format (see xxx).
+Formally described in Swagger format (see chapter [API Specification](swagger_specification.md)).
 
 Using HTTP over TLS with JSON payload.
 
