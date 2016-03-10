@@ -8,7 +8,7 @@ Formally described in Swagger format (see xxx).
 
 Using HTTP over TLS with JSON payload.
 
-The book describes version 0.3.0 of the API. 
+The book describes version 0.4.0 of the API. 
 
 ### API versioning
 
