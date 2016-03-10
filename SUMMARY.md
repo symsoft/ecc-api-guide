@@ -4,6 +4,9 @@
 * [API Philosophy](about.md)
    * [Versioning](versioning.md)
    * [Authentication](authentication.md)
+   * Payload
+   * Parameters
+   * Error codes
 * [Prerequisites](prerequisites.md)
    * [Example Services](example_services.md)
 * [Use cases](use_cases.md)
@@ -18,7 +21,4 @@
    * [Delete a Subscription](delete_subscription.md)
 * [API Specification](swagger_specification.md)
 * [Apache License](license.md)
-* Payload
-* Parameters
-* Error codes
 
