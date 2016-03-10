@@ -1,4 +1,4 @@
-### Get basic Subscriber information
+### Get basic Subscription information
 
 Text and example here.
 
