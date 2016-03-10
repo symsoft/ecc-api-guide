@@ -6,13 +6,14 @@ POST on /ecc/v1/subscriptions
 
 Command:
 ```
-curl --verbose --header "Content-Type: application/json" --data @createReq.json http://super:super@127.0.0.1:8081/ecc/v1/subscribers
+curl --header "Content-Type: application/json" --data @createReq.json http://user:password@172.16.20.14:8081/ecc/v1/subscribers
 ```
+Where the _createReq.json_ file contains the body of the request.
 
 Request:
 ```
 POST /ecc/v1/subscribers HTTP/1.1
-Host: 127.0.0.1:8081
+Host: 172.16.20.14:8081
 Authorization: Basic c3VwZXI6c3VwZXI=
 User-Agent: curl/7.43.0
 Accept: */*
