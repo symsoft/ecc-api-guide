@@ -10,4 +10,4 @@ A number of Services are set up.
 
 A SIM profile is established.
 
-TODO: Probably need some example services here.
+Billing arrangements are set up.
