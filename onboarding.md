@@ -2,7 +2,7 @@
 
 Manual process currently not part of the API.
 
-API User gets login credentials.
+API User gets login credentials and address to an API Gateway server.
 
 A default subscription type is set up, including basic HLR & OCS settings.
 
