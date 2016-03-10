@@ -1,6 +1,4 @@
-## About
-
-__TODO: Don't call this chapter "About", figure out something better. Also break up in fragments.__
+## API philosophy
 
 The ECC API is a REST (ref needed) API.
 
@@ -10,7 +8,7 @@ Using HTTP over TLS with JSON payload.
 
 The book describes version 0.4.0 of the API. 
 
-### API versioning
+### Versioning
 
 Follows Semantic Versioning (ref needed). The base URL /ecc/v1 is valid for version 1.n.n of the API. 
 
