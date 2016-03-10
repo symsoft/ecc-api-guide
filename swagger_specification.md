@@ -7,7 +7,7 @@ The formal ECC API specification in Swagger YAML format (ref needed).
 swagger: "2.0"
 info:
   description: "Symsoft Enterprise Communications Cloud API"
-  version: "v0.3.0"
+  version: "v0.4.0"
   title: "ECC API"
   termsOfService: "http://symsoft.com/api-terms/"
   contact:
@@ -17,19 +17,19 @@ info:
     url: "http://www.apache.org/licenses/LICENSE-2.0.html"
 basePath: "/ecc/v1"
 tags:
-- name: "Subscriber"
-  description: "Operations related to Subscribers"
+- name: "Subscription"
+  description: "Operations related to Subscriptions"
 - name: "Service"
   description: "Operations related to Services"
 paths:
   /subscribers:
     post:
       tags:
-      - "Subscriber"
-      summary: "Create Subscriber"
-      description: "Create a new Subscriber and associate with a SIM (identified by\
-        \ ICCID) and an MSISDN."
-      operationId: "createSubscriber"
+      - "Subscription"
+      summary: "Create Subscription"
+      description: "Create a new Subscription and associate with a SIM (identified\
+        \ by ICCID) and an MSISDN."
+      operationId: "create"
       consumes:
       - "application/json"
       produces:
@@ -37,75 +37,73 @@ paths:
       parameters:
       - in: "body"
         name: "body"
-        description: "Attributes of Subscriber to be created"
+        description: "Attributes of Subscription to be created"
         required: true
         schema:
-          $ref: "#/definitions/SubscriberPrototype"
+          $ref: "#/definitions/SubscriptionPrototype"
       responses:
-        200:
-          description: "Successful operation"
-          schema:
-            $ref: "#/definitions/SubscriberInfo"
+        202:
+          description: "Request accepted"
         400:
           description: "Missing mandatory parameter, or invalid MSISDN"
         404:
           description: "SIM not found"
         409:
-          description: "Some input value (ICCID or MSISDN) is already in use"
+          description: "An input value (ICCID or MSISDN) is already in use"
       security:
       - basic_auth: []
   /subscribers/{msisdn}:
     get:
       tags:
-      - "Subscriber"
-      summary: "List Subscriber information"
-      description: "List basic Subscriber information. For info about assigned Services,\
+      - "Subscription"
+      summary: "List Subscription information"
+      description: "List basic Subscription information. For info about assigned Services,\
         \ use the listServices operation"
-      operationId: "getSubscriber"
+      operationId: "read"
       produces:
       - "application/json"
       parameters:
       - name: "msisdn"
         in: "path"
-        description: "The MSISDN (E.164 number) of the Subscriber"
+        description: "The MSISDN (E.164 number) of the Subscription"
         required: true
         type: "string"
       responses:
         200:
           description: "Successful operation"
           schema:
-            $ref: "#/definitions/SubscriberInfo"
+            $ref: "#/definitions/SubscriptionInfo"
         404:
-          description: "Subscriber not found"
+          description: "Subscription not found"
       security:
       - basic_auth: []
     delete:
       tags:
-      - "Subscriber"
-      summary: "Delete Subscriber"
-      description: "Delete a Subscriber and all resources held, such as SIM and MSISDN.\
+      - "Subscription"
+      summary: "Delete Subscription"
+      description: "Delete a Subscription and resources held, such as SIM and MSISDN.\
         \ Assigned Services will also be deleted."
-      operationId: "deleteSubscriber"
+      operationId: "delete"
       parameters:
       - name: "msisdn"
         in: "path"
-        description: "The MSISDN (E.164 number) of the Subscriber"
+        description: "The MSISDN (E.164 number) of the Subscription"
         required: true
         type: "string"
       responses:
-        204:
-          description: "Successful operation"
+        202:
+          description: "Request accepted"
         404:
-          description: "Subscriber not found"
+          description: "Subscription not found"
       security:
       - basic_auth: []
     patch:
       tags:
-      - "Subscriber"
-      summary: "Update Subscriber"
-      description: "Change one or several Subscriber attributes, such as SIM (identified\
+      - "Subscription"
+      summary: "Update Subscription"
+      description: "Change one or several Subscription attributes, such as SIM (identified\
         \ by ICCID), MSISDN or blocking state."
-      operationId: "updateSubscriber"
+      operationId: "update"
       consumes:
       - "application/json"
       produces:
@@ -113,66 +111,64 @@ paths:
       parameters:
       - name: "msisdn"
         in: "path"
-        description: "The MSISDN (E.164 number) of the Subscriber"
+        description: "The MSISDN (E.164 number) of the Subscription"
         required: true
         type: "string"
       - in: "body"
         name: "body"
-        description: "Subscriber attributes to be changed"
+        description: "Subscription attributes to be changed"
         required: true
         schema:
-          $ref: "#/definitions/SubscriberPatch"
+          $ref: "#/definitions/SubscriptionPatch"
       responses:
-        200:
-          description: "Successful operation"
-          schema:
-            $ref: "#/definitions/SubscriberInfo"
+        202:
+          description: "Request accepted"
         400:
           description: "Invalid new MSISDN"
         404:
-          description: "Subscriber or SIM not found"
+          description: "Subscription or SIM not found"
         409:
-          description: "Some input value (ICCID or MSISDN) is already in use"
+          description: "An input value (ICCID or MSISDN) is already in use"
       security:
       - basic_auth: []
   /subscribers/{msisdn}/services:
     get:
       tags:
-      - "Subscriber"
-      summary: "List Services assigned to Subscriber"
-      description: "List Services assigned to Subscriber. Services may have optional\
+      - "Subscription"
+      summary: "List Services assigned to Subscription"
+      description: "List Services assigned to Subscription. Services may have optional\
         \ attributes."
-      operationId: "listServices"
+      operationId: "list"
       produces:
       - "application/json"
       parameters:
       - name: "msisdn"
         in: "path"
-        description: "The MSISDN (E.164 number) of the Subscriber"
+        description: "The MSISDN (E.164 number) of the Subscription"
         required: true
         type: "string"
       responses:
         200:
           description: "Successful operation"
           schema:
-            $ref: "#/definitions/SubscriberServiceInfo"
+            $ref: "#/definitions/SubscriptionServiceInfo"
         404:
-          description: "Subscriber not found"
+          description: "Subscription not found"
       security:
       - basic_auth: []
   /subscribers/{msisdn}/services/{sid}:
     post:
       tags:
-      - "Subscriber"
+      - "Subscription"
       - "Service"
-      summary: "Assign a Service to a Subscriber"
-      description: "Assign a Service to a Subscriber. Specific Services with identifiers\
+      summary: "Assign a Service to a Subscription"
+      description: "Assign a Service to a Subscription. Specific Services with identifiers\
         \ and attributes are pre-defined outside this API."
-      operationId: "addService"
+      operationId: "add"
       parameters:
       - name: "msisdn"
         in: "path"
-        description: "The MSISDN (E.164 number) of the Subscriber"
+        description: "The MSISDN (E.164 number) of the Subscription"
         required: true
         type: "string"
       - name: "sid"
@@ -181,26 +177,26 @@ paths:
         required: true
         type: "string"
       responses:
+        202:
+          description: "Request accepted"
         400:
           description: "Invalid Service"
-        204:
-          description: "Successful operation"
         404:
-          description: "Subscriber not found"
+          description: "Subscription not found"
       security:
       - basic_auth: []
     delete:
       tags:
-      - "Subscriber"
+      - "Subscription"
       - "Service"
-      summary: "Remove a Service from a Subscriber"
-      description: "Remove a Service from a Subscriber. All Service instances with\
+      summary: "Remove a Service from a Subscription"
+      description: "Remove a Service from a Subscription. All Service instances with\
         \ the given identifier will be removed."
-      operationId: "removeService"
+      operationId: "remove"
       parameters:
       - name: "msisdn"
         in: "path"
-        description: "The MSISDN (E.164 number) of the Subscriber"
+        description: "The MSISDN (E.164 number) of the Subscription"
         required: true
         type: "string"
       - name: "sid"
@@ -209,12 +205,12 @@ paths:
         required: true
         type: "string"
       responses:
+        202:
+          description: "Request accepted"
         400:
           description: "Invalid Service"
-        204:
-          description: "Successful operation"
         404:
-          description: "Subscriber not found"
+          description: "Subscription not found"
       security:
       - basic_auth: []
 securityDefinitions:
@@ -237,39 +233,38 @@ definitions:
         type: "string"
         description: "Optional expiry date of the Service"
     description: "Information about a Subscriber Service instance"
-  SubscriberPatch:
+  SubscriptionPatch:
     type: "object"
     properties:
       iccid:
         type: "string"
         example: "89461177710001700003"
-        description: "The ICCID identifying the new SIM to be used for the Subscriber"
+        description: "The ICCID identifying the new SIM to be used for the Subscription"
       msisdn:
         type: "string"
         example: "46708621488"
-        description: "The new MSISDN (E.164 number) of the Subscriber"
+        description: "The new MSISDN (E.164 number) of the Subscription"
       blocked:
         type: "boolean"
-        description: "If the Subscriber is blocked or not"
+        description: "If the Subscription is blocked or not"
         default: false
-    description: "Subscriber attributes to be changed"
-  SubscriberServiceInfo:
+    description: "Subscription attributes to be changed"
+  SubscriptionPrototype:
     type: "object"
     required:
+    - "iccid"
     - "msisdn"
-    - "services"
     properties:
+      iccid:
+        type: "string"
+        example: "89461177710001700003"
+        description: "The ICCID identifying the SIM to be used for the Subscription"
       msisdn:
         type: "string"
         example: "46708621488"
-        description: "The new MSISDN (E.164 number) of the Subscriber"
-      services:
-        type: "array"
-        description: "List of assigned services"
-        items:
-          $ref: "#/definitions/ServiceInfo"
-    description: "Detailed Service information for a Subscriber"
-  SubscriberInfo:
+        description: "The MSISDN (E.164 number) of the Subscription"
+    description: "Parameters required at creation of a new Subscription"
+  SubscriptionInfo:
     type: "object"
     required:
     - "blocked"
@@ -278,30 +273,31 @@ definitions:
       msisdn:
         type: "string"
         example: "46708621488"
-        description: "The MSISDN (E.164 number) of the Subscriber"
+        description: "The MSISDN (E.164 number) of the Subscription"
       iccid:
         type: "string"
         example: "89461177710001700003"
-        description: "The ICCID identifying the SIM used by the Subscriber"
+        description: "The ICCID identifying the SIM used by the Subscription"
       blocked:
         type: "boolean"
         description: "If the Subscriber is blocked or not"
         default: false
-    description: "Basic information about a Subscriber"
-  SubscriberPrototype:
+    description: "Basic information about a Subscription"
+  SubscriptionServiceInfo:
     type: "object"
     required:
-    - "iccid"
     - "msisdn"
+    - "services"
     properties:
-      iccid:
-        type: "string"
-        example: "89461177710001700003"
-        description: "The ICCID identifying the SIM to be used for the Subscriber"
       msisdn:
         type: "string"
         example: "46708621488"
-        description: "The MSISDN (E.164 number) of the Subscriber"
-    description: "Parameters required at creation of a new Subscriber"
+        description: "The new MSISDN (E.164 number) of the Subscription"
+      services:
+        type: "array"
+        description: "List of assigned services"
+        items:
+          $ref: "#/definitions/ServiceInfo"
+    description: "Detailed Service information for a Subscription"
 ```
 
