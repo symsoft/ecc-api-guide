@@ -1,6 +1,6 @@
 ## Prerequisites
 
-Before an ECC User is able to start using the API there are a few manual steps that must be completed.
+Before an API User is able to start using the API there are a few manual steps that must be completed.
 
 __TODO: Break up in fragments.__
 
@@ -8,7 +8,7 @@ __TODO: Break up in fragments.__
 
 Manual process currently not part of the API.
 
-ECC User gets login credentials.
+API User gets login credentials.
 
 A default subscription type is set up, including basic HLR & OCS settings.
 
@@ -22,4 +22,4 @@ TODO: Probably need some example services here.
 
 Manual process currently not part of the API.
 
-The ECC User will get a set of SIM cards. Each card is identified by a ICCID number usually printed on the physical card. 
+The API User will get a set of SIM cards. Each card is identified by a ICCID number usually printed on the physical card. 
