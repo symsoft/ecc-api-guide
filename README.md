@@ -12,7 +12,7 @@ __Note: This book is work in progress. Come back frequently and check for update
 
 This book is probably some kind of CC (need ref).
 
-Written and published with GitBook tools.
+Written and published with [GitBook](https://www.gitbook.io) tools.
 
 Source on GitHub.
 
