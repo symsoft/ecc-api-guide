@@ -6,6 +6,8 @@ __Note: This book is work in progress. Come back frequently and check for update
 
 ### About this book
 
+This book is probably some kind of CC (need ref).
+
 Written and published with GitBook tools.
 
 Source on GitHub.
