@@ -6,7 +6,7 @@ API User gets login credentials and address to an API Gateway server.
 
 A default subscription type is set up, including basic HLR & OCS settings.
 
-A number of Services are set up.
+A number of Services are set up (see Example services).
 
 A SIM profile is established.
 
