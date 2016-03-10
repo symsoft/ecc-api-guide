@@ -2,7 +2,7 @@
 
 Text
 
-Command:
+__Example Command:__
 ```
 curl --header "Accept: application/json" http://user:password@172.16.20.14:8081/ecc/v1/subscriptions/46708421488/services
 ```
