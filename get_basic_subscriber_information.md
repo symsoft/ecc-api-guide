@@ -4,13 +4,13 @@ Text and example here.
 
 Command:
 ```
-curl --verbose --header "Accept: application/json" http://super:super@127.0.0.1:8081/ecc/v1/subscribers/46708621488
+curl --verbose --header "Accept: application/json" http://user:password@172.16.20.14:8081/ecc/v1/subscribers/46708621488
 ```
 
 Request:
 ```
 GET /ecc/v1/subscribers/46708621488 HTTP/1.1
-Host: 127.0.0.1:8081
+Host: 172.16.20.14:8081
 Authorization: Basic c3VwZXI6c3VwZXI=
 User-Agent: curl/7.43.0
 Accept: application/json
