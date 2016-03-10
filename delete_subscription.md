@@ -7,6 +7,13 @@ __Example Command:__
 curl
 ```
 
+__Example Request:__
+```
+DELETE /ecc/v1/subscriptions/46708421488 HTTP/1.1
+
+TODO
+```
+
 __Example Response:__
 ```
 HTTP/1.1 202 Accepted
