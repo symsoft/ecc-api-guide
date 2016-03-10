@@ -8,6 +8,7 @@ Using HTTP over TLS with JSON payload.
 
 The book describes version 0.4.0 of the API. 
 
+The API is covered by Apache 2.0 License.
 
 ### Authentication
 
@@ -17,7 +18,6 @@ __TODO: Write a paragraph about cookies, load balancing and token expiry.__
 
 ### License
 
-The API is covered by Apache 2.0 License.
 
 This book is probably some kind of CC (need ref).
 
