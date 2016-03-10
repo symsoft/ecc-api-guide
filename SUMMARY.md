@@ -13,7 +13,7 @@
    * [Assign a Service](assign_a_service.md)
    * [List assigned Services with usage details](list_assigned_services_with_usage_details.md)
    * [Withdraw a Service](withdraw_a_service.md)
-   * [Delete a Subscriber](delete_a_subscriber.md)
-* [Swagger specification](swagger_specification.md)
+   * [Delete a Subscription](delete_subscription.md)
+* [API Specification](swagger_specification.md)
 * [Apache License](LICENSE)
 
