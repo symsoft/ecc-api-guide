@@ -1,3 +1,3 @@
 ### Payload
 
-text
+Payload is JSON (REF needed).
