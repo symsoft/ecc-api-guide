@@ -1,6 +1,6 @@
 ## API philosophy
 
-The ECC API is a _pragmatic_ REST (ref needed) API.
+The Enterprise Communications Cloud (ECC) API is a _pragmatic_ REST (ref needed) API.
 
 Using HTTP over TLS with JSON payload.
 
