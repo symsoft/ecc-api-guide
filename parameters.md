@@ -4,13 +4,11 @@ Some API parameters occur more frequently and deserves a more verbal explanation
 
 #### msisdn
 
-Text
-
-E.164 number
+__TODO__ E.164 number
 
 #### iccid
 
-Text
+__TODO__
 
 #### sid
 
