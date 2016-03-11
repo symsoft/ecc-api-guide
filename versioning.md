@@ -6,9 +6,9 @@ API version numbers follows [Semantic Versioning](http://semver.org). A version 
 - MINOR version is incremented when functionality is added in a backwards-compatible manner.
 - PATCH version is incremented when making backwards-compatible bug fixes.
 
-The base URL specifies what MAJOR version to use, i.e. /ecc/v1 is valid for version 1.n.n of the API.
+The base URL specifies what MAJOR version to use, i.e. /ecc/v1 is valid for version 1.n.n of the API. This allows for several MAJOR versions to exist in parallel.
 
-We will do our best to 
+We will however do our best to avoid MAJOR changes.
 
 ---
 
