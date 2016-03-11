@@ -1,7 +1,17 @@
 ### Parameters
 
-text
+Some API parameters occur more frequently and deserves a more verbal explanation.
 
-__msisdn__
+#### msisdn
 
-__iccid__
+Text
+
+E.164 number
+
+#### iccid
+
+Text
+
+#### sid
+
+Text
