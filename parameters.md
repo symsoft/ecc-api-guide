@@ -2,13 +2,19 @@
 
 Some API parameters occur more frequently and deserves a more verbal explanation.
 
+---
+
 #### msisdn
 
 __TODO__ E.164 number
 
+---
+
 #### iccid
 
 __TODO__
+
+---
 
 #### sid
 
