@@ -4,7 +4,7 @@ The ECC API is a _pragmatic_ REST (ref needed) API.
 
 Using HTTP over TLS with JSON payload.
 
-POST operations are asynchronous (returns 202) and will eventually be executed.
+POST/PATCH/DELETE operations are asynchronous (returns 202) and will eventually be executed.
 
 The book describes version 0.4.0 of the API. 
 
