@@ -2,12 +2,6 @@
 
 The blocking state a Subscription can be changed by issuing a PATCH request on the _/ecc/v1/subscriptions/{msisdn}_ path. The body of the request must include the desired blocking state.
 
-How to block and unblock a Subscription. 
-
-__TODO:__ Text and example.
-
-PATCH /ecc/v1/subscribers/NNNNNN with new blocking state.
-
 __Example Command:__
 ```
 curl --request PATCH \
