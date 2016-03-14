@@ -1,5 +1,10 @@
 ### Change MSISDN
 
+The _[msisdn](parameters.md#msisdn)_ associated with a Subscription can be changed by issuing a PATCH request on the _/ecc/v1/subscriptions/{old msisdn}_ path. The body of the request must include the new _[msisdn](parameters.md#msisdn)_ to be associated with the Subscription. 
+
+Once the Subscription is changed it will be accessible via the _/ecc/v1/subscriptions/{new msisdn}_ path, i.e. the main path for the Subscription changes.
+
+
 __TODO:__ Text and example goes here 
 
 PATCH /ecc/v1/subscribers/NNNNNN with new [MSISDN](parameters.md#msisdn).
@@ -8,7 +13,11 @@ Once changed, the main URL for the Subscription changes.
 
 __Example Command:__
 ```
-curl --request PATCH --data '{"msisdn" : "46705123456"}' --header "Content-type: application/json" --header "Accept: application/json" https://user:password@172.16.20.14:8081/ecc/v1/subscriptions/46708421488
+curl --request PATCH \
+--data '{"msisdn" : "46705123456"}' \
+--header "Content-type: application/json" \
+--header "Accept: application/json" \
+https://user:password@172.16.20.14:8081/ecc/v1/subscriptions/46708421488
 ```
 
 __Example Request:__
