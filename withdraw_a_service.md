@@ -1,6 +1,6 @@
 ### Withdraw a Service
 
-__TODO:__ Text
+A Service can be withdrawn from a Subscription by issuing a DELETE request on the _/ecc/v1/subscriptions/{msisdn}/services/{sid}_ path. 
 
 Note that all instances of the service will be withdrawn.
 
