@@ -5,7 +5,7 @@ __TODO:__ Text
 
 __Example Command:__
 ```
-curl TODO
+curl --verbose --request POST --header "Accept: application/json" http://super:super@127.0.0.1:8081/ecc/v1/subscriptions/46708421488/services/Data5G
 ```
 
 __Example Request:__
