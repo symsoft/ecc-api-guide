@@ -8,7 +8,7 @@ __Note:__ In the current version of the API it is the responsibility of the User
 
 __Example Command:__
 ```
-curl --header "Content-Type: application/json" --data @createReq.json http://user:password@172.16.20.14:8081/ecc/v1/subscriptions
+curl --header "Content-Type: application/json" --data @createReq.json https://user:password@172.16.20.14:8081/ecc/v1/subscriptions
 ```
 Where the _createReq.json_ file contains the body of the request.
 
