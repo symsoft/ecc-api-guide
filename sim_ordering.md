@@ -1,6 +1,6 @@
 ### SIM ordering
 
-The SIM ordering procedure is a manual process currently not part of the API.
+The SIM ordering procedure is a manual procedure currently not part of the API.
 
 The SIM ordering procedure uses the SIM profile established during the [onboarding](onboarding.md) procedure.
 
