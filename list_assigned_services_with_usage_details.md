@@ -1,6 +1,6 @@
 ### List assigned Services with usage details
 
-Text
+__TODO:__ Text
 
 __Example Command:__
 ```
