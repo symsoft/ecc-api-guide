@@ -6,7 +6,7 @@ Some API parameters occur more frequently and deserves a more verbal explanation
 
 #### msisdn
 
-__TODO__ E.164 number
+__TODO__ [E.164](https://en.wikipedia.org/wiki/E.164) number
 
 ---
 
