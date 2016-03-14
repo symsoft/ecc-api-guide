@@ -1,8 +1,8 @@
 ### Create a Subscription
 
-__TODO:__ Text and example goes here
-
 A new Subscription is created by issuing a POST request on the _/ecc/v1/subscriptions_ path. The body of the request must include both the _[msisdn](parameters.md#msisdn)_ and _[iccid](parameters.md#iccid)_ to be associated with the Subscription.
+
+Once the Subscription is created it will be accessible via the _/ecc/v1/subscriptions/{msisdn}_ path.
 
 __Note:__ In the current version of the API it is the responsibility of the API User to allocate and keep track of MSISDNs. 
 
