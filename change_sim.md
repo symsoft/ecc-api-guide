@@ -24,7 +24,7 @@ Content-Type: application/json
 Content-Length: 61
 
 {
-  "iccid": "46705123456" TODO
+  "iccid": "89461177710001700011" 
 }
 ```
 
