@@ -7,10 +7,10 @@ Once the change is executed the Subscription will be accessible via the _/ecc/v1
 __Example Command:__
 ```
 curl --request PATCH \
---data '{"msisdn" : "46705123456"}' \
---header "Content-type: application/json" \
---header "Accept: application/json" \
-https://user:password@172.16.20.14:8081/ecc/v1/subscriptions/46708421488
+ --data '{"msisdn" : "46705123456"}' \
+ --header "Content-type: application/json" \
+ --header "Accept: application/json" \
+ https://user:password@172.16.20.14:8081/ecc/v1/subscriptions/46708421488
 ```
 
 __Example Request:__
