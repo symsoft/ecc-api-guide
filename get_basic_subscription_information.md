@@ -1,6 +1,7 @@
 ### Get basic Subscription information
 
-__TODO:__ Text and example here.
+The basic information associated with a Subscription can be retrieved by issuing a GET request on the _/ecc/v1/subscriptions/{msisdn}_ path.
+
 
 __Example Command:__
 ```
