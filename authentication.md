@@ -6,5 +6,6 @@ In addition to Basic Authentication there is also an HTTP Cookie based mechanism
 
 At Cookie Authentication the user authenticates via the /login URL. This will set a session specific HTTP Cookie in the Browser. This Cookie will be included in all subsequent requests until the user terminates the session via the /logout URL. 
 
-__TODO: Write a paragraph about cookies, load balancing and token expiry.__
+---
+__TODO:__ Write a paragraph about cookies, load balancing and token expiry.
 
