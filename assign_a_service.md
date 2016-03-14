@@ -2,8 +2,6 @@
 
 __TODO:__ Text
 
-__TODO: Is it wise (stringent) to POST without body?__
-
 
 __Example Command:__
 ```
@@ -24,3 +22,6 @@ Server: Nobill/5.3.0
 Date: Thu, 10 Mar 2016 15:39:18 GMT
 Content-Length: 0
 ```
+
+---
+__TODO: Is it wise (stringent) to POST without body?__
