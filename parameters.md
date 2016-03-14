@@ -6,13 +6,15 @@ Some API parameters occur more frequently and deserves a more verbal explanation
 
 #### msisdn
 
-__TODO__ [E.164](https://en.wikipedia.org/wiki/E.164) number
+MSISDN is a number uniquely identifying a subscription in a GSM or a UMTS mobile network. Simply put, it is the telephone number to the SIM card in a mobile/cellular phone. This abbreviation has a several interpretations, the most common one being "Mobile Station International Subscriber Directory Number".
+
+The MSISDN together with IMSI are two important numbers used for identifying a mobile subscriber. The latter is stored in the SIM, i.e. the card inserted into the mobile phone, and each IMSI uniquely identifies the mobile station, its home wireless network, and the home country of the home wireless network, while the former is the number used for routing calls to the subscriber. IMSI is often used as a key in the HLR ("subscriber database") and MSISDN is the number normally dialed to connect a call to the mobile phone. A SIM has a unique IMSI that does not change, while the MSISDN can change in time, i.e. different MSISDNs can be associated with the SIM.
+
+The MSISDN follows the numbering plan defined in the ITU-T recommendation E.164.
 
 ---
 
 #### iccid
-
-__TODO__ [E.118](https://en.wikipedia.org/wiki/Subscriber_identity_module#ICCID) number
 
 Each SIM is internationally identified by its integrated circuit card identifier (ICCID). ICCIDs are stored in the SIM cards and are also engraved or printed on the SIM card body during a process called personalisation. The ICCID is defined by the ITU-T recommendation E.118 as the Primary Account Number. Its layout is based on ISO/IEC 7812. According to E.118, the number is up to 22 digits long, including a single check digit calculated using the Luhn algorithm.
 
