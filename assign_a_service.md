@@ -27,4 +27,4 @@ Content-Length: 0
 ```
 
 ---
-__TODO:__ Is it wise (stringent) to POST without body?
+__TODO:__ Is it wise (stringent) to POST without body? Do we need to assign several services in one operation? Perhaps we should change to use a body with a list of services.
