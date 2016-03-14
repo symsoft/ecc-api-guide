@@ -8,7 +8,7 @@ __Note:__ In the current version of the API it is the responsibility of the User
 
 __Example Command:__
 ```
-curl --header "Content-Type: application/json" --data '{"msisdn": "46705123456", "iccid": "89461177710001700003"}' https://user:password@172.16.20.14:8081/ecc/v1/subscriptions
+curl --header "Content-Type: application/json" --header "Accept: application/json" --data '{"msisdn": "46705123456", "iccid": "89461177710001700003"}' https://user:password@172.16.20.14:8081/ecc/v1/subscriptions
 ```
 
 __Example Request:__
@@ -17,7 +17,7 @@ POST /ecc/v1/subscriptions HTTP/1.1
 Host: 172.16.20.14:8081
 Authorization: Basic c3VwZXI6c3VwZXI=
 User-Agent: curl/7.43.0
-Accept: */*
+Accept: application/json
 Content-Type: application/json
 Content-Length: 61
 
