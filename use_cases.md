@@ -1,6 +1,6 @@
 ## Use cases
 
-Some of the more common use cases are described here. The information provided here is informative only, for the exact specification see [API Specification](api_specification.md). 
+Some of the more common use cases are described here. The information provided is informative only, for the exact specification see [API Specification](api_specification.md). 
 
 Use cases are described with a sample command using _[curl](https://curl.haxx.se)_, together with the corresponding HTTP request and response.
 
