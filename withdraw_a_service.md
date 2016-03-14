@@ -6,13 +6,13 @@ Note that all instances of the service will be withdrawn.
 
 __Example Command:__
 ```
-curl --verbose -request DELETE --header "Accept: application/json" https://super:super@127.0.0.1:8081/ecc/v1/subscriptions/46708421488/services/Data5G
+curl --verbose -request DELETE --header "Accept: application/json" https://user:password@172.16.20.14:8081/ecc/v1/subscriptions/46708421488/services/Data5G
 ```
 
 __Example Request:__
 ```
 DELETE /ecc/v1/subscriptions/46708421488/services/Data5G HTTP/1.1
-Host: 127.0.0.1:8081
+Host: 172.16.20.14:8081
 Authorization: Basic c3VwZXI6c3VwZXI=
 User-Agent: curl/7.43.0
 Accept: application/json
