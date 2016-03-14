@@ -1,10 +1,10 @@
-### Delete a Subscriber
+### Delete a Subscription
 
-Some text.
+__TODO:__ Some text.
 
 __Example Command:__
 ```
-curl
+curl TODO
 ```
 
 __Example Request:__
