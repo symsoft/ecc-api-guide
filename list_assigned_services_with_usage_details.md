@@ -1,5 +1,10 @@
 ### List assigned Services with usage details
 
+The Services assigned to a Subscription can be retrieved by issuing a GET request on the _/ecc/v1/subscriptions/{msisdn}/services_ path.
+
+The response contains of a list of service names, and optionally an associated usage value and an expiry date. This would depend upon how the Service was defined during the [onboarding](onboarding.md) procedure. See also [Example Services](example_services.md).  
+
+
 __TODO:__ Text
 
 __Example Command:__
