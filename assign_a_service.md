@@ -7,7 +7,7 @@ __TODO: Is it wise (stringent) to POST without body?__
 
 __Example Command:__
 ```
-curl
+curl TODO
 ```
 
 __Example Request:__
