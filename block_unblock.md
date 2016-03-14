@@ -2,11 +2,13 @@
 
 How to block and unblock a Subscription. 
 
-Text and example.
+__TODO:__ Text and example.
+
+PATCH /ecc/v1/subscribers/NNNNNN with new blocking state.
 
 __Example Command:__
 ```
-curl
+curl TODO
 ```
 
 __Example Request:__
