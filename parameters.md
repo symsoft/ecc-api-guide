@@ -12,7 +12,7 @@ __TODO__ [E.164](https://en.wikipedia.org/wiki/E.164) number
 
 #### iccid
 
-__TODO__
+__TODO__ [E.118](https://en.wikipedia.org/wiki/Subscriber_identity_module#ICCID) number
 
 ---
 
