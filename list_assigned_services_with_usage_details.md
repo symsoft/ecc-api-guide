@@ -4,8 +4,7 @@ The Services assigned to a Subscription can be retrieved by issuing a GET reques
 
 The response contains of a list of service names, and optionally an associated usage value and an expiry date. This would depend upon how the Service was defined during the [onboarding](onboarding.md) procedure. See also [Example Services](example_services.md).  
 
-
-__TODO:__ Text
+Note that it is possible that the same Service name appears more than once. This will happen if the Service definition allows multiple instances of the Service and the Subscriber has been assigned multiple instances of the Service.
 
 __Example Command:__
 ```
