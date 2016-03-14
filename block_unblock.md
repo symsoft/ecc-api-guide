@@ -8,7 +8,7 @@ PATCH /ecc/v1/subscribers/NNNNNN with new blocking state.
 
 __Example Command:__
 ```
-curl --verbose --request PATCH --data '{"blocked": true}' --header "Content-type: application/json" --header "Accept: application/json" https://user:password@172.16.20.14:8081/ecc/v1/subscriptions/46708421488
+curl --request PATCH --data '{"blocked": true}' --header "Content-type: application/json" --header "Accept: application/json" https://user:password@172.16.20.14:8081/ecc/v1/subscriptions/46708421488
 ```
 
 __Example Request:__
