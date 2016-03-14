@@ -2,12 +2,12 @@
 
 The onboarding process is a manual process currently not part of the API.
 
-API User gets login credentials and address to an API Gateway server.
+A SIM profile is established.
 
 A default subscription type is set up, including basic HLR & OCS settings.
 
 A number of Services are set up (see [Example services](example_services.md)).
 
-A SIM profile is established.
-
 Billing arrangements are set up.
+
+API User gets login credentials and address to an API Gateway server.
