@@ -2,7 +2,7 @@
 
 __TODO:__ Text and example goes here.
 
-PATCH /ecc/v1/subscribers/NNNNNN with new ICCID.
+PATCH /ecc/v1/subscribers/NNNNNN with new [ICCID](parameters.md#iccid).
 
 Old SIM is deleted and void after this operation.
 
