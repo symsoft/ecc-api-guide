@@ -6,7 +6,7 @@ Note that if the service allows multiple instances then multiple invocations of 
 
 __Example Command:__
 ```
-curl --verbose --request POST --header "Accept: application/json" https://user:password@172.16.20.14:8081/ecc/v1/subscriptions/46708421488/services/Data5G
+curl --request POST --header "Accept: application/json" https://user:password@172.16.20.14:8081/ecc/v1/subscriptions/46708421488/services/Data5G
 ```
 
 __Example Request:__
@@ -27,4 +27,4 @@ Content-Length: 0
 ```
 
 ---
-__TODO: Is it wise (stringent) to POST without body?__
+__TODO:__ Is it wise (stringent) to POST without body?
