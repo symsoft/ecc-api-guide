@@ -2,7 +2,7 @@
 
 The _[msisdn](parameters.md#msisdn)_ associated with a Subscription can be changed by issuing a PATCH request on the _/ecc/v1/subscriptions/{old msisdn}_ path. The body of the request must include the new _[msisdn](parameters.md#msisdn)_ to be associated with the Subscription. 
 
-Once the Subscription change is executed the Subscription will be accessible via the _/ecc/v1/subscriptions/{new msisdn}_ path, i.e. the main path for the Subscription changes.
+Once the change is executed the Subscription will be accessible via the _/ecc/v1/subscriptions/{new msisdn}_ path, i.e. the main path for the Subscription changes.
 
 __Example Command:__
 ```
