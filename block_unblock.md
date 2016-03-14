@@ -5,10 +5,10 @@ The blocking state a Subscription can be changed by issuing a PATCH request on t
 __Example Command:__
 ```
 curl --request PATCH \
---data '{"blocked": true}' \
---header "Content-type: application/json" \
---header "Accept: application/json" \
-https://user:password@172.16.20.14:8081/ecc/v1/subscriptions/46708421488
+ --data '{"blocked": true}' \
+ --header "Content-type: application/json" \
+ --header "Accept: application/json" \
+ https://user:password@172.16.20.14:8081/ecc/v1/subscriptions/46708421488
 ```
 
 __Example Request:__
