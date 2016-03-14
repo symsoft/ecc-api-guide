@@ -4,7 +4,7 @@ __TODO:__ Text and example here.
 
 __Example Command:__
 ```
-curl --verbose --header "Accept: application/json" https://user:password@172.16.20.14:8081/ecc/v1/subscriptions/46708421488
+curl --header "Accept: application/json" https://user:password@172.16.20.14:8081/ecc/v1/subscriptions/46708421488
 ```
 
 __Example Request:__
