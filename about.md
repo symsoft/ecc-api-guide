@@ -4,7 +4,7 @@ The Enterprise Communications Cloud (ECC) API is a [REST](https://en.wikipedia.o
 
 The API uses HTTP over TLS with [JSON payload](payload.md).
 
-POST/PATCH/DELETE operations are asynchronous (returns 202) and will eventually be executed.
+POST/PATCH/DELETE operations are asynchronous (returns 202, Accepted) and will eventually be executed.
 
 The book describes version 0.4.0 of the API. 
 
