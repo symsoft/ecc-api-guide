@@ -4,6 +4,8 @@ Text and example goes here
 
 POST on /ecc/v1/subscriptions
 
+__Note:__ In the current version of the API it is the responsibility of the User to allocate and keep track of MSISDNs. 
+
 __Example Command:__
 ```
 curl --header "Content-Type: application/json" --data @createReq.json http://user:password@172.16.20.14:8081/ecc/v1/subscriptions
@@ -34,4 +36,3 @@ Date: Thu, 10 Mar 2016 15:39:18 GMT
 Content-Length: 0
 ```
 
-__Note:__ In the current version of the API it is the responsibility of the User to allocate and keep track of MSISDNs. 
