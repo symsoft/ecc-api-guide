@@ -8,7 +8,7 @@ POST/PATCH/DELETE operations are asynchronous (returns 202) and will eventually 
 
 The book describes version 0.4.0 of the API. 
 
-Formally described in Swagger format (see chapter [API Specification](swagger_specification.md)).
+Formally described in [OpenAPI](https://github.com/OAI/OpenAPI-Specification) format (see chapter [API Specification](swagger_specification.md)).
 
 The API is covered by [Apache 2.0 License](license.md).
 
