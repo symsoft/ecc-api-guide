@@ -1,16 +1,18 @@
 ### Change SIM
 
-__TODO:__ Text and example goes here.
+The SIM associated with a Subscription can be changed by issuing a PATCH request on the _/ecc/v1/subscriptions/{msisdn}_ path. The body of the request must include the _[iccid](parameters.md#iccid)_ of the new SIM to be associated with the Subscription.
 
-PATCH /ecc/v1/subscribers/NNNNNN with new [ICCID](parameters.md#iccid).
-
-Old SIM is deleted and void after this operation.
+The old SIM is deleted and void after this operation.
 
 __Note:__ The change of SIM card is performed more or less immediately. There is currently no API operation to perform a deferred SIM swap. 
 
 __Example Command:__
 ```
-curl --request PATCH --data '{"iccid": "89461177710001700011"}' --header "Content-type: application/json" --header "Accept: application/json" https://user:password@172.16.20.14:8081/ecc/v1/subscriptions/46708421488
+curl --request PATCH \
+--data '{"iccid": "89461177710001700011"}' \
+--header "Content-type: application/json" \
+--header "Accept: application/json" \
+https://user:password@172.16.20.14:8081/ecc/v1/subscriptions/46708421488
 ```
 
 __Example Request:__
