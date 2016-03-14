@@ -4,7 +4,7 @@ The onboarding process is a manual process currently not part of the API.
 
 A SIM profile is established.
 
-A default subscription type is set up, including basic HLR & OCS settings.
+A default Subscription type is set up, including basic HLR & OCS settings.
 
 A number of Services are set up (see [Example services](example_services.md)).
 
