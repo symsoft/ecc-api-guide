@@ -4,6 +4,8 @@ __TODO:__ Text and example goes here.
 
 Old SIM is deleted and void after this operation.
 
+__Note:__ The change of SIM card is performed more or less immediately. There is currently no API operation to perform a deferred SIM swap. 
+
 __Example Command:__
 ```
 curl
@@ -33,4 +35,3 @@ Date: Thu, 10 Mar 2016 15:39:18 GMT
 Content-Length: 0
 ```
 
-__Note:__ The change of SIM card is performed more or less immediately. There is currently no API operation to perform a deferred SIM swap. 
