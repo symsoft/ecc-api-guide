@@ -8,4 +8,4 @@ As a result of the SIM ordering procedure the API User will get a set of SIM car
 
 Information about the SIM cards are also stored in the ECC platform. The API User will need to indicate what SIM card to use for a specific Subscription by using the _[iccid](parameters.md#iccid)_ parameter at [Subscription creation](create_subscription.md). It is also possible to [change SIM](change_sim.md) in use by a Subscription at a later stage should need arise.
 
-The SIM ordering procedure may be repeated several times.  
+The SIM ordering procedure may be repeated several times as the API User requires additional SIM cards. It is worth to notice that this procedure may involve manufacturing of cards and may thus take some time.  
