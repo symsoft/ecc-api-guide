@@ -1,6 +1,6 @@
 ### Get basic Subscription information
 
-Text and example here.
+__TODO:__ Text and example here.
 
 __Example Command:__
 ```
