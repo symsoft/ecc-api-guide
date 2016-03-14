@@ -1,8 +1,8 @@
 ### Assign a Service
 
-__TODO:__ Text
+A Service can be assigned to a Subscription by issuing a POST request on the _/ecc/v1/subscriptions/{msisdn}/services/{sid}_ path. 
 
-Note that if the service allows multiple instances then multiple invocations of the same command will result in multiple instances of the service.
+If the Service allows multiple instances then multiple invocations of the same command will result in multiple instances of the Service being assigned to the Subscriber.
 
 __Example Command:__
 ```
