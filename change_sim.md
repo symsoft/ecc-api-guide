@@ -10,7 +10,7 @@ __Note:__ The change of SIM card is performed more or less immediately. There is
 
 __Example Command:__
 ```
-curl TODO
+curl --verbose --request PATCH --data '{"iccid": "89461177710001700011"}' --header "Content-type: application/json" --header "Accept: application/json" https://user:password@172.16.20.14:8081/ecc/v1/subscriptions/46708421488
 ```
 
 __Example Request:__
