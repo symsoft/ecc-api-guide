@@ -4,7 +4,6 @@ The SIM associated with a Subscription can be changed by issuing a PATCH request
 
 The old SIM is deleted and void after this operation.
 
-__Note:__ The change of SIM card is performed more or less immediately. There is currently no API operation to perform a deferred SIM swap. 
 
 __Example Command:__
 ```
