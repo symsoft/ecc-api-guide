@@ -8,7 +8,10 @@ __Note:__ In the current version of the API it is the responsibility of the API 
 
 __Example Command:__
 ```
-curl --header "Content-Type: application/json" --header "Accept: application/json" --data '{"msisdn": "46705123456", "iccid": "89461177710001700003"}' https://user:password@172.16.20.14:8081/ecc/v1/subscriptions
+curl --header "Content-Type: application/json" \
+--header "Accept: application/json" \
+--data '{"msisdn": "46708421488", "iccid": "89461177710001700003"}' \
+https://user:password@172.16.20.14:8081/ecc/v1/subscriptions
 ```
 
 __Example Request:__
