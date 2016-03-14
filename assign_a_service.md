@@ -2,6 +2,7 @@
 
 __TODO:__ Text
 
+Note that multiple invocations of the same command may result in multiple instances of the service. If the service allows multiple instances that is.
 
 __Example Command:__
 ```
