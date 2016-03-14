@@ -29,14 +29,14 @@ Content-Length: 334
   "services" : [ {
     "name" : "Data1G",
     "value" : 88,
-    "expires" : "Thu Mar 10 17:14:36 CET 2016"
+    "expires" : "Thu Mar 22 18:50:23 CET 2016"
   }, {
     "name" : "Data1G",
-    "value" : 88,
-    "expires" : "Thu Mar 10 17:14:36 CET 2016"
+    "value" : 900,
+    "expires" : "Thu Mar 16 10:20:11 CET 2016"
   }, {
     "name" : "Data5G",
-    "value" : 88,
+    "value" : 2,
     "expires" : "Thu Mar 10 17:14:36 CET 2016"
   } ]
 }
