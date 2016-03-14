@@ -1,6 +1,9 @@
 ### Delete a Subscription
 
-__TODO:__ Some text.
+A Subscription can be deleted by issuing a DELETE request on the _/ecc/v1/subscriptions/{msisdn}_ path. 
+
+The associated SIM is deleted and void after this operation.
+
 
 __Example Command:__
 ```
@@ -27,5 +30,5 @@ Content-Length: 0
 ```
 
 ---
-__TODO: Must decide and describe if a SIM is dead (deleted) after this operation. In a future version we may have multiple Subscription Types. It may be so that a change of Subscription Type only can be performed by means of a delete & create, and is such case the SIM is to be re-used. For a normal deletion the SIM should be dead and not used ever again.__ 
+__TODO:__ Must decide and describe if a SIM is dead (deleted) after this operation. In a future version we may have multiple Subscription Types. It may be so that a change of Subscription Type only can be performed by means of a delete & create, and is such case the SIM is to be re-used. For a normal deletion the SIM should be dead and not used ever again. 
 
