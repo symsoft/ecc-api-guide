@@ -8,7 +8,7 @@ __Note:__ The change of SIM card is performed more or less immediately. There is
 
 __Example Command:__
 ```
-curl
+curl TODO
 ```
 
 __Example Request:__
