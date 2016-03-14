@@ -8,7 +8,7 @@ Once changed, the main URL for the Subscription changes.
 
 __Example Command:__
 ```
-curl --verbose --request PATCH --data '{"msisdn" : "46705123456"}' --header "Content-type: application/json" https://user:password@172.16.20.14:8081/ecc/v1/subscriptions/46708421488
+curl --verbose --request PATCH --data '{"msisdn" : "46705123456"}' --header "Content-type: application/json" --header "Accept: application/json" https://user:password@172.16.20.14:8081/ecc/v1/subscriptions/46708421488
 ```
 
 __Example Request:__
@@ -17,7 +17,7 @@ PATCH /ecc/v1/subscriptions/46708421488 HTTP/1.1
 Host: 172.16.20.14:8081
 Authorization: Basic c3VwZXI6c3VwZXI=
 User-Agent: curl/7.43.0
-Accept: */*
+Accept: application/json
 Content-Type: application/json
 Content-Length: 61
 
