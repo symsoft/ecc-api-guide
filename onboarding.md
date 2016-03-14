@@ -1,8 +1,8 @@
 ### Onboarding
 
-The onboarding process is a manual process currently not part of the API.
+The onboarding procedure is a manual process currently not part of the API.
 
-The SIM profile to be used by the API User is established. This profile is used later in the [SIM ordering](sim_ordering.md) process.
+The SIM profile to be used by the API User is established. This profile is used later in the [SIM ordering](sim_ordering.md) procedure.
 
 A Subscription type is set up, including basic HLR & OCS settings. This Subscription type is specific to the API User and is not available to other API Users. The Subscription type may also include one or several default Services.
 
