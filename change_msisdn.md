@@ -8,7 +8,7 @@ Once changed, the main URL for the Subscription changes.
 
 __Example Command:__
 ```
-curl TODO
+curl --verbose --request PATCH --data '{"msisdn" : "46705123456"}' --header "Content-type: application/json" http://super:super@127.0.0.1:8081/ecc/v1/subscriptions/46708421488
 ```
 
 __Example Request:__
