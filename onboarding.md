@@ -10,4 +10,5 @@ The onboarding procedure is a manual process currently not part of the API. Onbo
 
 * Billing arrangements are set up. This includes both billing for resources used in the ECC platform and traffic charges incurred by the Subscription. 
 
-* Finally the API User gets login credentials and address to an API Gateway server.
+* Finally the API User gets login credentials and address to an API Gateway server. This may also include a VPN connection to the API Gateway.
+
