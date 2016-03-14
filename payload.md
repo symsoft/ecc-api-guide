@@ -15,4 +15,3 @@ Content-Length: 61
 ... body omitted ...
 
 ```
-
