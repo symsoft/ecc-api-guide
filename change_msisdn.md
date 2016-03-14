@@ -2,7 +2,7 @@
 
 __TODO:__ Text and example goes here 
 
-PATCH /ecc/v1/subscribers/NNNNNN with new MSISDN.
+PATCH /ecc/v1/subscribers/NNNNNN with new [MSISDN](parameters.md#msisdn).
 
 Once changed, the main URL for the Subscription changes.
 
