@@ -8,7 +8,7 @@ Once changed, the main URL for the Subscription changes.
 
 __Example Command:__
 ```
-curl
+curl TODO
 ```
 
 __Example Request:__
