@@ -1,6 +1,6 @@
 ### Create a Subscription
 
-Text and example goes here
+__TODO:__ Text and example goes here
 
 POST on /ecc/v1/subscriptions
 
