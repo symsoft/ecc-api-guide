@@ -28,7 +28,7 @@ Content-Length: 334
   "msisdn" : "46708421488",
   "services" : [ {
     "name" : "Data1G",
-    "value" : 0,
+    "value" : 1000,
     "expires" : "Thu Mar 22 18:50:23 CET 2016"
   }, {
     "name" : "Data1G",
