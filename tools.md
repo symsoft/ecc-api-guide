@@ -4,7 +4,7 @@ __TODO: more text here__
 
 Helpful tools 
 
-- curl
+- [curl](https://curl.haxx.se)
 - jq
 - http-console
 - Swagger explorer
