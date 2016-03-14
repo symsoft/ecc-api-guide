@@ -4,13 +4,6 @@ The _[msisdn](parameters.md#msisdn)_ associated with a Subscription can be chang
 
 Once the Subscription is changed it will be accessible via the _/ecc/v1/subscriptions/{new msisdn}_ path, i.e. the main path for the Subscription changes.
 
-
-__TODO:__ Text and example goes here 
-
-PATCH /ecc/v1/subscribers/NNNNNN with new [MSISDN](parameters.md#msisdn).
-
-Once changed, the main URL for the Subscription changes.
-
 __Example Command:__
 ```
 curl --request PATCH \
