@@ -4,7 +4,7 @@ __TODO:__ Text and example goes here
 
 POST on /ecc/v1/subscriptions
 
-__Note:__ In the current version of the API it is the responsibility of the User to allocate and keep track of MSISDNs. 
+__Note:__ In the current version of the API it is the responsibility of the API User to allocate and keep track of MSISDNs. 
 
 __Example Command:__
 ```
