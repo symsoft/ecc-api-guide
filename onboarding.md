@@ -8,6 +8,6 @@ A Subscription type is set up, including basic HLR & OCS settings. This Subscrip
 
 A number of Services that may be used by the Subscriptions are set up (see [Example services](example_services.md)). Again, these services are specific to the API User and is not available to other API Users.
 
-Billing arrangements are set up.
+Billing arrangements are set up. This includes both billing for resources used in the ECC platform and traffic charges incurred by the Subscription. 
 
 Finally the API User gets login credentials and address to an API Gateway server.
