@@ -1,6 +1,6 @@
 ## API Specification
 
-The formal ECC API specification in Swagger YAML format (__TODO: ref needed__).
+The formal ECC API specification in [OpenAPI](https://github.com/OAI/OpenAPI-Specification) format (__TODO: ref needed__) format.
 
 ```yaml
 ---
