@@ -1,6 +1,6 @@
 ## API Specification
 
-The formal ECC API specification in [OpenAPI](https://github.com/OAI/OpenAPI-Specification) format (__TODO: ref needed__) format.
+The formal ECC API specification in [OpenAPI](https://github.com/OAI/OpenAPI-Specification) format.
 
 ```yaml
 ---
