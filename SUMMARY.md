@@ -23,6 +23,6 @@
    * [Withdraw a Service](withdraw_a_service.md)
    * [Delete a Subscription](delete_subscription.md)
 * [API Specification](swagger_specification.md)
-* [Apache License](license.md)
 * [API change history](api_change_history.md)
+* [Apache License](license.md)
 
