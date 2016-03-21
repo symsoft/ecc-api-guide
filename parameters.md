@@ -8,7 +8,7 @@ Some API parameters occur more frequently and deserves a more verbal explanation
 
 MSISDN is a number uniquely identifying a subscription in a GSM or a UMTS mobile network. Simply put, it is the telephone number to the SIM card in a mobile/cellular phone. This abbreviation has a several interpretations, the most common one being "Mobile Station International Subscriber Directory Number".
 
-The MSISDN together with IMSI are two important numbers used for identifying a mobile subscriber. The latter is stored in the SIM, i.e. the card inserted into the mobile phone, and each IMSI uniquely identifies the mobile station, its home wireless network, and the home country of the home wireless network, while the former is the number used for routing calls to the subscriber. IMSI is often used as a key in the HLR ("subscriber database") and MSISDN is the number normally dialed to connect a call to the mobile phone. A SIM has a unique IMSI that does not change, while the MSISDN can change in time, i.e. different MSISDNs can be associated with the SIM.
+The MSISDN together with IMSI are two important numbers used for identifying a mobile subscriber. The latter is stored in the SIM, i.e. the card inserted into the mobile phone, and each IMSI uniquely identifies the mobile station, its home wireless network, and the home country of the home wireless network, while the former is the number used for routing calls to the subscriber. IMSI is often used as a key in the HLR ("subscriber database") and MSISDN is the number normally dialed to connect a call to the mobile phone.
 
 The MSISDN follows the numbering plan defined in the ITU-T recommendation E.164.
 
