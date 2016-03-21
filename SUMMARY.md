@@ -7,7 +7,6 @@
    * [Payload](payload.md)
    * [Parameters](parameters.md)
    * [Error codes](error_codes.md)
-   * [Tools](tools.md)
 * [Prerequisites](prerequisites.md)
    * [Onboarding](onboarding.md)
    * [SIM ordering](sim_ordering.md)
