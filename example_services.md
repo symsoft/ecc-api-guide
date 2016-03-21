@@ -16,9 +16,29 @@ A simple set of Services (defined at [onboarding](onboarding.md)) could look lik
 
  * __SMS__ - Short message service. Each SMS charged individually.
 
-Looking at a Subscription:
+
+__Example Subscription:__
 
 ```
+{
+  "msisdn" : "46708421488",
+  "services" : [ {
+    "id" : "Voice"
+  }, {
+    "id" : "Data1G",
+    "instance" : "b78",
+    "value" : 1000,
+    "expires" : "Thu Mar 22 18:50:23 CET 2016"
+  }, {
+    "id" : "Data1G",
+    "instance" : "a77",
+    "value" : 556,
+    "expires" : "Thu Mar 16 10:20:11 CET 2016"
+  }, {
+    "id" : "DataMonthly1G",
+    "value" : 0
+  } ]
+}
 ```
 
 ---
