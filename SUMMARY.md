@@ -24,6 +24,7 @@
    * [Delete a Subscription](delete_subscription.md)
 * [API Specification](swagger_specification.md)
 * [API change history](api_change_history.md)
+   * [0.4.0 to 0.5.0](040_to_050.md)
 * [Apache License](license.md)
-* [0.4.0 to 0.5.0](040_to_050.md)
+
 
