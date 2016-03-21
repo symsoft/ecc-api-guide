@@ -8,4 +8,4 @@ Common error cases:
 
 * Code 407 (Conflict) is returned when the requested resource, such as a SIM or an MSISDN, already is in use. 
 
-* Code 400 (Bad Request)
+* Code 400 (Bad Request) is returned when the request refers to a non existing entity other than the main resource, or when required parameters are missing or malformed. 
