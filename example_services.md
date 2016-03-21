@@ -1,9 +1,6 @@
 ### Example Services
 
-__TODO:__ text
-
-
-Sample services
+A simple set of Services (defined at [onboarding](onboarding.md)) could look like: 
 
  * __FreeZoneData__ - Free data access to walled garden.
  
@@ -19,6 +16,10 @@ Sample services
 
  * __SMS__ - Short message service. Each SMS charged individually.
 
+Looking at a Subscription:
+
+```
+```
 
 ---
 __TODO:__ Need to describe some example services in order for User to understand why some operations behave as they do. Use services from midware test data.
