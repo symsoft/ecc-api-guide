@@ -25,4 +25,5 @@
 * [API Specification](swagger_specification.md)
 * [API change history](api_change_history.md)
 * [Apache License](license.md)
+* 0.4.0 to 0.5.0
 
