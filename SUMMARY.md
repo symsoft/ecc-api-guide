@@ -21,10 +21,10 @@
    * [Assign a Service](assign_a_service.md)
    * [List assigned Services with usage details](list_assigned_services_with_usage_details.md)
    * [Withdraw a Service](withdraw_a_service.md)
+   * [Withdraw a specific Service instance](withdraw_a_specific_service_instance.md)
    * [Delete a Subscription](delete_subscription.md)
 * [API Specification](swagger_specification.md)
 * [API change history](api_change_history.md)
    * [0.4.0 to 0.5.0](040_to_050.md)
 * [Apache License](license.md)
-* [Withdraw a specific Service instance](withdraw_a_specific_service_instance.md)
 
