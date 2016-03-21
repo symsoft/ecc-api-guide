@@ -7,7 +7,7 @@ The formal ECC API specification in [OpenAPI](https://github.com/OAI/OpenAPI-Spe
 swagger: "2.0"
 info:
   description: "Symsoft Enterprise Communications Cloud API"
-  version: "v0.4.0"
+  version: "v0.5.0"
   title: "ECC API"
   termsOfService: "http://symsoft.com/api-terms/"
   contact:
@@ -45,11 +45,13 @@ paths:
         202:
           description: "Request accepted"
         400:
-          description: "Missing mandatory parameter, or invalid MSISDN"
-        404:
-          description: "SIM not found"
+          description: "Bad request"
+          schema:
+            $ref: "#/definitions/DiagnosticInfo"
         409:
-          description: "An input value (ICCID or MSISDN) is already in use"
+          description: "Conflict"
+          schema:
+            $ref: "#/definitions/DiagnosticInfo"
       security:
       - basic_auth: []
   /subscriptions/{msisdn}:
@@ -84,6 +86,8 @@ paths:
       description: "Delete a Subscription and resources held, such as SIM and MSISDN.\
         \ Assigned Services will also be deleted."
       operationId: "delete"
+      produces:
+      - "application/json"
       parameters:
       - name: "msisdn"
         in: "path"
@@ -124,11 +128,15 @@ paths:
         202:
           description: "Request accepted"
         400:
-          description: "Invalid new MSISDN"
+          description: "Bad request"
+          schema:
+            $ref: "#/definitions/DiagnosticInfo"
         404:
-          description: "Subscription or SIM not found"
+          description: "Subscription not found"
         409:
-          description: "An input value (ICCID or MSISDN) is already in use"
+          description: "Conflict"
+          schema:
+            $ref: "#/definitions/DiagnosticInfo"
       security:
       - basic_auth: []
   /subscriptions/{msisdn}/services:
@@ -165,6 +173,8 @@ paths:
       description: "Assign a Service to a Subscription. Specific Services with identifiers\
         \ and attributes are pre-defined outside this API."
       operationId: "add"
+      produces:
+      - "application/json"
       parameters:
       - name: "msisdn"
         in: "path"
@@ -180,7 +190,9 @@ paths:
         202:
           description: "Request accepted"
         400:
-          description: "Invalid Service"
+          description: "Bad request"
+          schema:
+            $ref: "#/definitions/DiagnosticInfo"
         404:
           description: "Subscription not found"
       security:
@@ -192,7 +204,9 @@ paths:
       summary: "Remove a Service from a Subscription"
       description: "Remove a Service from a Subscription. All Service instances with\
         \ the given identifier will be removed."
-      operationId: "remove"
+      operationId: "removeAll"
+      produces:
+      - "application/json"
       parameters:
       - name: "msisdn"
         in: "path"
@@ -208,7 +222,46 @@ paths:
         202:
           description: "Request accepted"
         400:
-          description: "Invalid Service"
+          description: "Bad request"
+          schema:
+            $ref: "#/definitions/DiagnosticInfo"
+        404:
+          description: "Subscription not found"
+      security:
+      - basic_auth: []
+  /subscriptions/{msisdn}/services/{sid}/{instance}:
+    delete:
+      tags:
+      - "Subscription"
+      - "Service"
+      summary: "Remove a Service Instance from a Subscription"
+      description: "Remove a specific Service instance from a Subscription."
+      operationId: "removeOne"
+      produces:
+      - "application/json"
+      parameters:
+      - name: "msisdn"
+        in: "path"
+        description: "The MSISDN (E.164 number) of the Subscription"
+        required: true
+        type: "string"
+      - name: "sid"
+        in: "path"
+        description: "Service identifier"
+        required: true
+        type: "string"
+      - name: "instance"
+        in: "path"
+        description: "Instance identifier"
+        required: true
+        type: "string"
+      responses:
+        202:
+          description: "Request accepted"
+        400:
+          description: "Bad request"
+          schema:
+            $ref: "#/definitions/DiagnosticInfo"
         404:
           description: "Subscription not found"
       security:
@@ -220,11 +273,14 @@ definitions:
   ServiceInfo:
     type: "object"
     required:
-    - "name"
+    - "id"
     properties:
-      name:
+      id:
         type: "string"
         description: "The Service identifier"
+      instance:
+        type: "string"
+        description: "Optional instance identifier"
       value:
         type: "integer"
         format: "int64"
@@ -249,6 +305,15 @@ definitions:
         description: "If the Subscription is blocked or not"
         default: false
     description: "Subscription attributes to be changed"
+  DiagnosticInfo:
+    type: "object"
+    required:
+    - "info"
+    properties:
+      info:
+        type: "string"
+        description: "Human readable diagnostic information to aid in trouble shooting"
+    description: "Diagnostic Information"
   SubscriptionPrototype:
     type: "object"
     required:
@@ -269,6 +334,7 @@ definitions:
     required:
     - "blocked"
     - "iccid"
+    - "imsi"
     properties:
       msisdn:
         type: "string"
@@ -282,6 +348,12 @@ definitions:
         type: "boolean"
         description: "If the Subscriber is blocked or not"
         default: false
+      imsi:
+        type: "array"
+        example: "244141000170000"
+        description: "A list of IMSI numbers used by the Subscription"
+        items:
+          type: "string"
     description: "Basic information about a Subscription"
   SubscriptionServiceInfo:
     type: "object"
