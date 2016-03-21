@@ -4,8 +4,8 @@ The API will return standard HTTP return codes in case of an error. In some case
 
 Common error cases: 
 
-* Code 404 (Not Found) refers to the main resource, i.e. in most cases the Subscription.
+* Code 404 (Not Found) refers to the main resource, i.e. in most cases the Subscription. This is also what will be returned in case an API User tries to access a Subscription belonging to another API User.
 
-* Code 407 (Conflict)
+* Code 407 (Conflict) is returned when the requested resource, such as a SIM or an MSISDN, already is in use. 
 
 * Code 400 (Bad Request)
