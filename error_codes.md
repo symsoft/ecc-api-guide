@@ -1,6 +1,6 @@
 ### Error codes
 
-The API will return standard HTTP return codes in case of an error. In some cases there will be additional, human readable, information in the response body.
+The API will return standard HTTP return codes in case of an error. In most cases there will be additional, human readable, information in the response body.
 
 Common error cases: 
 
