@@ -25,3 +25,5 @@ Each SIM is internationally identified by its integrated circuit card identifier
 The Service Identifier is a string that uniquely identifies one of the Services possible to assign to Subscriptions created by the API User.
 
 Each API User has a user specific set of Services. This set of Services is defined and set up during the [onboarding](onboarding.md) procedure.
+
+The Service Identifier is case sensitive and needs to be URL escaped in case of 'strange' characters.
