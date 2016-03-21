@@ -6,7 +6,7 @@ The Enterprise Communications Cloud (ECC) is a platform from Symsoft AB that pro
 
 ---
 
-__Note: This book is work in progress. Come back frequently and check for updates.__
+__This book is work in progress. Come back frequently and check for updates.__
 
 __Current API version is 0.5.0__
 
