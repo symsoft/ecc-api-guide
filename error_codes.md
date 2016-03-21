@@ -1,6 +1,11 @@
 ### Error codes
 
-__TODO:__ text
+The API will return standard HTTP return codes in case of an error. In some cases there will be additional, human readable, information in the response body.
 
----
-__TODO:__ Add diagnostic info to all error codes. Check if we code-wise can pass this info backwards as a context variable. Note that this may also affect all operations where we only expect 202 as we in error cases will get a diagnostic JSON body.
+Some common error cases: 
+
+* Code 404 (Not Found) refers to the main resource, i.e. in most cases the Subscription.
+
+* Code 407 (Conflict)
+
+* Code 400 (Bad Request)
