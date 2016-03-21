@@ -2,7 +2,7 @@
 
 The API will return standard HTTP return codes in case of an error. In some cases there will be additional, human readable, information in the response body.
 
-Some common error cases: 
+Common error cases: 
 
 * Code 404 (Not Found) refers to the main resource, i.e. in most cases the Subscription.
 
