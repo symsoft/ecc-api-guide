@@ -29,6 +29,9 @@ Content-Length: 87
 {
   "msisdn" : "46708421488",
   "iccid" : "89461177710001700003",
-  "blocked" : false
+  "blocked" : false,
+  "imsi": [
+    "244141000170000"
+  ]
 }
 ```
