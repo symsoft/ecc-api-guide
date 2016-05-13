@@ -6,7 +6,7 @@ The Enterprise Communications Cloud (ECC) is a platform from Symsoft AB that pro
 
 ---
 
-__This is the working branch for the next version of the ECC API.
+__This is the working branch for the next version of the ECC API.__
 
 __Current API version is 0.5.0__
 
