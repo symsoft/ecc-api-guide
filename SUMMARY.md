@@ -4,6 +4,7 @@
 * [API Philosophy](about.md)
    * [Versioning](versioning.md)
    * [Authentication](authentication.md)
+   * [Events](events.md)
    * [Payload](payload.md)
    * [Parameters](parameters.md)
    * [Error codes](error_codes.md)
