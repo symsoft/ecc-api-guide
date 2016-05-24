@@ -1,11 +1,15 @@
 ### Change State
 
-To change the state of a Subscription issue a PATCH request on the _/ecc/v1/subscriptions/{msisdn}_ path. The body of the request shall include the desired state.
+Change the state of a Subscription by issue a PATCH request on the _/ecc/v1/subscriptions/{msisdn}_ path. The body of the request shall include the desired state. States can be **BEFORE_FIRST_USE** or **IN_USE**. Please find definition of states below:
+
+- **BEFORE_FIRST_USE**: Initial state of a Subscription. When state has been changed, it can never go back to **BEFORE_FIRST_USE**
+- **IN_USE**: The state where the Subscriptionu se services,
+
 
 __Example Command:__
 ```
 curl --request PATCH \
- --data '{"state": inuse}' \
+ --data '{"state" : "IN_USE"}' \
  --header "Content-type: application/json" \
  --header "Accept: application/json" \
  https://user:password@172.16.20.14:8081/ecc/v1/subscriptions/46708421488
@@ -22,7 +26,7 @@ Content-Type: application/json
 Content-Length: 61
 
 {
-  "state=inuse"
+  "state" : "IN_USE"
 }
 ```
 
