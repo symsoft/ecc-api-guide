@@ -19,8 +19,18 @@ The long-polling timeout value is specified with a attribute called `long-pollin
 __Example Command:__
 ```
 curl --header "Accept: application/json" \
- https://user:password@172.16.20.14:8081/ecc/v1/subscriptions/events/{event-typ}?long-polling=30
+ https://user:password@172.16.20.14:8081/ecc/v1/subscriptions/events/{event-type}?long-polling=30
 ```
+####Event-Type
+
+The following are the events that are logged
+
+| Event Type | Fields | Description |
+|------------|--------|-------------|
+| threshold | sequence-number <br> msisdn| description |
+
+
+
 
 __Example Request:__
 ```
