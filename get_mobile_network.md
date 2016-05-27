@@ -1,7 +1,12 @@
 ### Get Mobile Network information
 
 Mobile Network information, such as which mobile network a device is attached to can be retrieved by issuing a GET request on the _/ecc/v1/subscriptions/{type}:{id}/mobile_network_ path.
-
+On succes, the response contains the following information
+- **imsi**: current used imsi
+- **cs-node**: msc/vlr E.214 global title address
+- **ps-node**: sgsn address. E.214 Mobile Global Title or IP address
+- **eps-node**: mme address. E.214 Mobile Global Title or host and realm
+- **mccmnc**: Mobile Country Code and Mobile Network Code
 
 __Example Command:__
 ```
