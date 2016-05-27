@@ -1,6 +1,6 @@
 ### Get Mobile Network information
 
-Mobile Network information, such as which mobile network a device is attached to can be retrieved by issuing a GET request on the _/ecc/v1/subscriptions/{type}:{id}/mobile_network_ path.
+Mobile Network information, such as which mobile network a device is attached to can be retrieved by issuing a GET request on the _/ecc/v1/subscriptions/{type}:{id}/mobile-network_ path.
 On succes, the response contains the following information
 - **imsi**: current used imsi
 - **cs-node**: msc/vlr E.214 global title address
@@ -11,12 +11,12 @@ On succes, the response contains the following information
 __Example Command:__
 ```
 curl --header "Accept: application/json" \
- https://user:password@172.16.20.14:8081/ecc/v1/subscriptions/msisdn:46708421488/mobile_network
+ https://user:password@172.16.20.14:8081/ecc/v1/subscriptions/msisdn:46708421488/mobile-network
 ```
 
 __Example Request:__
 ```
-GET /ecc/v1/subscriptions/msisdn:46708421488/mobile_network HTTP/1.1
+GET /ecc/v1/subscriptions/msisdn:46708421488/mobile-network HTTP/1.1
 Host: 172.16.20.14:8081
 Authorization: Basic c3VwZXI6c3VwZXI=
 User-Agent: curl/7.43.0
