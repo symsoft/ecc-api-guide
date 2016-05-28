@@ -28,6 +28,8 @@ The following are the events that are logged
 | Event Type | Fields | Description |
 |------------|--------|-------------|
 | threshold | sequence-number <br> msisdn| description |
+| device change | sequence-number | The, device, IMEI or SV parameter, has changed for the Subscription |
+| network change | new-plmn | the device has attached to a new mobile network |
 
 
 
