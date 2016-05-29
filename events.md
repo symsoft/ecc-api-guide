@@ -25,11 +25,12 @@ curl --header "Accept: application/json" \
 
 The following are the events that are logged
 
-| Event Type | Fields | Description |
-|------------|--------|-------------|
-| threshold | sequence-number <br> msisdn| description |
-| device change | sequence-number | The, device, IMEI or SV parameter, has changed for the Subscription |
-| network change | new-plmn | the device has attached to a new mobile network |
+| Event Type | Description |
+|------------|--------|
+| threshold | A threshold value has been passed for service |
+| device-change | The device, IMEI or SV parameter, has changed for the Subscription |
+| network-change | The device has attached to a new mobile network |
+| state-change | The Subscrition state has changed| 
 
 
 
@@ -57,19 +58,19 @@ Content-Length: 121
   "events" : [
     {
     "sequence-number" : 1002 
-    "msisdn" : ""
-    "iccid" : ""
+    "msisdn" : "4670312345"
+    "iccid" : "89461177710001700003"
     "imsi": "244141000170000"
-    "service" : 
-    "threshold" : 
+    "service" : "data" 
+    "threshold" : "
     "value" :
     "time" :
     }, 
     {
     "sequence-number" : 1003 
     "msisdn" : ""
-    "iccid" : ""
-    "imsi": "244141000170000"
+    "iccid" : "89463188899999999892"
+    "imsi": "2441410001706789"
     "service" : 
     "threshold" : 
     "value" :
