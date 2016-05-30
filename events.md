@@ -4,7 +4,7 @@ Events are a ECC feature that provides comprehensive event-logging for ECC Subsc
 
 A number of events are supported, for example, when a usage threshold is passed, state change, mobile network change, device change, and so on.
 
-The Events resource provides an API to retreive these event-logs from the system through a long-polling mechanism.
+The Events resource provides an API to retrieve these event-logs from the system through a long-polling mechanism.
 
 In order to be notified of events, the client has to perform a long-polling request towards the API Server. On reception of such long-polling request, the server does not return the HTTP response immediately (unless error handling): the server returns the HTTP response either when an event occurs (including events information in the response) or when a timeout occurs (a timer being associated to the long-polling request). 
 
@@ -14,7 +14,7 @@ The API supports long-polling and uses `ETag` and `If-None-Match` headers to det
 
 If the client provides an If-None-Match header that matches the data known by the server, then the request hangs open until the data changes, at which point the server can respond with new events instantly or until the timeout expires with no change, where the ECC responds with code 304 Not Modified.
 
-The long-polling timeout value is specified with a attribute called `long-polling` with the value set to the desired timeout (in seconds)
+The long-polling timeout value is specified with an attribute called `long-polling` with the value set to the desired timeout (in seconds)
 
 __Example Command:__
 ```
@@ -30,7 +30,7 @@ The following are the events that are logged
 | threshold | A threshold value has been passed for service |
 | device-change | The device, IMEI or SV parameter, has changed for the Subscription |
 | network-change | The device has attached to a new mobile network |
-| state-change | The Subscrition state has changed| 
+| state-change | The Subscription state has changed| 
 
 
 
