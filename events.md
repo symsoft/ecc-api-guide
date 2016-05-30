@@ -80,7 +80,7 @@ Content-Length: 121
 }
 ```
 
-If no events occurs for the specified time-out, the server times out the request and responds with 304:
+If no events occurs for the specified long-polling timeout, the server times out the request and responds with 304:
 
 ```
 HTTP/1.1 304 Not Modified
