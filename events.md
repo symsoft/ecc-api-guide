@@ -80,3 +80,22 @@ Content-Length: 121
 }
 ```
 
+If no events occurs for the specified time-out, the server times out the request and responds with 304:
+
+```
+HTTP/1.1 304 Not Modified
+Server: Nobill/5.3.0
+Etag: "d3b11ce788cc203b8175af70cf8fbb41"
+Date: Thu, 10 Mar 2016 09:52:43 GMT
+Content-Length: 0
+```
+The client can check for updates by performing the same request again, including an If-None-Match header containing the value of the ETag header received in the previous response from the server
+
+```
+GET /ecc/v1/subscriptions/event/threshold HTTP/1.1
+If-None-Match: "d3b11ce788cc203b8175af70cf8fbb41"
+Host: 172.16.20.14:8081
+Authorization: Basic c3VwZXI6c3VwZX=I
+User-Agent: curl/7.43.0
+Accept: application/json
+```
