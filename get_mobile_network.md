@@ -4,7 +4,7 @@ Mobile Network information, such as which mobile network a device is attached to
 On succes, the response contains the following information
 - **imsi**: current used imsi
 - **cs-node**: msc/vlr E.214 global title address
-- **ps-node**: sgsn address. E.214 Mobile Global Title or IP address
+- **ps-node**: sgsn address. E.214 Mobile Global Title or host and realm
 - **eps-node**: mme address. E.214 Mobile Global Title or host and realm
 - **mccmnc**: Mobile Country Code and Mobile Network Code
 
@@ -34,8 +34,8 @@ Content-Length: 121
 {
   "imsi": "244141000170000"
   "cs-node" : "4828132801",
-  "ps-node" : "4828130051",
-  "eps-node" : "4828130081",
+  "ps-node" : { "number" : "4828130051"},
+  "eps-node" : "host" : "mms-1", "realm" : "epc.mnc001.mcc244.3gppnetwork.org"
   "mccmnc" : "24401"
   ]
 }
