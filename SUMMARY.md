@@ -12,7 +12,7 @@
 * [Prerequisites](prerequisites.md)
    * [Onboarding](onboarding.md)
    * [SIM ordering](sim_ordering.md)
-   * [Example Services](example_services.md)
+   * [Services](services.md)
 * [Use cases](use_cases.md)
    * [Create a Subscription](create_subscription.md)
    * [Get basic Subscription information](get_basic_subscription_information.md)
