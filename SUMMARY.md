@@ -30,5 +30,6 @@
 * [API change history](api_change_history.md)
    * [0.4.0 to 0.5.0](040_to_050.md)
    * [0.5.0 to 0.5.0](050_to_060.md)
+   * [0.5.0 to 0.5.0](060_to_070.md)
 * [Apache License](license.md)
 
