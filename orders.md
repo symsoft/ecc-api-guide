@@ -25,14 +25,14 @@ __Example Response:__
 HTTP/1.1 200 OK
 Server: Nobill/5.3.0
 Date: Thu, 10 Mar 2016 15:39:18 GMT
-Content-Length: 0
+Content-Length: 102
 
 {
-  "orderId": ,
-  "msisdn" : "string",
-  "iccid" : "string",
-  "status": "string",
-  "orderDate": "string",
-  "completionDate": "string"
+  "orderId": 20144,
+  "msisdn" : "4612312312",
+  "iccid" : "89461177710001700003",
+  "status": "Completed",
+  "orderDate": "2016-03-10T00:00:00Z",
+  "completionDate": "2016-03-10T00:00:05Z"
 }
 ```
