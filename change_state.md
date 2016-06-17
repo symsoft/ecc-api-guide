@@ -3,7 +3,7 @@
 Change the state of a Subscription by issue a PATCH request on the _/ecc/v1/subscriptions/{type}:{id}_ path. The body of the request shall include the desired state. States can be **BEFORE_FIRST_USE** or **IN_USE**. Please find definition of states below:
 
 - **BEFORE_FIRST_USE**: Initial state of a Subscription. When state has been changed, it can never go back to **BEFORE_FIRST_USE**
-- **IN_USE**: The state where the Subscriptionu se services,
+- **IN_USE**: The state where the Subscription use services,
 
 
 __Example Command:__
