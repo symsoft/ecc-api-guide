@@ -17,7 +17,7 @@ Serices are identified by the _[sid](parameters.md#msid)_ . For teleservices and
 
 ####Teleservices
 
-The following capabillities are available and identified by _[sid](parameters.md#msid)_, "voice", "mo-sms" and "mt-sms"
+The following capabillities are available and identified by _[sid](parameters.md#msid)_, "ts-voice", "ts-mo-sms" and "ts-mt-sms"
 
 ####Supplementary services
 The follwing supplementary services are available and identified by _[sid](parameters.md#msid)_ "cfu", "cfb", "cfnr", "cfnrc", "clip", "clir" and "mpty"
