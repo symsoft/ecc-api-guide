@@ -21,6 +21,7 @@
    * [Block - Unblock](block_unblock.md)
    * [Change State](change_state.md)
    * [Assign a Service](assign_a_service.md)
+   * [Get Service details](get_service_details.md)
    * [List assigned Services with usage details](list_assigned_services_with_usage_details.md)
    * [Withdraw a Service](withdraw_a_service.md)
    * [Withdraw a specific Service instance](withdraw_a_specific_service_instance.md)
