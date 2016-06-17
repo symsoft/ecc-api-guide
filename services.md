@@ -29,11 +29,11 @@ The following service section allows a subscription to use voice and sms and has
 {
   ...
   "services" : [ {
-    "id" : "voice"
+    "id" : "ts-voice"
   }, {
-    "id" : "sms-mo"
+    "id" : "ts-sms-mo"
   }, {
-    "id" : "sms-mt"
+    "id" : "ts-sms-mt"
   }, {
     "id" : "cfnr",
     "forward-number" : "4670123123123"
