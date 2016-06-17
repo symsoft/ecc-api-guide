@@ -24,6 +24,7 @@
    * [List assigned Services with usage details](list_assigned_services_with_usage_details.md)
    * [Withdraw a Service](withdraw_a_service.md)
    * [Withdraw a specific Service instance](withdraw_a_specific_service_instance.md)
+   * [Modify a Service](modify_service.md)
    * [Delete a Subscription](delete_subscription.md)
    * [Get mobile network](get_mobile_network.md)
 * [API Specification](swagger_specification.md)
