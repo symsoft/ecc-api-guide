@@ -1,7 +1,7 @@
 ### Assign Services
 
 Services can be assigned to a Subscription by issuing a POST request on the _/ecc/v1/subscriptions/{type}:{id}/services_ path. 
-The body of the request includes the different services 
+The body of the request includes the different services. 
 
 If the Service allows multiple instances then multiple invocations of the same command will result in multiple instances of the Service being assigned to the Subscriber.
 
