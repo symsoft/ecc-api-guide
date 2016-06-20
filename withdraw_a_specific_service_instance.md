@@ -2,6 +2,8 @@
 
 A specific Service instance can be withdrawn from a Subscription by issuing a DELETE request on the _/ecc/v1/subscriptions/{type}:{id}/services/{sid}/{instance}_ path. 
 
+__NOTE:__ This is only applicable for *__bucket__* service types
+
 __Example Command:__
 ```
 curl -request DELETE \
