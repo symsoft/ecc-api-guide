@@ -2,7 +2,7 @@
 
 A Service can be withdrawn from a Subscription by issuing a DELETE request on the _/ecc/v1/subscriptions/{type}:{id}/services/{sid}_ path. 
 
-Note that all instances of the service will be withdrawn.
+__Note__ If the service is of the *__bucket__* type all instances of the service will be withdrawn. </br> To remove a specific instance of a bucket type service the [Withraw a Service instance ](withdraw_a_specific_service_instance.md) should be used.
 
 __Example Command:__
 ```
