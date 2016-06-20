@@ -10,7 +10,7 @@ The following service types are available:
 |------------|--------|
 | teleservice |  specifies which capabilities, Voice, Mobile Originated SMS and Mobile Terminated SMS a subscription may use |
 | supplementary-service | Supplementary services, such as call forwarding, call barring for voice services |
-| bucket | services which monitors usage consumption for different resorces |
+| bucket | services which monitors usage consumption for different resorces <br /> new ‘instances’ are created each time this type of service is assigned to a subscription |
 | reccuring-bucket | bucket services that are automatically renewed |
 
 Services are identified by the _[sid](parameters.md#msid)_ . For teleservices and supplemenatry-services the sid is defined and the same for all API Users.
@@ -43,7 +43,7 @@ The following service section allows a subscription to use voice and sms and has
 ```
 #### Bucket and Recurring Bucket
 
-These services are (defined at [onboarding](onboarding.md)) so the _[sid](parameters.md#msid)_ is unique per API user. 
+These services are defined at [onboarding](onboarding.md) so the _[sid](parameters.md#msid)_ is unique per API user. 
 A set of services could look like this
  
  * __DataMonthly1G__ - Recurring data service bucket of 1G. Reset at the 1st day of each month. Only one recurring data service allowed.
@@ -75,7 +75,7 @@ __Example Subscription using Services above:__
 }
 ```
 
-For recurring bucket services an optional limit can be specified. The limit are applied individual per subscription.
+For _recurring-bucket_ services an optional limit can be specified. The limit are applied individual per subscription.
 The service below is a recurring voice service. Reset at the 1st day of each month with an individual limit of 1000 minutes per month. Current usage is 8 minutes.
 
 ```
