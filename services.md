@@ -24,7 +24,7 @@ The following supplementary services are available and identified by _[sid](para
 
 For the call-forwarding supplementarty services "cfu", "cfb", "cfnr" and "cfnrc" an additional parameter "forward-number" is available.
 
-The following service section allows a subscription to use voice and sms and has the supplementary service call forwarding not reached and calling line restriction activated: 
+The following service section allows a subscription to use voice and sms and has the supplementary service call-forwarding-not- reachable (cfnrc) and calling-line-identification-restriction(clir) activated: 
 ```
 {
   ...
@@ -35,7 +35,7 @@ The following service section allows a subscription to use voice and sms and has
   }, {
     "id" : "ts-sms-mt"
   }, {
-    "id" : "cfnr",
+    "id" : "cfnrc",
     "forward-number" : "4670123123123"
   }, {
     "id" : "clir"}]
