@@ -71,6 +71,7 @@ __Example Subscription using Services above:__
   }, {
     "id" : "DataMonthly1G",
     "value" : 0
+    "reset_date": "2016-03-01T00:00:00+0000"
   } ]
 }
 ```
@@ -85,6 +86,7 @@ The service below is a recurring voice service. Reset at the 1st day of each mon
     "id" : "VoiceMonthly",
     "limit" : "1000",
     "value" : 8,
+    "reset_date": "2016-03-01T00:00:00+0000"
   } ]
 }
 ```
