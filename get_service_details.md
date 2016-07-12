@@ -2,7 +2,7 @@
 
 Service details for a service identified by its _sid_ assigned to a Subscription can be retrieved by issuing a GET request on the _/ecc/v1/subscriptions/{type}:{id}/services/{sid}_ path.
 
-The response contains a representation of the Service which depends of the type of [services](services.md)) and upon how the Service was defined during the [onboarding](onboarding.md) procedure.  
+The response contains a representation of the Service which depends of the type of [services](services.md) and upon how the Service was defined during the [onboarding](onboarding.md) procedure.  
 
 Note that it is possible that the same Service appears more than once. This will happen if the Service definition allows multiple instances of the Service and the Subscriber has been assigned multiple instances of the Service.
 
