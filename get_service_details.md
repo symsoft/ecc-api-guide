@@ -30,10 +30,8 @@ Date: Thu, 26 Mar 2016 16:14:36 GMT
 Content-Length: 104
 
 {
-  "msisdn" : "46708421488",
-  "services" : [ {
     "id" : "cfnr",
     "forward-number" : "46812312345",
-  } ]
+  } 
 }
 ```
