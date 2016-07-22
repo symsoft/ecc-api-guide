@@ -44,10 +44,11 @@ Content-Length: 334
     "expires" : "Thu Mar 16 10:20:11 CET 2016"
   } ]
   }, {
-    "id" : "Data5G",
-    "instance" : "w99",
-    "value" : 235,
-    "expires" : "Thu Mar 10 17:14:36 CET 2016"
-  } ]
+    "id" : "ts-voice",
+  }, {
+   "id" : "cfu"
+   "forward-number : 467012312311"
+  }
+  ]
 }
 ```
