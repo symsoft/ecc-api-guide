@@ -1,8 +1,8 @@
 ### Create a Subscription
 
-A new Subscription is created by issuing a POST request on the _/ecc/v1/subscriptions_ path. The body of the request must include both the _[msisdn](parameters.md#msisdn)_ and _[iccid](parameters.md#iccid)_ to be associated with the Subscription.
+A new Subscription is created by issuing a POST request on the _/ecc/v1/subscriptions_ path. The body of the request must include the _[iccid](parameters.md#iccid)_ to associate a SIM with the Subscription. Typically the _[msisdn](parameters.md#msisdn)_ is also needed unless it's a MSISDN less subscription. 
 
-Once the Subscription is created it will be accessible via the _/ecc/v1/subscriptions/{msisdn}_ path.
+Once the Subscription is created it will be accessible via the _/ecc/v1/subscriptions/{type}:{id}_ path.
 
 __Example Command:__
 ```
@@ -33,6 +33,13 @@ __Example Response:__
 HTTP/1.1 202 Accepted
 Server: Nobill/5.3.0
 Date: Thu, 10 Mar 2016 15:39:18 GMT
-Content-Length: 0
+Content-Length: 26
+
+{
+  "orders": [
+    20144
+  ]
+}
+
 ```
 
