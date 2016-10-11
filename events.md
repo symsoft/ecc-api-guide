@@ -1,5 +1,4 @@
 ### Events
-
 Events are a ECC feature that provides comprehensive event-logging for ECC Subscription.
 
 A number of events are supported, for example, when a usage threshold is passed, state change, mobile network change, device change, and so on.
@@ -45,6 +44,7 @@ User-Agent: curl/7.43.0
 Accept: application/json
 ```
 
+
 __Example Response:__
 ```
 HTTP/1.1 200 OK
@@ -53,28 +53,27 @@ Etag: "d3b11ce788cc203b8175af70cf8fbb41"
 Content-Type: application/json;charset=UTF-8
 Date: Thu, 10 Mar 2016 09:52:43 GMT
 Content-Length: 121
-
 {
-  "events" : [
-    {
-    "sequence-number" : 1002 
-    "msisdn" : "4670312345"
-    "iccid" : "89461177710001700003"
-    "imsi": "244141000170000"
-    "service" : "data" 
-    "threshold" : "
-    "value" :
-    "time" :
+  "events" : [
+    {
+    "sequence-number" : 1002 
+    "msisdn" : "4670312345"
+    "iccid" : "89461177710001700003"
+    "imsi": "244141000170000"
+    "service" : "Data-0.5GB-Monthly" 
+    "threshold" : "80-Percentage"
+    "value" : "400 MB"
+    "time" : "2016-03-10 08:02:54"
     }, 
     {
     "sequence-number" : 1003 
-    "msisdn" : ""
+    "msisdn" : "4670412345"
     "iccid" : "89463188899999999892"
     "imsi": "2441410001706789"
-    "service" : 
-    "threshold" : 
-    "value" :
-    "time" :
+    "service" : "500-SMS-Monthly"
+    "threshold" : "90-Percentage"
+    "value" : "450"
+    "time" : "2016-03-10 08:22:13"
     }
   ]
 }
