@@ -29,7 +29,8 @@ The following are the events that are logged
 | threshold | A threshold value has been passed for service |
 | device-change | The device, IMEI or SV parameter, has changed for the Subscription |
 | network-change | The device has attached to a new mobile network |
-| state-change | The Subscription state has changed| 
+| state-change | The Subscription state has changed|
+| order | An order has finished|
 
 
 
