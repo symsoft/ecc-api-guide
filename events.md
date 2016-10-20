@@ -33,7 +33,15 @@ The following are the events that are logged
 | order | An order has finished|
 
 
+Description of Events general Properties
 
+| Name | Description |
+|------------|--------|
+|sequence-number | Sequnce Number for this Event|
+|time | Timestamp when the event happend|
+|iccid| The ICCID of the Subscription that this events relates to|
+|msisdn| The MSISDN of the Subscription that this events relates to|
+|imsi| The active IMSI of the Subscription that this events relates to|
 
 __Example Request:__
 ```
@@ -79,6 +87,28 @@ Content-Length: 121
   ]
 }
 ```
+
+__Sample Order Event:__
+
+```
+"events": [
+{
+     "sequence-number" : 1002
+     "msisdn" : "4670312345"
+     "iccid" : "89461177710001700003"
+     "orderid" : "10032"
+     "status" : "completed"
+     "time" : ""2016-03-10 08:22:13"     
+}
+```
+
+Description of Order Event additional Properties
+
+| Name | Description |
+|------------|--------|
+|orderid | Order Id|
+|status | Status of the finished order. Completed or Canceled|
+
 
 If no events occurs for the specified long-polling timeout, the server times out the request and responds with 304:
 
