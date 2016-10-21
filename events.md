@@ -45,7 +45,7 @@ Description of Events general Properties
 
 __Example Request:__
 ```
-GET /ecc/v1/subscriptions/event/threshold HTTP/1.1
+GET /ecc/v1/subscriptions/events/threshold HTTP/1.1
 If-None-Match: "9f3b76784171ed59bc1df0bb9964f1df"
 Host: 172.16.20.14:8081
 Authorization: Basic c3VwZXI6c3VwZX=I
@@ -88,6 +88,15 @@ Content-Length: 121
 }
 ```
 
+Description of Threshols Events additional Properties
+
+| Name | Description |
+|------------|--------|
+|service | A string identifying the Service Id for which this threshold was reached|
+|threshold| A string identifing the Threshold|
+|value| The usage value for this service oject|   
+
+
 __Sample Order Event:__
 
 ```
@@ -102,7 +111,7 @@ __Sample Order Event:__
 }
 ```
 
-Description of Order Event additional Properties
+Description of Orders Events additional Properties
 
 | Name | Description |
 |------------|--------|
