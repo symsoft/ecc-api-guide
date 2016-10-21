@@ -88,13 +88,36 @@ Content-Length: 121
 }
 ```
 
-Description of Threshols Events additional Properties
+Description of Threshold Events additional Properties
 
 | Name | Description |
 |------------|--------|
 |service | A string identifying the Service Id for which this threshold was reached|
 |threshold| A string identifing the Threshold|
 |value| The usage value for this service oject|   
+
+__Sample State-Change Event:__
+
+```
+"events": [
+{
+     "sequence-number" : 1002
+     "msisdn" : "4670312345"
+     "iccid" : "89461177710001700003"
+     "previous-state" : "BEFORE_FIRST_USE"
+     "new-state" : "IN_USE"
+     "time" : ""2016-03-10 08:22:13"     
+}
+```
+
+Description of State-Change Event additional Properties
+
+| Name | Description |
+|------------|--------|
+|previous-state | String identifying the previous state|
+|new-state | String identifying the new state|
+
+
 
 
 __Sample Order Event:__
@@ -117,6 +140,8 @@ Description of Orders Events additional Properties
 |------------|--------|
 |orderid | Order Id|
 |status | Status of the finished order. Completed or Canceled|
+
+
 
 
 If no events occurs for the specified long-polling timeout, the server times out the request and responds with 304:
