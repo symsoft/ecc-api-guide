@@ -10,7 +10,7 @@ The ECC REST API enables you to manage the subscriptions and its capabilities on
 
 __*The ECC API is currently in Developer Preview. Some APIs may change before general availability.*__
 
-__*Current API version is 0.7.0*__
+__*Current API version is 0.7.1*__
 
 ---
 
