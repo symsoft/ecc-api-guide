@@ -1,6 +1,7 @@
 ### Orders
 
 Provisioning operations in the ECC API follow an asynchronous design. For the asynchronous operations the ECC API returns 202, Accepted and an orderId. 
+The ECC API only allows for one outstanding order per subscription and returns 409, Conflict if there is an outstanding order for a subscription.
 
 The Order resource provides an API to retreive status about these orders. 
 The status for a specific provisioning operation can be checked by issuing a GET request on the _/ecc/v1/orders/{orderid}_ path.
