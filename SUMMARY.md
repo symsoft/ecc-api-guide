@@ -8,6 +8,7 @@
    * [Events](events.md)
    * [Payload](payload.md)
    * [Parameters](parameters.md)
+   * [Data Formats](data_formats.md)
    * [Error codes](error_codes.md)
 * [Prerequisites](prerequisites.md)
    * [Onboarding](onboarding.md)
