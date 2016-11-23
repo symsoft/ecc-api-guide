@@ -5,7 +5,8 @@ Batches are a ECC feature that provides the possibility to send multiple API req
 A new Batch is created by issuing a POST request on the _/ecc/v1/batches_ path. The body of the request shall contain an
 array of API requests that will be executed.
 
-The following API requests are supported in a Batch request.
+The following API requests are supported in a Batch request:
+
 | API request | Method | Path
 |------------|--------| --------|
 | Create subscription | POST | /ecc/v1/subscriptions |
