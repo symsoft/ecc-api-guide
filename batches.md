@@ -12,12 +12,15 @@ You are limited to 100 calls in a single batch request. If you need to make more
 It introduces a new Batches resource that provides an API to create and get status of a batch resource. A batch resource has the following properties:
   * Id
   * Status [Submitted, Completed]
-  * Create timestamp
+  * Submitted timestamp
   * Total number of API calls with state=Completed
   * Duration from start to latest Completed API call
   * List of API calls
 
-The list of API calls is an ordered list where each entry will started in the same order as in the list.
+The list of API calls is an ordered list where each entry will started in the same order as in the list. Batch adds meta data to each API call:
+* orderId
+* Status [Not Submitted, Submitted, Completed]
+* statusChangedTS : timestamp for latest status change
 
 The life-cycle of a batch is simple:
   1.Create a batch with POST .../batches with list of API calls in the body.
