@@ -22,6 +22,9 @@ A batch can have one of the following statuses:
 | COMPLETED | Orders for all API requests have completed |
 | PARTIAL_COMPLETED | Orders for all valid requests have completed, but there exist some API requests that have status REJECTED or FAILED |
 
+Note that if a provisioning order, corresponding to an API request in the batch, does not complete (due to e.g provisioning failure)
+ then the batch will remain in state _PROCESSING_.
+
 When a batch is completed, or partial completed, an event will be generated which can be retrieved via the [events](events.md) resource.
 Note that an individual API request, contained in the batch, will also generate an _order complete_ event when the corresponding order has completed.
 This _order complete_ event will contain the _batch id_ corresponding to the batch that contained the API request.
@@ -35,6 +38,10 @@ Each API request contained in a batch will have one of the following statuses:
 | FAILED | No order could be created for the request, e.g. due to that the subscription was not found |
 | PROCESSING | An order has been created and provisioning is ongoing |
 | COMPLETED | The order has successfully completed |
+
+Note that if a provisioning of an order fails, the status of the corresponding API request will still be _PROCESSING_.
+More information about API requests with status _PROCESSING_ can be retrieved by querying the [Orders](orders.md) resource using
+the _orderid_ corresponding to the API request.
 
 Batches will be automatically removed after 60 days.
 
