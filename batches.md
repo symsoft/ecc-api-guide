@@ -2,42 +2,48 @@
 Batches are a ECC feature that provides the possibility to send multiple API requests in a single HTTP request.
 
 Examples of situations when you might want to use batching:
-  * Block multiple subscriptions in one request
-  * Remove and add services for a subscription(s) in one and the same request
+  * Block or de-block multiple subscriptions
+  * Perform multiple API requests, that are logically connected, on a specific subscription.
 
-In each case, instead of sending each call separately, you can group them together into a single HTTP request. You can even group requests for multiple subscriptions.
+If a batch contains multiple API requests related to the same subscription, these specific API requests will be done sequentially in
+the order they appear in the batch. For example, if a batch contains two API requests for a specific subscription the second API request
+will not be performed until the first request has completed.
 
-You are limited to 100 calls in a single batch request. If you need to make more calls than that, use multiple batch requests.
+A batch can contain a maximum of 100 API requests.
 
-It introduces a new Batches resource that provides an API to create and get status of a batch resource. A batch resource has the following properties:
-  * Id
-  * Status [Submitted, Completed]
-  * Submitted timestamp
-  * Total number of API calls with state=Completed
-  * Duration from start to latest Completed API call
-  * List of API calls
+When a batch is created it will be given an unique _batch id_ which later can be used to query the status of the batch.
 
-The list of API calls is an ordered list where each entry will started in the same order as in the list. Batch adds meta data to each API call:
-* orderId
-* Status [Not Submitted, Submitted, Completed]
-* statusChangedTS : timestamp for latest status change
+A batch can have one of the following statuses:
 
-The life-cycle of a batch is simple:
-  1.Create a batch with POST .../batches with list of API calls in the body.
-  2. ECC API responds with 202 Accepted, the batch resource properties and the API call list where two fields have been added to each call:
-    * orderId: see Order chapter. "orderId": will have -1 in the response to POST, because the order has not yet been created yet.
-    * Status: Not Submitted
+| Status | Description |
+| ---------- | ----------- |
+| INITIALISING | The batch and the contained API requests are being verified |
+| PROCESSING | API requests are being processed, i.e. provisioning orders are being created |
+| COMPLETED | Orders for all API requests have completed |
+| PARTIAL_COMPLETED | Orders for all valid requests have completed, but there exist some API requests that have status REJECTED or FAILED |
 
-  3. Get batch status with GET /batches/batchId:17
-  4. ECC API responds with 200 OK, the batch properties and the API call list with updates orderId and status [Not Submitted, Submitted, Completed]
-  5. When the batch is completed, all API Calls have status Completed, then ECC API notifies the client with Batch completed event that contains the batchId.
-  6. The batch job will be stored for 60 days and will then be deleted.
+When a batch is completed, or partial completed, an event will be generated which can be retrieved via the [events](events.md) resource.
+Note that an individual API request, contained in the batch, will also generate an _order complete_ event when the corresponding order has completed.
+This _order complete_ event will contain the _batch id_ corresponding to the batch that contained the API request.
 
-Note that the ECC API will generate an order-completed event per API call in the batch and these events contains both the OrderId and the BatchId.
+Each API request contained in a batch will have one of the following statuses:
+
+| Status | Description |
+| ---------- | ----------- |
+| APPROVED | API request is approved, but no order has been created yet |
+| REJECTED | API request is rejected. e.g due to formatting error |
+| FAILED | No order could be created for the request, e.g. due to that the subscription was not found |
+| PROCESSING | An order has been created and provisioning is ongoing |
+| COMPLETED | The order has successfully completed |
+
+Batches will be automatically removed after 60 days.
+
 
 #### Submit a batch
 A new Batch is created by issuing a POST request on the _/ecc/v1/batches_ path. The _requests_ parameter shall contain an
-array of API requests that will be executed.
+array of API requests that will be executed. Each API request may also, optionally, contain a _requestid_ parameter carrying an identifier
+for the specific API request. This identifier can be used by the ECC API user to correlate API requests when retrieving information about a
+batch, see [Get information about a batch](#get-information-about-a-batch)
 
 The following API requests are supported in a Batch request:
 
@@ -139,30 +145,12 @@ Content-Length: XXX
 #### Get information about a batch
 Information about a previously submitted batch can be retrieved by issuing a GET request on the _/ecc/v1/batches/{batchid}_ path.
 
-The response contains information about the batch as well as information about each individual request in the batch.
+The response contains information about the batch as well as information about each individual API request in the batch.
 
-The _status_ parameter for the batch indicates the status of the batch. The following values are possible:
+The _status_ parameter for the batch indicates the status of the batch.
 
-| Status value | Description |
-| ---------- | ----------- |
-| INITIALISING | The batch and the contained requests are being verified |
-| PROCESSING | Requests are being processed |
-| COMPLETED | Orders for all requests have completed |
-| PARTIAL_COMPLETED | Orders for all valid requests have completed, but there exist some requests that have status REJECTED or FAILED |
-
-For each valid request in the batch an order will be created and the corresponding order id will be given for the request.
-Each request will also have a status and the following values are possible:
-
-| Status value | Description |
-| ---------- | ----------- |
-| APPROVED | Request is approved, but no order has been created yet |
-| REJECTED | Request is rejected. e.g due to formatting error |
-| FAILED | No order could be created for the request, e.g. due to that the subscription was not found |
-| PROCESSING | An order has been created and provisioning is ongoing |
-| COMPLETED | The order has successfully completed |
-
-Please note that if provisioning fails the request status will still be PROCESSING. The status of an order can be
-checked by issuing a request using the order end-point with the order id corresponding to the request. Provisioning failures
+Please note that if a provisioning order fails the request status will still be PROCESSING. The status of an order can be
+checked by issuing a request using the [orders](orders.md) end-point with the order id corresponding to the request. Provisioning failures
  requires manual intervention in order to resolve.
 
 __Example Request:__
