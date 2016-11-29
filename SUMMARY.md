@@ -6,7 +6,7 @@
    * [Authentication](authentication.md)
    * [Orders](orders.md)
    * [Events](events.md)
-   * [Batch](batch.md)
+   * [Batch Requests](batches.md)
    * [Payload](payload.md)
    * [Parameters](parameters.md)
    * [Data Formats](data_formats.md)
