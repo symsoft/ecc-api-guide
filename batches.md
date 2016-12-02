@@ -20,12 +20,12 @@ A batch can have one of the following statuses:
 | INITIALISING | The batch and the contained API requests are being verified |
 | PROCESSING | API requests are being processed, i.e. provisioning orders are being created |
 | COMPLETED | Orders for all API requests have completed |
-| PARTIAL_COMPLETED | Orders for all valid requests have completed, but there exist some API requests that have status REJECTED or FAILED |
+| PARTIALLY_COMPLETED | Orders for all valid requests have completed, but there exist some API requests that have status REJECTED or FAILED |
 
 Note that if a provisioning order, corresponding to an API request in the batch, does not complete (due to e.g provisioning failure)
  then the batch will remain in state _PROCESSING_.
 
-When a batch is completed, or partial completed, an event will be generated which can be retrieved via the [events](events.md) resource.
+When a batch is completed, or partially completed, an event will be generated which can be retrieved via the [events](events.md) resource.
 Note that an individual API request, contained in the batch, will also generate an _order complete_ event when the corresponding order has completed.
 This _order complete_ event will contain the _batch id_ corresponding to the batch that contained the API request.
 
