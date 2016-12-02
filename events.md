@@ -183,7 +183,7 @@ Description of Orders Events additional Properties
 |------------|--------|
 |orderid | Order Id|
 |batchid | Optional Batch Id, if the order was created as part of an API request submitted in a batch|
-|status | Status of the finished order. Completed or Canceled|
+|status | Status of the finished order. Completed|
 
 __Sample Batch Event:__
 
@@ -202,7 +202,7 @@ Description of Orders Events additional Properties
 | Name | Description |
 |------------|--------|
 |batchid | Batch Id|
-|status | Status of the finished batch. Completed or Partial_Completed|
+|status | Status of the finished batch. Processing, Completed or Partially_Completed|
 
 
 
