@@ -105,7 +105,8 @@ __Sample Network-Change Event:__
      "time" : ""2016-03-10T08:22:481Z" 
      "msisdn" : "4670312345"
      "iccid" : "89461177710001700003"
-     "mcc-mnc" : "240006"
+     "mcc" : "240"
+     "mnc" : "006"
      "domain" : "cs"        
 }
 {     
@@ -113,7 +114,8 @@ __Sample Network-Change Event:__
      "time" : ""2016-03-10T08:22:132Z"
      "msisdn" : "4670312345"
      "iccid" : "89461177710001700003"
-     "mcc-mnc" : "240006"
+     "mcc" : "240"
+     "mnc" :"006"
      "domain" : "ps"
 }
 ```
@@ -122,7 +124,8 @@ Description of Network-Change Event additional Properties
 
 | Name | Description |
 |------------|--------|
-|mcc-mnc | This parameter represents the value of the MCC-MNC the subscription attach to|
+|mcc| This parameter represents the value of the MCC the subscription attach to| 
+|mnc| This parameter represents the value of the MNC the subscription attach to|
 |domain | String identifying the type of network the subscription attached to may be "cs", "ps" or "eps"|
 
 
