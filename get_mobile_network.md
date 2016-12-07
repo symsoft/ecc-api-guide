@@ -8,6 +8,7 @@ On succes, the response contains the following information
 - **eps-node**: mme address. E.214 Mobile Global Title or host and realm
 - **mcc**: Mobile Country Code
 - **mnc**: Mobile Network Code
+
 __Example Command:__
 ```
 curl --header "Accept: application/json" \
