@@ -6,8 +6,8 @@ On succes, the response contains the following information
 - **cs-node**: msc/vlr E.214 global title address
 - **ps-node**: sgsn address. E.214 Mobile Global Title or host and realm
 - **eps-node**: mme address. E.214 Mobile Global Title or host and realm
-- **mccmnc**: Mobile Country Code and Mobile Network Code
-
+- **mcc**: Mobile Country Code
+- **mnc**: Mobile Network Code
 __Example Command:__
 ```
 curl --header "Accept: application/json" \
@@ -36,7 +36,8 @@ Content-Length: 121
   "cs-node" : "4828132801",
   "ps-node" : { "number" : "4828130051"},
   "eps-node" : "host" : "mms-1", "realm" : "epc.mnc001.mcc244.3gppnetwork.org"
-  "mccmnc" : "24401"
+  "mcc" : "244"
+  "mnc": "001"
   ]
 }
 ```
