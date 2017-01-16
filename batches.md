@@ -2,12 +2,14 @@
 Batches are a ECC feature that provides the possibility to send multiple API requests in a single HTTP request.
 
 Examples of situations when you might want to use batching:
-  * Block or de-block multiple subscriptions
+  * Block or de-block multiple different subscriptions.
   * Perform multiple API requests, that are logically connected, on a specific subscription.
+
+The first one is of batch type _single_ and if batch type is not defined in the call then the batch type _single_ is default.
 
 If a batch contains multiple API requests related to the same subscription, these specific API requests will be done sequentially in
 the order they appear in the batch. For example, if a batch contains two API requests for a specific subscription the second API request
-will not be performed until the first request has completed.
+will not be performed until the first request has completed. This type of batch request is called _multi_.
 
 A batch can contain a maximum of 100 API requests.
 
@@ -63,11 +65,12 @@ The following API requests are supported in a Batch request:
 | Withdraw a service | DELETE | subscriptions/{type}:{id}/services |
 | Modify a service | PATCH | subscriptions/{type}:{id}/services |
 
-If the batch contains multiple requests affecting the same subscription, these requests will be handled sequentially in the
-order they appear in the list. This means that a subsequent request will not be handled until all earlier requests in the list, for the same
- subscription, have successfully completed.
+If the batch is of type _multi_ it contains multiple requests affecting the same subscription, these requests will be handled sequentially in the
+order they appear in the list. This means that a subsequent request will not be handled until all earlier requests in the list, for the same subscription, have successfully completed.
 
-__Example Request:__
+Note, that all requests must provide _iccid_ when batch type is _multi_ to be valid.
+
+__Example of type _single_ Request:__
 ```
 POST /ecc/v1/batches HTTP/1.1
 Host: 172.16.20.14:8081
@@ -78,6 +81,7 @@ Content-Type: application/json
 Content-Length: XXX
 
 {
+    "type": "single",
     "requests": [
       {
         "method": "POST",
