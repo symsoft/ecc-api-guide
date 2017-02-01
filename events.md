@@ -30,7 +30,8 @@ The following are the events that are logged
 | device-change | The device, IMEI or SV parameter, has changed for the Subscription |
 | network-change | The device has attached to a new mobile network |
 | state-change | The Subscription state has changed|
-| order | An order has finished|
+| order | An order has completed|
+| batch | A batch has completed|
 
 
 Description of Events general Properties
@@ -39,9 +40,9 @@ Description of Events general Properties
 |------------|--------|
 |sequence-number | Sequnce Number for this Event|
 |time | Timestamp when the event happend|
-|iccid| The ICCID of the Subscription that this events relates to|
-|msisdn| The MSISDN of the Subscription that this events relates to|
-|imsi| The active IMSI of the Subscription that this events relates to|
+|iccid| The ICCID of the Subscription that this events relates to. Not relevant for batch events.|
+|msisdn| The MSISDN of the Subscription that this events relates to. Not relevant for batch events.|
+|imsi| The active IMSI of the Subscription that this events relates to. Not relevant for batch events.|
 
 __Example Request:__
 ```
@@ -158,10 +159,42 @@ __Sample Order Event:__
 ```
 "events": [
 {
+     "sequence-number" : 1002,
+     "msisdn" : "4670312345",
+     "iccid" : "89461177710001700003",
+     "orderid" : "10032",
+     "status" : "completed",
+     "time" : ""2016-03-10 08:22:13"     
+},
+{
+     "sequence-number" : 1003,
+     "msisdn" : "4670312346",
+     "iccid" : "89461177710001700004",
+     "orderid" : "10033",
+     "batchid" : "f81d4fae-7dec-11d0-a765-00a0c91e6bf6",
+     "status" : "completed",
+     "time" : ""2016-03-10 08:22:13"     
+}
+```
+
+Note that order events related to requests submitted in a batch also contains the _batchid_ parameter.
+
+
+Description of Orders Events additional Properties
+
+| Name | Description |
+|------------|--------|
+|orderid | Order Id|
+|batchid | Optional Batch Id, if the order was created as part of an API request submitted in a batch|
+|status | Status of the finished order. Completed|
+
+__Sample Batch Event:__
+
+```
+"events": [
+{
      "sequence-number" : 1002
-     "msisdn" : "4670312345"
-     "iccid" : "89461177710001700003"
-     "orderid" : "10032"
+     "batchid" : "f81d4fae-7dec-11d0-a765-00a0c91e6bf6"
      "status" : "completed"
      "time" : ""2016-03-10 08:22:13"     
 }
@@ -171,8 +204,9 @@ Description of Orders Events additional Properties
 
 | Name | Description |
 |------------|--------|
-|orderid | Order Id|
-|status | Status of the finished order. Completed or Canceled|
+|batchid | Batch Id|
+|status | Status of the finished batch. Processing, Completed or Partially_Completed|
+
 
 
 
