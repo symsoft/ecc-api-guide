@@ -22,6 +22,7 @@
    * [Change SIM](change_sim.md)
    * [Block - Unblock](block_unblock.md)
    * [Change State](change_state.md)
+   * [Change ODB profile](change_odb_profile.md)
    * [Assign a Service](assign_a_service.md)
    * [Get Service details](get_service_details.md)
    * [List assigned Services with usage details](list_assigned_services_with_usage_details.md)
