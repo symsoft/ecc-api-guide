@@ -1,4 +1,4 @@
-### Change State
+### Change ODB Profile
 
 Change the ODB (Operator Determined Barring) profile  of a Subscription by issue a PATCH request on the _/ecc/v1/subscriptions/{type}:{id}_ path. The body of the request shall include the desired ODB profile identifier. The valid set of ODB profile identifiers are defined as part of the onboarding process.
 
