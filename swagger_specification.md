@@ -1161,9 +1161,9 @@ The formal ECC API specification in [OpenAPI](https://github.com/OAI/OpenAPI-Spe
                     "type": "string"
                 },
                 "odb-profile": {
-                    "example": "1",
                     "description": "The new ODB profile",
-                    "type": "string"
+                    "type": "integer",
+                    "format": "int32"
                 },
                 "iccid": {
                     "example": "89461177710001700003",
@@ -1375,9 +1375,9 @@ The formal ECC API specification in [OpenAPI](https://github.com/OAI/OpenAPI-Spe
                     "type": "boolean"
                 },
                 "odb-profile": {
-                    "example": "1",
                     "description": "The new ODB profile",
-                    "type": "string"
+                    "type": "integer",
+                    "format": "int32"
                 },
                 "iccid": {
                     "example": "89461177710001700003",
