@@ -134,20 +134,27 @@ Content-Length: XXX
   "status": "INITIALIZING",
   {
     "requestid": "127322",
-    "status": "APPROVED"
+    "status": "APPROVED",
+	"info": null,
+	"orderid": null
   },
   {
     "requestid": "127323",
-    "status": "APPROVED"
+    "status": "APPROVED",
+	"info": null,
+	"orderid": null
   },
   {
     "requestid": "127324",
-    "status": "APPROVED"
+    "status": "APPROVED",
+	"info": null,
+	"orderid": null
   },
   {
     "requestid": "127325",
     "status": "REJECTED",
-    "info": "Missing id parameter in body"
+    "info": "Missing id parameter in body",
+	"orderid": null
   }
 }
 
@@ -188,21 +195,24 @@ Content-Length: XXX
       {
         "requestid": "127322",
         "orderid": 23901,
-        "status": "PROCESSING"
+        "status": "PROCESSING",
+		"info": null
       },
       {
         "requestid": "127323",
         "orderid": 23902,
-        "status": "COMPLETED"
-        "completiondate": "2017-01-01T12:00:37.87+00:20"
+        "status": "COMPLETED",
+		"info": null
       },
       {
         "requestid": "127323",
+		"orderid": null,
         "status": "FAILED",
         "info": "Subscription not found"
       },
       {
         "requestid": "127325",
+		"orderid": null,
         "status": "REJECTED",
         "info": "Missing id parameter in body"
       }
