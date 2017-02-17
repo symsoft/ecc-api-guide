@@ -132,30 +132,32 @@ Content-Length: XXX
   "batchid": "f81d4fae-7dec-11d0-a765-00a0c91e6bf6",
   "creationdate": "2017-01-01T12:00:27.87+00:20"
   "status": "INITIALIZING",
-  {
-    "requestid": "127322",
-    "status": "APPROVED",
-	"info": null,
-	"orderid": null
-  },
-  {
-    "requestid": "127323",
-    "status": "APPROVED",
-	"info": null,
-	"orderid": null
-  },
-  {
-    "requestid": "127324",
-    "status": "APPROVED",
-	"info": null,
-	"orderid": null
-  },
-  {
-    "requestid": "127325",
-    "status": "REJECTED",
-    "info": "Missing id parameter in body",
-	"orderid": null
-  }
+  "requests": [
+      {
+        "requestid": "127322",
+        "status": "APPROVED",
+	    "info": null,
+	    "orderid": null
+      },
+      {
+        "requestid": "127323",
+        "status": "APPROVED",
+	    "info": null,
+	    "orderid": null
+      },
+      {
+        "requestid": "127324",
+        "status": "APPROVED",
+	    "info": null,
+	    "orderid": null
+      },
+      {
+        "requestid": "127325",
+        "status": "REJECTED",
+        "info": "Missing id parameter in body",
+	    "orderid": null
+      }
+  ]
 }
 
 ```
