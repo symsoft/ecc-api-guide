@@ -1705,6 +1705,16 @@ The formal ECC API specification in [OpenAPI](https://github.com/OAI/OpenAPI-Spe
                     "format": "int32",
                     "example": 1
                 },
+                "static-ip": {
+                    "type": "string",
+                    "description": "Static IP for the subscription",
+                    "example": "192.168.10.11"
+                },
+                "a2p-voice-app-key": {
+                    "type": "string",
+                    "description": "A2P voice application key",
+                    "example": "appkey"
+                },
                 "iccid": {
                     "type": "string",
                     "description": "The ICCID identifying the SIM used by the Subscription",
