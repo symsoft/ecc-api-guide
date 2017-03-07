@@ -1,4 +1,4 @@
-### Change ODB Profile
+### Change Static IP
 
 Change the static IP assigned to the  Subscription by issue a PATCH request on the _/ecc/v1/subscriptions/{type}:{id}_ path. The body of the request shall include the desired static IP. Note that this feature is only applicable for subscriptions that have been enabled for static IP as part of the onboarding process.
 
