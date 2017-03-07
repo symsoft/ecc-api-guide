@@ -1,4 +1,4 @@
-### Change ODB Profile
+### Change A2P Voice Application Key
 
 Change the A2P Voice Application Key  assigned to the  Subscription by issue a PATCH request on the _/ecc/v1/subscriptions/{type}:{id}_ path. The body of the request shall include the desired application key. Note that this feature is only applicable for subscriptions that have been enabled for A2P Voice support as part of the onboarding process.
 This property can also be supplied when creating a subscription.
