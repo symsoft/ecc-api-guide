@@ -23,6 +23,8 @@
    * [Block - Unblock](block_unblock.md)
    * [Change State](change_state.md)
    * [Change ODB profile](change_odb_profile.md)
+   * [Change static IP](change_static_ip.md)
+   * [Change A2P Voice Application Key](change_a2p_voice_app_key.md)
    * [Assign a Service](assign_a_service.md)
    * [Get Service details](get_service_details.md)
    * [List assigned Services with usage details](list_assigned_services_with_usage_details.md)
