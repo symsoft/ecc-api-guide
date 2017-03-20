@@ -22,7 +22,9 @@ The following capabillities are available and identified by _[sid](parameters.md
 ####Supplementary services
 The following supplementary services are available and identified by _[sid](parameters.md#msid)_ "cfu", "cfb", "cfnr", "cfnrc", "clip", "clir" and "mpty".
 
-For the call-forwarding supplementarty services "cfu", "cfb", "cfnr" and "cfnrc" an additional parameter "forward-number" is available.
+For the call-forwarding supplementary services "cfu", "cfb", "cfnr" and "cfnrc" an additional parameter "forward-number" is available.
+
+For the "clir" supplementary service an additional parameter, "mode", is available. The "mode" parameter can have two values: "permanent" or "temp-allowed".
 
 The following service section allows a subscription to use voice and sms and has the supplementary service call-forwarding-not- reachable (cfnrc) and calling-line-identification-restriction(clir) activated: 
 ```
@@ -38,7 +40,9 @@ The following service section allows a subscription to use voice and sms and has
     "id" : "cfnrc",
     "forward-number" : "4670123123123"
   }, {
-    "id" : "clir"}]
+    "id" : "clir",
+    "mode" : "permanent"
+  }]
 }
 ```
 #### Bucket and Recurring Bucket
