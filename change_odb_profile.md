@@ -41,3 +41,28 @@ Content-Length: 26
   ]
 }
 ```
+#### Available ODB profiles
+An ODB profile restricts the subscriber possibility to initiate and/or receive calls and SMS when roaming and is managed by the ECC tenant via the ECC API (see above). 
+
+The ODB profile has the following attributes:
+* Id: the identity of the profile used in the ECC API.
+* Description: described the ODB profile
+* Home country: defines the home country, where the barring shall __not__ apply
+* Home PLMNId: MCC or MCC/MNC corresponds to home country.
+* ODB setting: enabled ODB rules.
+
+The ODB profile applies on all countries/networks __except__ the home country/network (i.e. HPLMN or EHPLMN)
+
+ECC has implemented the ODB profiles listed in the table below. 
+
+| ODB profile id  | Slogan                                                  | (E)HPLMN  | ODB description        |
+|-----------------|---------------------------------------------------------|-----------|------------------------|
+| 0               | No barring                                              | *         | No barring, services allowed everywhere |
+| 1               | Bar Premium calls                                       | *         | Bar Outgoing-premium-rate-calls everywhere |
+| 10              | Bar Premium when roaming                                | 26001    | Bar Outgoing-premium-rate-calls (info + entertainment)  |
+| 11              | Bar all in- (MTC) and outgoing call (MOC) when roaming  | 26001    | Bar in- and outgoing calls  |
+| 12              | Bar all outgoing call (MOC) when roaming                | 26001    | Bar all outgoing call (MOC) |
+| 13              | Bar all incoming call (MTC) when roaming                | 26001   | Bar all incoming call (MTC)   |
+
+
+The profiles 1 and 2 are valid for all networks. Select profile 1 when all voice and sms services are allowed on all networks. Profile 2 will bar premium services in all networks.
