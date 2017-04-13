@@ -1,21 +1,24 @@
 ### Get Mobile Network information
 
-Mobile Network information, such as which mobile network a device is attached to can be retrieved by issuing a GET request on the _/ecc/v1/subscriptions/{type}:{id}/mobile-network_ path.
-On succes, the response contains the following information
-- **imsi**: current used imsi
-- **cs-node**: msc/vlr E.214 global title address
-- **ps-node**: sgsn address. E.214 Mobile Global Title or host and realm
-- **eps-node**: mme address. E.214 Mobile Global Title or host and realm
-- **mcc**: Mobile Country Code
-- **mnc**: Mobile Network Code
+Mobile Network information, such as which mobile network a device is attached to can be retrieved by issuing a GET request on the _/ecc/v1/subscriptions/{type}:{id}/mobile-network_ path.  
+On success, the response contains the following information:
 
-__Example Command:__
+* **imsi**: current used imsi
+* **cs-node**: msc/vlr E.214 global title address
+* **ps-node**: sgsn address. E.214 Mobile Global Title or host and realm
+* **eps-node**: mme address. E.214 Mobile Global Title or host and realm
+* **mcc**: Mobile Country Code
+* **mnc**: Mobile Network Code
+
+**Example Command:**
+
 ```
 curl --header "Accept: application/json" \
  https://user:password@172.16.20.14:8081/ecc/v1/subscriptions/msisdn:46708421488/mobile-network
 ```
 
-__Example Request:__
+**Example Request:**
+
 ```
 GET /ecc/v1/subscriptions/msisdn:46708421488/mobile-network HTTP/1.1
 Host: 172.16.20.14:8081
@@ -24,7 +27,8 @@ User-Agent: curl/7.43.0
 Accept: application/json
 ```
 
-__Example Response:__
+**Example Response:**
+
 ```
 HTTP/1.1 200 OK
 Server: Nobill/5.3.0
@@ -42,3 +46,6 @@ Content-Length: 121
   ]
 }
 ```
+
+
+
