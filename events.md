@@ -54,6 +54,7 @@ The following are the events that are logged
 | Event Type | Description |
 | --- | --- |
 | threshold | A threshold value has been passed for service |
+| expiration | A service has expired and is invalid |
 | device-change | The device, IMEI or SV parameter, has changed for the Subscription |
 | network-change | The device has attached to a new mobile network |
 | state-change | The Subscription state has changed |
@@ -122,7 +123,27 @@ Description of Threshold Events additional Properties
 | --- | --- |
 | service | A string identifying the Service Id for which this threshold was reached |
 | threshold | A string identifing the Threshold |
-| value | The usage value for this service oject |
+| value | The usage value for this service object |
+
+**Sample Expiration Event**
+```
+"events": [
+{
+     "sequence-number" : 1142
+     "time" : "2016-03-10T08:22:481Z" 
+     "msisdn" : "4670312345"
+     "iccid" : "89461177710001700003"
+     "service" : "500-SMS"
+	 "value" : "43"
+}
+```
+
+Description of Expiration Events additional Properties
+
+| Name | Description |
+| --- | --- |
+| service | A string identifying the Service Id for which this threshold was reached |
+| value | The usage value for this service object |
 
 **Sample Network-Change Event:**
 
@@ -130,7 +151,7 @@ Description of Threshold Events additional Properties
 "events": [
 {
      "sequence-number" : 99
-     "time" : ""2016-03-10T08:22:481Z" 
+     "time" : "2016-03-10T08:22:481Z" 
      "msisdn" : "4670312345"
      "iccid" : "89461177710001700003"
      "mcc" : "240"
