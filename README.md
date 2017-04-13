@@ -4,13 +4,7 @@ Welcome to the ECC API. This book is here to help you getting started with the E
 
 The Enterprise Communications Cloud \(ECC\) is a platform from Symsoft AB that provides Mobile Subscription as a Service.
 
-The ECC REST API enables you to manage the subscriptions and its capabilities on mobile networks.
-
----
-
-_**The ECC API is currently in Developer Preview. Some APIs may change before general availability.**_
-
----
+The ECC REST API enables you to manage the subscriptions and its capabilities on mobile networks. 
 
 ### About this book
 

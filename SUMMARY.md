@@ -32,7 +32,8 @@
   * [Withdraw a specific Service instance](withdraw_a_specific_service_instance.md)
   * [Modify a Service](modify_service.md)
   * [Delete a Subscription](delete_subscription.md)
-  * [Get mobile network](get_mobile_network.md)
+  * [Mobile network information](get_mobile_network.md)
+  * [Get IMEI](get-imei.md)
 * [API Specification](swagger_specification.md)
 * [API change history](api_change_history.md)
   * [0.4.0 to 0.5.0](040_to_050.md)
@@ -40,5 +41,6 @@
   * [0.6.0 to 0.7.0](060_to_070.md)
   * [0.7.0 to 0.8.0](070_to_080.md)
   * [0.8.0 to 0.9.0](080-to-090.md)
+  * [0.9.0 to 1.0.0](090-to-100.md)
 * [Apache License](license.md)
 
