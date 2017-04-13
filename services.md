@@ -99,4 +99,12 @@ The service below is a recurring voice service. Reset at the 1st day of each mon
     "reset_date": "2016-03-01T00:00:00+0000"
   } ]
 }
+
 ```
+#### Service Units
+The following units are used:
+* Data in bytes
+* Voice in seconds
+* SMS in number of SMS
+
+
