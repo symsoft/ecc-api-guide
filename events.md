@@ -52,7 +52,7 @@ Description of Events general Properties
 
 | Name | Description |
 | --- | --- |
-| sequence-number | Sequnce Number for this Event |
+| sequence-number | Sequence Number for this Event-Type |
 | time | Timestamp when the event happend |
 | iccid | The ICCID of the Subscription that this events relates to. Not relevant for batch events. |
 | msisdn | The MSISDN of the Subscription that this events relates to. Not relevant for batch events. |
@@ -118,6 +118,7 @@ Description of Threshold Events additional Properties
 | value | The usage value for this service object |
 
 **Sample Expiration Event**
+
 ```
 "events": [
 {
@@ -138,6 +139,29 @@ Description of Expiration Events additional Properties
 | --- | --- |
 | service | A string identifying the Service Id for which this threshold was reached |
 | value | The usage value for this service object |
+
+**Sample Device-Change Event**
+
+```
+"events": [
+{
+     "sequence-number" : 2182,
+     "time" : "2016-03-11T08:27:481Z", 
+     "msisdn" : "4670312345",
+     "iccid" : "89461177710001700003",
+     "imei" : "490154203237518"
+     "sv" : "23",
+     "type" : "DeviceChangeEventInfo"
+
+}
+```
+
+Description of Device-Change Events additional Properties
+
+| Name | Description |
+| :--- | :--- |
+| imei | A string identifying the International Mobile Equipment Identity \(IMEI\). |
+| sv | A string identifying the IMEI software version. |
 
 **Sample Network-Change Event:**
 
@@ -262,7 +286,7 @@ Date: Thu, 10 Mar 2016 09:52:43 GMT
 Content-Length: 0
 ```
 
-The client can check for updates by performing the same request again, including an If-None-Match header containing   
+The client can check for updates by performing the same request again, including an If-None-Match header containing  
 the value of the ETag header received in the previous response from the server
 
 ```
