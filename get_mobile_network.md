@@ -47,5 +47,5 @@ Content-Length: 121
 }
 ```
 
-
+The mcc/mnc can be mapped to Country and Operator using eg http://mcc-mnc.com.
 
