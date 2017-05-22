@@ -37,14 +37,14 @@ The `first-element` parameter can be used to list events starting from a specifi
 
 ```
 curl --header "Accept: application/json" \
- https://user:password@172.16.20.14:8081/ecc/v1/subscriptions/events/{event-type}?long-polling=30
+ https://user:password@172.16.20.14:8081/ecc/v1/events/{event-type}?long-polling=30
 ```
 
 **Example Command To List 50 Events Starting With Element 1000:**
 
 ```
 curl --header "Accept: application/json" \
- https://user:password@172.16.20.14:8081/ecc/v1/subscriptions/events/{event-type}?limit=50&first-element=1000
+ https://user:password@172.16.20.14:8081/ecc/v1/events/{event-type}?limit=50&first-element=1000
 ```
 
 #### Event-Type
@@ -149,7 +149,7 @@ Description of Threshold Events additional Properties
      "mcc" : "240",
      "mnc" :"006",
      "domain" : "ps",
-     "type" : "NetworkChangeEventInfo",
+     "type" : "NetworkChangeEventInfo"
 }
 ```
 
@@ -193,7 +193,8 @@ Description of State-Change Event additional Properties
      "iccid" : "89461177710001700003",
      "orderid" : "10032",
      "status" : "completed",
-     "time" : ""2016-03-10 08:22:13"     
+     "time" : "2016-03-10 08:22:13",
+     "type" : "OrderEventInfo"     
 },
 {
      "sequence-number" : 1003,
@@ -202,7 +203,8 @@ Description of State-Change Event additional Properties
      "orderid" : "10033",
      "batchid" : "f81d4fae-7dec-11d0-a765-00a0c91e6bf6",
      "status" : "completed",
-     "time" : ""2016-03-10 08:22:13"     
+     "time" : "2016-03-10 08:22:13",
+     "type" : "OrderEventInfo
 }
 ```
 
@@ -224,7 +226,8 @@ Description of Orders Events additional Properties
      "sequence-number" : 1002
      "batchid" : "f81d4fae-7dec-11d0-a765-00a0c91e6bf6"
      "status" : "completed"
-     "time" : ""2016-03-10 08:22:13"     
+     "time" : "2016-03-10 08:22:13",
+     "type" : "BatchEventInfo"     
 }
 ```
 
@@ -249,7 +252,7 @@ The client can check for updates by performing the same request again, including
 the value of the ETag header received in the previous response from the server
 
 ```
-GET /ecc/v1/subscriptions/event/threshold HTTP/1.1
+GET /ecc/v1/event/threshold HTTP/1.1
 If-None-Match: "d3b11ce788cc203b8175af70cf8fbb41"
 Host: 172.16.20.14:8081
 Authorization: Basic c3VwZXI6c3VwZX=I
