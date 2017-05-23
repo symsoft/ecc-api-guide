@@ -201,7 +201,7 @@ Description of State-Change Event additional Properties
 }
 ```
 
-Note that order events related to requests submitted in a batch also contains the _batchid_ parameter.
+Note that order events related to requests submitted in a batch also contains the _batchid_ and _requestid_ parameters.
 
 Description of Orders Events additional Properties
 
@@ -210,7 +210,7 @@ Description of Orders Events additional Properties
 | orderid | Order Id |
 | batchid | Optional Batch Id, if the order was created as part of an API request submitted in a batch |
 | status | Status of the finished order. Completed |
-| requestid | Optional request id if the order was created as part of an API request submitted in a batch and a request id was included in the batch requst |
+| requestid | Optional request id, if the order was created as part of an API request submitted in a batch and a request id was included in the batch request. |
 
 **Sample Batch Event:**
 
