@@ -2,7 +2,8 @@
 
 Some service attributes, such as _forward-number_ for supplementary-service and _limit_ for reccuring-bucket can be changed by issue a PATCH request on the _/ecc/v1/subscriptions/{type}:{id}/services/{sid}_ path. The body of the request shall include the attribute to change.
 
-__Example Command:__
+**Example Command:**
+
 ```
 curl --request PATCH \
  --data '{"forward-number" : "467012312345"}' \
@@ -11,7 +12,8 @@ curl --request PATCH \
  https://user:password@172.16.20.14:8081/ecc/v1/subscriptions/msisdn:46708421488/subscriptions/cfnr
 ```
 
-__Example Request:__
+**Example Request:**
+
 ```
 PATCH /ecc/v1/subscriptions/msisdn:46708421488/services/cfnr HTTP/1.1
 Host: 172.16.20.14:8081
@@ -26,7 +28,8 @@ Content-Length: 61
 }
 ```
 
-__Example Response:__
+**Example Response:**
+
 ```
 HTTP/1.1 202 Accepted
 Server: Nobill/5.3.0
@@ -40,3 +43,6 @@ Content-Length: 26
   ]
 }
 ```
+
+
+

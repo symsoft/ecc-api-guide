@@ -103,7 +103,7 @@ The service below is a recurring voice service. Reset at the 1st day of each mon
 ```
 #### Service Units
 The following units are used:
-* Data in bytes
+* Data in kilobytes
 * Voice in seconds
 * SMS in number of SMS
 
