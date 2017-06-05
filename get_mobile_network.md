@@ -1,4 +1,4 @@
-### Get Mobile Network information
+### Mobile Network information
 
 Mobile Network information, such as which mobile network a device is attached to can be retrieved by issuing a GET request on the _/ecc/v1/subscriptions/{type}:{id}/mobile-network_ path.  
 On success, the response contains the following information:
@@ -47,5 +47,7 @@ Content-Length: 121
 }
 ```
 
-The mcc/mnc can be mapped to Country and Operator using eg http://mcc-mnc.com.
+The mcc/mnc can be mapped to Country and Operator using eg [http://mcc-mnc.com](http://mcc-mnc.com).
+
+Mobile network information can be deleted by issuing a DELETE request on the _/ecc/v1/subscriptions/{type}:{id}/mobile-network_ path. This triggers the HLR/HSS to send a Cancel Location.
 
