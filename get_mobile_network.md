@@ -51,3 +51,32 @@ The mcc/mnc can be mapped to Country and Operator using eg [http://mcc-mnc.com](
 
 Mobile network information can be deleted by issuing a DELETE request on the _/ecc/v1/subscriptions/{type}:{id}/mobile-network_ path. This triggers the HLR/HSS to send a Cancel Location. The Cancel Location will trigger IMSI detach followed by a IMSI attach on the device.
 
+**Example Command:**
+
+```
+curl --DELETE --header "Accept: application/json" \
+ https://user:password@172.16.20.14:8081/ecc/v1/subscriptions/msisdn:46708421488/mobile-network
+```
+
+**Example Request:**
+
+```
+DELETE /ecc/v1/subscriptions/msisdn:46708421488/mobile-network HTTP/1.1
+Host: 172.16.20.14:8081
+Authorization: Basic c3VwZXI6c3VwZXI=
+User-Agent: curl/7.43.0
+Accept: application/json
+```
+
+**Example Response:**
+
+```
+HTTP/1.1 200 OK
+Server: Nobill/5.3.0
+Content-Type: application/json;charset=UTF-8
+Date: Thu, 10 Mar 2016 09:52:43 GMT
+Content-Length: 0
+```
+
+
+
