@@ -5,6 +5,8 @@ On success, the response contains the following information:
 
 * imei: current device imei
 
+Note: the IMEI is not always available.
+
 **Example Command:**
 
 ```
@@ -35,8 +37,6 @@ Content-Length: 121
   "imei" : "356938035643809"
 }
 ```
-
-
 
 
 
