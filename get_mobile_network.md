@@ -54,7 +54,7 @@ Mobile network information can be deleted by issuing a DELETE request on the _/e
 **Example Command:**
 
 ```
-curl --DELETE --header "Accept: application/json" \
+curl --request DELETE --header "Accept: application/json" \
  https://user:password@172.16.20.14:8081/ecc/v1/subscriptions/msisdn:46708421488/mobile-network
 ```
 
