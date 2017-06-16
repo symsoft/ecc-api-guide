@@ -49,5 +49,5 @@ Content-Length: 121
 
 The mcc/mnc can be mapped to Country and Operator using eg [http://mcc-mnc.com](http://mcc-mnc.com).
 
-Mobile network information can be deleted by issuing a DELETE request on the _/ecc/v1/subscriptions/{type}:{id}/mobile-network_ path. This triggers the HLR/HSS to send a Cancel Location.
+Mobile network information can be deleted by issuing a DELETE request on the _/ecc/v1/subscriptions/{type}:{id}/mobile-network_ path. This triggers the HLR/HSS to send a Cancel Location. The Cancel Location will trigger IMSI detach followed by a IMSI attach on the device.
 
