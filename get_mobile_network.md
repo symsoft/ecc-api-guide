@@ -1,4 +1,4 @@
-### Mobile Network information
+### Mobile Network information \(incl Cancel Location\)
 
 Mobile Network information, such as which mobile network a device is attached to can be retrieved by issuing a GET request on the _/ecc/v1/subscriptions/{type}:{id}/mobile-network_ path.  
 On success, the response contains the following information:
