@@ -1,17 +1,19 @@
 ### Withdraw a Service
 
-A Service can be withdrawn from a Subscription by issuing a DELETE request on the _/ecc/v1/subscriptions/{type}:{id}/services/{sid}_ path. 
+A Service can be withdrawn from a Subscription by issuing a DELETE request on the _/ecc/v1/subscriptions/{type}:{id}/services/{sid}_ path.
 
-__Note__ If the service is of the *__bucket__* type all instances of the service will be withdrawn. </br> To remove a specific instance of a bucket type service the [Withraw a Service instance ](withdraw_a_specific_service_instance.md) should be used.
+**Note** If the service is of the _**bucket**_ type all instances of the service will be withdrawn. To remove a specific instance of a bucket type service the [Withraw a Service instance ](withdraw_a_specific_service_instance.md) should be used.
 
-__Example Command:__
+**Example Command:**
+
 ```
 curl -request DELETE \
  --header "Accept: application/json" \
  https://user:password@172.16.20.14:8081/ecc/v1/subscriptions/msisdn:46708421488/services/Data5G
 ```
 
-__Example Request:__
+**Example Request:**
+
 ```
 DELETE /ecc/v1/subscriptions/msisdn:46708421488/services/Data5G HTTP/1.1
 Host: 172.16.20.14:8081
@@ -20,7 +22,8 @@ User-Agent: curl/7.43.0
 Accept: application/json
 ```
 
-__Example Response:__
+**Example Response:**
+
 ```
 HTTP/1.1 202 Accepted
 Server: Nobill/5.3.0
@@ -33,4 +36,6 @@ Content-Length: 26
   ]
 }
 ```
+
+
 
