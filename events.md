@@ -52,7 +52,7 @@ Description of Events general Properties
 
 | Name | Description |
 | --- | --- |
-| sequence-number | Sequnce Number for this Event |
+| sequence-number | Sequence Number for this Event-Type |
 | time | Timestamp when the event happend |
 | iccid | The ICCID of the Subscription that this events relates to. Not relevant for batch events. |
 | msisdn | The MSISDN of the Subscription that this events relates to. Not relevant for batch events. |
@@ -161,7 +161,7 @@ Description of Device-Change Events additional Properties
 | Name | Description |
 | :--- | :--- |
 | imei | A string identifying the International Mobile Equipment Identity \(IMEI\). |
-| sv | A string identifying the software version. |
+| sv | A string identifying the IMEI software version. |
 
 **Sample Network-Change Event:**
 
