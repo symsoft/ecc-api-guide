@@ -37,13 +37,12 @@ Date: Thu, 10 Mar 2016 09:52:43 GMT
 Content-Length: 121
 
 {
-  "imsi": "244141000170000"
+  "imsi": "244141000170000",
   "cs-node" : "4828132801",
   "ps-node" : { "number" : "4828130051"},
-  "eps-node" : "host" : "mms-1", "realm" : "epc.mnc001.mcc244.3gppnetwork.org"
-  "mcc" : "244"
+  "eps-node" : { "host" : "mms-1", "realm" : "epc.mnc001.mcc244.3gppnetwork.org" },
+  "mcc" : "244",
   "mnc": "001"
-  ]
 }
 ```
 
