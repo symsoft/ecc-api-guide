@@ -1,4 +1,20 @@
 ## API change history
 
-The change log starts at version 0.4.0. Earlier versions where experimental and not distributed outside the Symsoft R&D lab. 
+## 1.1.1
+
+* Removed 'readOnly' properties from swagger definition
+
+## 1.1.0
+
+* Added support for specifying APN identifiers per subscription
+
+## 1.0.1
+
+* Added IMEI and SV to device-change event.
+
+## 1.0.0
+
+* Public release
+
+
 
