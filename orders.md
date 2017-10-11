@@ -1,18 +1,22 @@
 ### Orders
 
 Provisioning operations in the ECC API follow an asynchronous design. For the asynchronous operations the ECC API returns 202, Accepted and an orderId. 
+
 The ECC API only allows for one outstanding order per subscription and returns 409, Conflict if there is an outstanding order for a subscription.
 
-The Order resource provides an API to retreive status about these orders. 
+The Order resource provides an API to retreive status about these orders.
+
 The status for a specific provisioning operation can be checked by issuing a GET request on the _/ecc/v1/orders/{orderid}_ path.
 
-__Example Command:__
+**Example Command:**
+
 ```
 curl --header "Accept: application/json" \
  https://user:password@172.16.20.14:8081/ecc/v1/orders/10091
 ```
 
-__Example Request:__
+**Example Request:**
+
 ```
 GET /ecc/v1/orders/10091 HTTP/1.1
 Host: 172.16.20.14:8081
@@ -21,7 +25,8 @@ User-Agent: curl/7.43.0
 Accept: application/json
 ```
 
-__Example Response:__
+**Example Response:**
+
 ```
 HTTP/1.1 200 OK
 Server: Nobill/5.3.0
@@ -37,3 +42,20 @@ Content-Length: 102
   "completionDate": "2016-03-10T00:00:05Z"
 }
 ```
+
+#### Orders statuses
+
+An order may have one of the following statuses:
+
+| Status | Description |
+| --- | --- |
+| PROCESSING | An order has been created and provisioning is ongoing |
+| COMPLETED | The order has successfully completed |
+| CANCELED | The order has failed, no changes has been performed |
+
+
+
+
+
+
+
