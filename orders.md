@@ -43,5 +43,15 @@ Content-Length: 102
 }
 ```
 
+#### Orders statuses
+
+An order may have one of the following statuses:
+
+| Status | Description |
+| :--- | :--- |
+| PROCESSING | An order has been created and provisioning is ongoing |
+| COMPLETED | The order executed successfully |
+| CANCELED | The order has failed, no changes has been performed |
+
 
 
