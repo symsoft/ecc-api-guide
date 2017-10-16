@@ -253,8 +253,10 @@ Description of Orders Events additional Properties
 | --- | --- |
 | orderid | Order Id |
 | batchid | Optional Batch Id, if the order was created as part of an API request submitted in a batch |
-| status | Status of the order, can only be COMPLETED. |
+| status | Status of the order, either COMPLETED or CANCELED. |
 | requestid | Optional request id, if the order was created as part of an API request submitted in a batch and a request id was included in the batch request. |
+
+**NOTE:** The current API only uses the COMPLETED status, the CANCELED status will be introduced in a later release.
 
 **Sample Batch Event:**
 
@@ -263,7 +265,7 @@ Description of Orders Events additional Properties
 {
      "sequence-number" : 1002,
      "batchid" : "f81d4fae-7dec-11d0-a765-00a0c91e6bf6",
-     "status" : "completed",
+     "status" : "COMPLETED",
      "time" : "2016-03-10 08:22:13",
      "type" : "BatchEventInfo"     
 }
@@ -274,7 +276,7 @@ Description of Orders Events additional Properties
 | Name | Description |
 | --- | --- |
 | batchid | Batch Id |
-| status | Status of the finished batch. Processing, Completed or Partially\_Completed |
+| status | Status of the finished batch. Either COMPLETED or PARTIALLY\_COMPLETED |
 
 If no events occurs for the specified long-polling timeout, the server times out the request and responds with 304:
 
