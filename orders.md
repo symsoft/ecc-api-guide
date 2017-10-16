@@ -37,7 +37,7 @@ Content-Length: 102
   "orderId": 20144,
   "msisdn" : "4612312312",
   "iccid" : "89461177710001700003",
-  "status": "Completed",
+  "status": "COMPLETED",
   "orderDate": "2016-03-10T00:00:00Z",
   "completionDate": "2016-03-10T00:00:05Z"
 }
@@ -45,13 +45,30 @@ Content-Length: 102
 
 #### Orders statuses
 
-An order may have one of the following statuses:
+A provisioning order may have one of the following statuses:
 
 | Status | Description |
 | :--- | :--- |
-| PROCESSING | An order has been created and provisioning is ongoing |
 | COMPLETED | The order executed successfully |
-| CANCELED | The order has failed, no changes has been performed |
+| PROVISIONING | Provisioning is ongoing |
+| CANCELED | The order execution failed, please contact support for more information |
+
+**NOTE:** The current API may also use the following statues that are deprecated and will be removed in a later release.
+
+| Status | Description |
+| :--- | :--- |
+| ~~REGISTERED~~ | See PROVISIONING |
+| ~~APPROVED~~ | See PROVISIONING |
+| ~~REJECTED~~ | See PROVISIONING |
+| ~~FAILED~~ | See PROVISIONING |
+| ~~PENDING~~ | See PROVISIONING |
+| ~~PROVISIONING\_PENDING~~ | See PROVISIONING |
+| ~~PROVISIONING\_READY~~ | See PROVISIONING |
+| ~~PROVISIONING\_FAILED~~ | See PROVISIONING |
+| ~~PREREQUISITES\_PENDING~~ | See PROVISIONING |
+| ~~WAIT\_FOR\_PREREQUISITES\_READY~~ | See PROVISIONING |
+| ~~PREREQUISITES\_READY~~ | See PROVISIONING |
+| ~~PREREQUISITES\_FAILED~~ | See PROVISIONING |
 
 
 
