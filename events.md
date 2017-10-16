@@ -256,8 +256,6 @@ Description of Orders Events additional Properties
 | status | Status of the order, either COMPLETED or CANCELED. |
 | requestid | Optional request id, if the order was created as part of an API request submitted in a batch and a request id was included in the batch request. |
 
-**NOTE:** The current API only uses the COMPLETED status, the CANCELED status will be introduced in a later release.
-
 **Sample Batch Event:**
 
 ```
