@@ -51,7 +51,7 @@ A provisioning order may have one of the following statuses:
 | :--- | :--- |
 | COMPLETED | The order executed successfully |
 | PROVISIONING | Provisioning is ongoing |
-| CANCELED | The order execution failed, please contact support for more information |
+| CANCELED | The order execution was canceled, please contact support for more information |
 
 **NOTE:** The current API may also use the following statues that are deprecated and will be removed in a later release.
 
