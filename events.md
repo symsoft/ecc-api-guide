@@ -253,7 +253,7 @@ Description of Orders Events additional Properties
 | --- | --- |
 | orderid | Order Id |
 | batchid | Optional Batch Id, if the order was created as part of an API request submitted in a batch |
-| status | Status of the order, either COMPLETED or CANCELED. |
+| status | Status of the finished order, either COMPLETED or CANCELED. |
 | requestid | Optional request id, if the order was created as part of an API request submitted in a batch and a request id was included in the batch request. |
 
 **Sample Batch Event:**
@@ -269,7 +269,7 @@ Description of Orders Events additional Properties
 }
 ```
 
-Description of Orders Events additional Properties
+Description of Batch Events additional Properties
 
 | Name | Description |
 | --- | --- |

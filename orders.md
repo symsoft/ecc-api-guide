@@ -53,22 +53,5 @@ A provisioning order may have one of the following statuses:
 | PROVISIONING | Provisioning is ongoing |
 | CANCELED | The order execution was canceled, please contact support for more information |
 
-The following statues are deprecated in this version of the API.
-
-| Status | Description |
-| :--- | :--- |
-| REGISTERED | See PROVISIONING |
-| APPROVED | See PROVISIONING |
-| REJECTED | See PROVISIONING |
-| FAILED | See PROVISIONING |
-| PENDING | See PROVISIONING |
-| PROVISIONING\_PENDING | See PROVISIONING |
-| PROVISIONING\_READY | See PROVISIONING |
-| PROVISIONING\_FAILED | See PROVISIONING |
-| PREREQUISITES\_PENDING | See PROVISIONING |
-| WAIT\_FOR\_PREREQUISITES\_READY | See PROVISIONING |
-| PREREQUISITES\_READY | See PROVISIONING |
-| PREREQUISITES\_FAILED | See PROVISIONING |
-
 
 
