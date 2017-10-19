@@ -1,6 +1,8 @@
 ### Set APN identifiers
 
-Set the APN identifiers for a subscription by issue a PATCH request on the _/ecc/v1/subscriptions/{type}:{id}_ path. The body of the request shall include the desired APN identifiers. The valid set of APN identifiers are defined as part of the onboarding process.
+Set the APN identifiers for a subscription by issue a PATCH request on the _/ecc/v1/subscriptions/{type}:{id}_ path. The body of the request shall include the desired APN identifiers. The given APN identifiers will replace the currently set APN identifiers.
+
+The valid set of APN identifiers are defined as part of the onboarding process.
 
 The first id in the `apn-ids` list will be used as the default APN identifier.
 
