@@ -2,15 +2,6 @@
 
 Batches are a ECC feature that provides the possibility to send multiple API requests in a single HTTP request.
 
-Examples of situations when you might want to use batching:
-
-* Block or de-block multiple different subscriptions.
-* Perform multiple API requests, that are logically connected, on a specific subscription.
-
-The first one is of batch type _single_ and if batch type is not defined in the call then the batch type _single_ is default.
-
-If a batch contains multiple API requests related to the same subscription, these specific API requests will be done sequentially in the order they appear in the batch. For example, if a batch contains two API requests for a specific subscription the second API request will not be performed until the first request has completed. This type of batch request is called _multi_.
-
 A batch can contain a maximum of 100 API requests.
 
 When a batch is created it will be given an unique _batch id_ which later can be used to query the status of the batch.
@@ -20,14 +11,20 @@ A batch can have one of the following statuses:
 | Status | Description |
 | --- | --- |
 | INITIALISING | The batch and the contained API requests are being verified |
-| PROCESSING | API requests are being processed, i.e. provisioning orders are being created |
-| COMPLETED | Orders for all API requests have completed |
-| PARTIALLY\_COMPLETED | All API requests have been executed, but some API requests were REJECTED, FAILED or CANCELED. |
+| PROCESSING | API requests are being processed |
+| COMPLETED | Orders for all API requests have completed successfully |
+| PARTIALLY\_COMPLETED | All API requests have been executed, but at least one API request completed with status REJECTED, FAILED or CANCELED. |
 
-When a batch is completed, or partially completed, an event will be generated which can be retrieved via the [events](events.md) resource.  
+When a batch is completed, or partially completed, an event will be generated which can be retrieved via the [events](events.md) resource.
+
 Note that an individual API request, contained in the batch, will also generate an _order complete_ event when the corresponding order has completed. This _order complete_ event will contain the _batch id_ corresponding to the batch that contained the API request.
 
-Each API request contained in a batch will have one of the following statuses:
+A batch may be of type:
+
+* _single_ - executes API requests in parallell. This is the default if no type is specified.
+* _multi_ -  executes API requests sequentially _per subscription_ \(grouped by _iccid_\) in the order they appear in the batch. This can be useful when performing operations that are logically connected on a specific subscription. For example creating a subscription and adding services. All requests in a _multi_ batch must specify an _iccid_.
+
+Each API request contained in a batch can have one of the following statuses:
 
 | Status | Description |
 | --- | --- |
@@ -42,8 +39,7 @@ Batches will be automatically removed after 60 days.
 
 #### Submit a batch
 
-A new Batch is created by issuing a POST request on the _/ecc/v1/batches_ path. The _requests_ parameter shall contain an  
-array of API requests that will be executed. Each API request may also, optionally, contain a _requestid_ parameter carrying an identifier for the specific API request. This identifier can be used by the ECC API user to correlate API requests when retrieving information about a batch, see [Get information about a batch](#get-information-about-a-batch)
+A new Batch is created by issuing a POST request on the _/ecc/v1/batches_ path. The _requests_ parameter shall contain an array of API requests that will be executed. Each API request may also, optionally, contain a _requestid_ parameter carrying an identifier for the specific API request. This identifier can be used by the ECC API user to correlate API requests when retrieving information about a batch, see [Get information about a batch](#get-information-about-a-batch)
 
 The following API requests are supported in a Batch request:
 
@@ -56,9 +52,7 @@ The following API requests are supported in a Batch request:
 | Withdraw a service | DELETE | subscriptions/{type}:{id}/services |
 | Modify a service | PATCH | subscriptions/{type}:{id}/services |
 
-If the batch is of type _multi_ it contains multiple requests affecting the same subscription, these requests will be handled sequentially in the order they appear in the list. This means that a subsequent request will not be handled until all earlier requests in the list, for the same subscription, have successfully completed.
-
-Note, that all requests must provide _iccid_ when batch type is _multi_ to be valid.
+If the batch is of type _multi_, the requests will be handled sequentially _per subscription_ \(grouped by _iccid_\) in the order they appear in the list. This means that a subsequent request will not be handled until all earlier requests for a subscription have successfully completed. If one request completes with status CANCELED the execution of the requests for this subscription is stopped. The requests that have not been executed will have status APPROVED.
 
 **Example of type **_**single**_** Request:**
 
@@ -161,9 +155,7 @@ The response contains information about the batch as well as information about e
 
 The _status_ parameter for the batch indicates the status of the batch.
 
-Please note that if a provisioning order fails the request status will still be PROCESSING. The status of an order can be  
-checked by issuing a request using the [orders](orders.md) end-point with the order id corresponding to the request. Provisioning failures  
- requires manual intervention in order to resolve.
+Please note that if a provisioning order fails the request status will still be PROCESSING. The status of an order can be checked by issuing a request using the [orders](orders.md) end-point with the order id corresponding to the request. Provisioning failures requires manual intervention in order to resolve.
 
 **Example Request:**
 
@@ -201,7 +193,7 @@ Content-Length: XXX
         "info": null
       },
       {
-        "requestid": "127323",
+        "requestid": "127324",
         "orderid": null,
         "status": "FAILED",
         "info": "Subscription not found"
