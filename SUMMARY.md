@@ -34,6 +34,7 @@
   * [Delete a Subscription](delete_subscription.md)
   * [Mobile network information](get_mobile_network.md)
   * [Get IMEI](get-imei.md)
+  * [APN identifiers](set-apn-ids.md)
 * [API Specification](swagger_specification.md)
 * [API change history](api_change_history.md)
   * [0.4.0 to 0.5.0](040_to_050.md)
@@ -44,5 +45,6 @@
   * [0.9.0 to 1.0.0](090-to-100.md)
   * [1.0.0 to 1.1.0](100-to-110.md)
   * [1.1.0 to 1.2.0](110-to-120.md)
+  * [1.2.0 to 1.3.0](120-to-130.md)
 * [Apache License](license.md)
 
