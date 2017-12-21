@@ -37,13 +37,5 @@
   * [APN identifiers](set-apn-ids.md)
 * [API Specification](swagger_specification.md)
 * [API change history](api_change_history.md)
-  * [0.4.0 to 0.5.0](040_to_050.md)
-  * [0.5.0 to 0.6.0](050_to_060.md)
-  * [0.6.0 to 0.7.0](060_to_070.md)
-  * [0.7.0 to 0.8.0](070_to_080.md)
-  * [0.8.0 to 0.9.0](080-to-090.md)
-  * [0.9.0 to 1.0.0](090-to-100.md)
-  * [1.0.0 to 1.1.0](100-to-110.md)
-  * [1.1.0 to 1.2.0](110-to-120.md)
 * [Apache License](license.md)
 
