@@ -37,11 +37,21 @@ Content-Length: 102
   "orderId": 20144,
   "msisdn" : "4612312312",
   "iccid" : "89461177710001700003",
-  "status": "Completed",
+  "status": "COMPLETED",
   "orderDate": "2016-03-10T00:00:00Z",
   "completionDate": "2016-03-10T00:00:05Z"
 }
 ```
+
+#### Orders statuses
+
+A provisioning order may have one of the following statuses:
+
+| Status | Description |
+| :--- | :--- |
+| COMPLETED | The order executed successfully |
+| PROVISIONING | Provisioning is ongoing |
+| CANCELED | The order execution was canceled, please contact support for more information |
 
 
 
