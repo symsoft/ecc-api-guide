@@ -1,5 +1,9 @@
 ## API change history
 
+## 1.2.0
+
+* Define the order statuses
+
 ## 1.1.1
 
 * Removed 'readOnly' properties from swagger definition
