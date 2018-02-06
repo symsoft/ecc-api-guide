@@ -228,7 +228,7 @@ Description of State-Change Event additional Properties
      "msisdn" : "4670312345",
      "iccid" : "89461177710001700003",
      "orderid" : "10032",
-     "status" : "completed",
+     "status" : "COMPLETED",
      "time" : "2016-03-10 08:22:13",
      "type" : "OrderEventInfo"     
 },
@@ -238,7 +238,7 @@ Description of State-Change Event additional Properties
      "iccid" : "89461177710001700004",
      "orderid" : "10033",
      "batchid" : "f81d4fae-7dec-11d0-a765-00a0c91e6bf6",
-     "status" : "completed",
+     "status" : "COMPLETED",
      "time" : "2016-03-10 08:22:13",
      "requestid" : "931",
      "type" : "OrderEventInfo"
@@ -253,7 +253,7 @@ Description of Orders Events additional Properties
 | --- | --- |
 | orderid | Order Id |
 | batchid | Optional Batch Id, if the order was created as part of an API request submitted in a batch |
-| status | Status of the finished order. Completed |
+| status | Status of the finished order, either COMPLETED or CANCELED. |
 | requestid | Optional request id, if the order was created as part of an API request submitted in a batch and a request id was included in the batch request. |
 
 **Sample Batch Event:**
@@ -263,18 +263,18 @@ Description of Orders Events additional Properties
 {
      "sequence-number" : 1002,
      "batchid" : "f81d4fae-7dec-11d0-a765-00a0c91e6bf6",
-     "status" : "completed",
+     "status" : "COMPLETED",
      "time" : "2016-03-10 08:22:13",
      "type" : "BatchEventInfo"     
 }
 ```
 
-Description of Orders Events additional Properties
+Description of Batch Events additional Properties
 
 | Name | Description |
 | --- | --- |
 | batchid | Batch Id |
-| status | Status of the finished batch. Processing, Completed or Partially\_Completed |
+| status | Status of the finished batch. Either COMPLETED or PARTIALLY\_COMPLETED |
 
 If no events occurs for the specified long-polling timeout, the server times out the request and responds with 304:
 
