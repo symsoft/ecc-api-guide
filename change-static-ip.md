@@ -1,13 +1,16 @@
-### Change A2P Voice Application Key
+### Change Static IP Address
 
-Change the A2P Voice Application Key  assigned to the  Subscription by issue a PATCH request on the _/ecc/v1/subscriptions/{type}:{id}_ path. The body of the request shall include the desired application key. Note that this feature is only applicable for subscriptions that have been enabled for A2P Voice support as part of the onboarding process.  
-This property can also be supplied when creating a subscription.
+Change the static IP address of a subscription by issue a PATCH request on the _/ecc/v1/subscriptions/{type}:{id}_ path. The body of the request shall include the desired static IP address.
+
+Note that this feature is only applicable for subscriptions using an APN with static IP enabled. It will not affect the IP address of a susbcription using an APN with dynamic allocation of IP addresses.
+
+Only valid IPv4 addresses are allowed.
 
 **Example Command:**
 
 ```
 curl --request PATCH \
- --data '{"a2p-voice-app-key" : "appkey"}' \
+ --data '{"static-ip" : "192.168.1.1}' \
  --header "Content-type: application/json" \
  --header "Accept: application/json" \
  https://user:password@172.16.20.14:8081/ecc/v1/subscriptions/msisdn:46708421488
@@ -22,10 +25,10 @@ Authorization: Basic c3VwZXI6c3VwZXI=
 User-Agent: curl/7.43.0
 Accept: application/json
 Content-Type: application/json
-Content-Length: 43
+Content-Length: 24
 
 {
-  "a2p-voice-app-key" : "appkey"
+  "static-ip" : "192.168.1.1"
 }
 ```
 
