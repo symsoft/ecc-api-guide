@@ -1,9 +1,10 @@
 ### Change A2P Voice Application Key
 
-Change the A2P Voice Application Key  assigned to the  Subscription by issue a PATCH request on the _/ecc/v1/subscriptions/{type}:{id}_ path. The body of the request shall include the desired application key. Note that this feature is only applicable for subscriptions that have been enabled for A2P Voice support as part of the onboarding process.
+Change the A2P Voice Application Key  assigned to the  Subscription by issue a PATCH request on the _/ecc/v1/subscriptions/{type}:{id}_ path. The body of the request shall include the desired application key. Note that this feature is only applicable for subscriptions that have been enabled for A2P Voice support as part of the onboarding process.  
 This property can also be supplied when creating a subscription.
 
-__Example Command:__
+**Example Command:**
+
 ```
 curl --request PATCH \
  --data '{"a2p-voice-app-key" : "appkey"}' \
@@ -12,7 +13,8 @@ curl --request PATCH \
  https://user:password@172.16.20.14:8081/ecc/v1/subscriptions/msisdn:46708421488
 ```
 
-__Example Request:__
+**Example Request:**
+
 ```
 PATCH /ecc/v1/subscriptions/msisdn:46708421488 HTTP/1.1
 Host: 172.16.20.14:8081
@@ -27,7 +29,8 @@ Content-Length: 43
 }
 ```
 
-__Example Response:__
+**Example Response:**
+
 ```
 HTTP/1.1 202 Accepted
 Server: Nobill/5.3.0
@@ -41,3 +44,6 @@ Content-Length: 26
   ]
 }
 ```
+
+
+
