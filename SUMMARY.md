@@ -23,7 +23,7 @@
   * [Change SIM](change_sim.md)
   * [Block - Unblock](block_unblock.md)
   * [Change State](change_state.md)
-  * [Change Static IP](change-static-ip.md)
+  * [Change Static IP address](change-static-ip.md)
   * [Change ODB profile](change_odb_profile.md)
   * [Change A2P Voice Application Key](change_a2p_voice_app_key.md)
   * [Assign a Service](assign_a_service.md)
