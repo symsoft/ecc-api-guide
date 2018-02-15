@@ -1,8 +1,8 @@
-### Change Static IP
+### Change Static IP address
 
-Change the static IP of a subscription by issue a PATCH request on the _/ecc/v1/subscriptions/{type}:{id}_ path. The body of the request shall include the desired static IP.
+Change the static IP address of a subscription by issue a PATCH request on the _/ecc/v1/subscriptions/{type}:{id}_ path. The body of the request shall include the desired static IP address.
 
-Note that this feature is only applicable for subscriptions that have been enabled for static IP support as part of the onboarding process.
+Note that this feature is only applicable for subscriptions using an APN with static IP enabled. It will not affect the IP address of a susbcription using an APN with dynamic allocation of IP addresses.
 
 Only valid IPv4 addresses are allowed.
 
