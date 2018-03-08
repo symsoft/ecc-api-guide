@@ -3,6 +3,7 @@
 ## 1.2.0
 
 * Define the order statuses
+* Allow sid to be specified in the resource parameter in a batch request
 
 ## 1.1.1
 
