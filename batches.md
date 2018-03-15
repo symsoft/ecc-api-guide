@@ -49,10 +49,15 @@ The following API requests are supported in a Batch request:
 | Block/Unblock subscription | PATCH | subscriptions/{type}:{id} |
 | Change state of a subscription | PATCH | subscriptions/{type}:{id} |
 | Assign a service | POST | subscriptions/{type}:{id}/services |
+|  | POST | subscriptions/{type}:{id}/services/_{sid}_ |
 | Withdraw a service | DELETE | subscriptions/{type}:{id}/services |
+|  | DELETE | subscriptions/{type}:{id}/services/_{sid}_ |
 | Modify a service | PATCH | subscriptions/{type}:{id}/services |
+|  | PATCH | subscriptions/{type}:{id}/services/_{sid}_ |
 
 If the batch is of type _multi_, the requests will be handled sequentially _per subscription_ \(grouped by _iccid_\) in the order they appear in the list. This means that a subsequent request will not be handled until all earlier requests for a subscription have successfully completed. If one request completes with status CANCELED the execution of the requests for this subscription is stopped. The requests that have not been executed will have status APPROVED.
+
+API requests for services has two different request formats. You can either specify the _sid_ directly in the resource field or in the _id_ field in the body of the request.
 
 **Example of type **_**single**_** Request:**
 
@@ -101,7 +106,12 @@ Content-Length: XXX
            "limit": 100
         },
         "requestid": "127325"
-      }
+      },
+      {
+        "method": "DELETE",
+        "resource": "subscriptions/msisdn:46708421488/services/cfu",
+        "requestid": "127326"
+      }      
     ]
 }
 ```
@@ -116,7 +126,7 @@ Content-Length: XXX
 
 {
   "batchid": "f81d4fae-7dec-11d0-a765-00a0c91e6bf6",
-  "creationdate": "2017-01-01T12:00:27.87+00:20"
+  "creationdate": "2017-01-01T12:00:27.87+00:20",
   "status": "INITIALIZING",
   "requests": [
       {
@@ -141,6 +151,12 @@ Content-Length: XXX
         "requestid": "127325",
         "status": "REJECTED",
         "info": "Missing id parameter in body",
+        "orderid": null
+      },
+      {
+        "requestid": "127326",
+        "status": "APPROVED",
+        "info": null,
         "orderid": null
       }
   ]
@@ -177,7 +193,7 @@ Content-Length: XXX
 
 {
   "batchid": "f81d4fae-7dec-11d0-a765-00a0c91e6bf6",
-  "creationdate": "2017-01-01T12:00:27.87+00:20"
+  "creationdate": "2017-01-01T12:00:27.87+00:20",
   "status": "PROCESSING",
   "requests": [
       {
@@ -203,6 +219,12 @@ Content-Length: XXX
         "orderid": null,
         "status": "REJECTED",
         "info": "Missing id parameter in body"
+      },
+      {
+        "requestid": "127326",
+        "orderid": 23903,
+        "status": "COMPLETED",
+        "info": null      
       }
   ]
 }
