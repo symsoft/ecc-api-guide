@@ -13,34 +13,113 @@ curl --header "Accept: application/json" \
  https://user:password@api.ecc.symsoft.com/ecc/v1/subscriptions
 ```
 
-**Example Request:**
+**Example Response:**
 
 ```
-GET /ecc/v1/subscriptions HTTP/1.1
-Host: api.ecc.symsoft.com
-Authorization: Basic c3VwZXI6c3VwZXI=
-User-Agent: curl/7.43.0
-Accept: application/json
+{
+  "subscriptions" : [ {
+    "msisdn" : "46708421488",
+    "iccid" : "89461177710001700003",
+    "blocked" : false,
+    "imsi" : [ "244141000170000" ],
+    "subscription-type" : "Blue",
+    "odb-profile" : 10,
+    "ongoing-orders" : [ ]
+  }, {
+    "msisdn" : "46708421489",
+    "iccid" : "89461177710001700004",
+    "blocked" : false,
+    "imsi" : [ "244141000170001" ],
+    "subscription-type" : "Blue",
+    "odb-profile" : 10,
+    "ongoing-orders" : [ ]
+  } ]
+}
+```
+
+#### Sorting
+
+By default the returned list is sorted on iccid. 
+
+It is possible to describe how the returned subscriptions should be sorted by adding an `order-by` query parameter that specifies the field that should be used for sorting. If more than one `order-by` query parameter is specified the result will first be sorted on the first field and then the next field etc.
+
+The following fields can be used for sorting:
+
+* iccid
+* msisdn
+* blocked
+
+Sort order is by default ascending, but this can be controlled by suffixing the field with `:asc` \(ascending\) or `:desc` \(descending\).
+
+**Example Command:**
+
+```
+curl --header "Accept: application/json" \
+ https://user:password@api.ecc.symsoft.com/ecc/v1/subscriptions?order-by=iccid:asc&order-by=msisdn:desc
 ```
 
 **Example Response:**
 
 ```
-HTTP/1.1 200 OK
-Server: Nobill/5.3.0
-Content-Type: application/json;charset=UTF-8
-Date: Thu, 26 Mar 2016 16:14:36 GMT
-Content-Length: 334
-
 {
-  "subscriptions": [
-    {
-      "msisdn" : "46708421488",
-      "iccid" : "89461177710001700003",
-      "blocked" : false,
-      "imsi": [ "244141000170000" ]
-    }
-  ]
+  "subscriptions" : [ {
+    "msisdn" : "46708421488",
+    "iccid" : "89461177710001700003",
+    "blocked" : false,
+    "imsi" : [ "244141000170000" ],
+    "subscription-type" : "Blue",
+    "odb-profile" : 10,
+    "ongoing-orders" : [ ]
+  }, {
+    "msisdn" : "46708421489",
+    "iccid" : "89461177710001700004",
+    "blocked" : false,
+    "imsi" : [ "244141000170001" ],
+    "subscription-type" : "Blue",
+    "odb-profile" : 10,
+    "ongoing-orders" : [ ]
+  } ]
+}Filtering
+```
+
+#### Filtering
+
+It is possible to filter the returned subscriptions on the following fields:
+
+| Field | Description |
+| :--- | :--- |
+| iccid-prefix | Match subscriptions with an iccid starting with these digits |
+| msisdn-prefix | Match subscriptions with an msisdn starting with these digits |
+| blocked | Is the subscription blocked true/false |
+
+**Example Command:**
+
+```
+curl --header "Accept: application/json" \
+ https://user:password@api.ecc.symsoft.com/ecc/v1/subscriptions?iccid-prefix=8946117771&msisdn-prefix=4670842&blocked=true
+```
+
+**Example Response:**
+
+```
+{
+  "subscriptions" : [ {
+    "msisdn" : "46708421488",
+    "iccid" : "89461177710001700003",
+    "blocked" : false,
+    "imsi" : [ "244141000170000" ],
+    "subscription-type" : "Blue",
+    "odb-profile" : 10,
+    "ongoing-orders" : [ ]
+  }, {
+    "msisdn" : "46708421489",
+    "iccid" : "89461177710001700004",
+    "blocked" : false,
+    "imsi" : [ "244141000170001" ],
+    "subscription-type" : "Blue",
+    "odb-profile" : 10,
+    "ongoing-orders" : [ ]
+  } ]
 }
 ```
 
@@ -57,37 +136,30 @@ It is possible to add a offset and limit query parameter that specifies what par
 
 ```
 curl --header "Accept: application/json" \
- https://user:password@api.ecc.symsoft.com/ecc/v1/subscriptions?offset=2&limit=2
-```
-
-**Example Request:**
-
-```
-GET /ecc/v1/subscriptions?offset=2&limit=2 HTTP/1.1
-Host: api.ecc.symsoft.com
-Authorization: Basic c3VwZXI6c3VwZXI=
-User-Agent: curl/7.43.0
-Accept: application/json
+ https://user:password@api.ecc.symsoft.com/ecc/v1/subscriptions?offset=0&limit=2
 ```
 
 **Example Response:**
 
 ```
-HTTP/1.1 200 OK
-Server: Nobill/5.3.0
-Content-Type: application/json;charset=UTF-8
-Date: Thu, 26 Mar 2016 16:14:36 GMT
-Content-Length: 334
-
 {
-  "subscriptions": [
-    {
-      "msisdn" : "46708421488",
-      "iccid" : "89461177710001700003",
-      "blocked" : false,
-      "imsi": [ "244141000170000" ]
-    }
-  ]
+  "subscriptions" : [ {
+    "msisdn" : "46708421488",
+    "iccid" : "89461177710001700003",
+    "blocked" : false,
+    "imsi" : [ "244141000170000" ],
+    "subscription-type" : "Blue",
+    "odb-profile" : 10,
+    "ongoing-orders" : [ ]
+  }, {
+    "msisdn" : "46708421489",
+    "iccid" : "89461177710001700004",
+    "blocked" : false,
+    "imsi" : [ "244141000170001" ],
+    "subscription-type" : "Blue",
+    "odb-profile" : 10,
+    "ongoing-orders" : [ ]
+  } ]
 }
 ```
 
