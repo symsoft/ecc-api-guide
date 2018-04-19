@@ -4,7 +4,7 @@ Subscriptions can be retrieved by issuing a GET request on the _/ecc/v1/subscrip
 
 The response contains of a list of Subscriptions with limited information. See [Get Basic Subscription Information](/get_basic_subscription_information.md) and [List Assigned Services with Usage Details ](/list_assigned_services_with_usage_details.md)for information on how to retrieve the rest of the data for a subscription.
 
-The subscriptions are sorted by ICCID and the returned list is limited to at most 100 subscriptions. The request supports paging to make it possible to retrieve more than 100 subscriptions.
+The subscriptions are by default sorted by ICCID and the returned list of subscriptions is limited to at most 100 subscriptions. The request supports paging to make it possible to retrieve more than 100 subscriptions.
 
 **Example Command:**
 
@@ -39,9 +39,7 @@ curl --header "Accept: application/json" \
 
 #### Sorting
 
-By default the returned list is sorted on iccid. 
-
-It is possible to describe how the returned subscriptions should be sorted by adding an `order-by` query parameter that specifies the field that should be used for sorting. If more than one `order-by` query parameter is specified the result will first be sorted on the first field and then the next field etc.
+It is possible to change how the subscriptions should be sorted by adding an `order-by` query parameter that specifies the field that should be used for sorting. If more than one `order-by` query parameter is specified the result will first be sorted on the first field and then the next field etc.
 
 The following fields can be used for sorting:
 
@@ -84,9 +82,9 @@ curl --header "Accept: application/json" \
 
 #### Filtering
 
-It is possible to filter the returned subscriptions on the following fields:
+It is possible to filter the returned subscriptions by including the following query parameters in the request:
 
-| Field | Description |
+| Query parameter | Description |
 | :--- | :--- |
 | iccid-prefix | Match subscriptions with an iccid starting with these digits |
 | msisdn-prefix | Match subscriptions with an msisdn starting with these digits |
@@ -125,7 +123,7 @@ curl --header "Accept: application/json" \
 
 #### Paging
 
-It is possible to add a offset and limit query parameter that specifies what part of the subscriptions that should be returned.
+It is possible to control paging by using the `offset` and `limit` query parameters. These parameters specifies what part/page of the subscriptions that should be returned.
 
 | Query parameter | Description |
 | :--- | :--- |
