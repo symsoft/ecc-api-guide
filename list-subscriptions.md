@@ -2,9 +2,19 @@
 
 Subscriptions can be retrieved by issuing a GET request on the _/ecc/v1/subscriptions_ path.
 
-The response contains of a list of Subscriptions with limited information. See [Get Basic Subscription Information](/get_basic_subscription_information.md) and [List Assigned Services with Usage Details ](/list_assigned_services_with_usage_details.md)for information on how to retrieve the rest of the data for a subscription.
+The response contains of a list of Subscriptions with the following fields populated per subscription:
 
-The subscriptions are by default sorted by ICCID and the returned list of subscriptions is limited to at most 100 subscriptions. The request supports paging to make it possible to retrieve more than 100 subscriptions.
+* msisdn
+* iccid
+* blocked
+* imsi
+* subscription-type
+* odb-profile
+* ongoing-orders
+
+See [Get Basic Subscription Information](/get_basic_subscription_information.md) and [List Assigned Services with Usage Details ](/list_assigned_services_with_usage_details.md)for information on how to retrieve the rest of the data for a subscription.
+
+The subscriptions are by default sorted by ICCID and the returned list of subscriptions is limited to at most 100 subscriptions. 
 
 **Example Command:**
 
@@ -39,7 +49,21 @@ curl --header "Accept: application/json" \
 
 #### Sorting
 
-It is possible to change how the subscriptions should be sorted by adding an `order-by` query parameter that specifies the field that should be used for sorting. If more than one `order-by` query parameter is specified the result will first be sorted on the first field and then the next field etc.
+The subscriptions are by default sorted by iccid but it is possible to change this by adding an `order-by` query parameter that controls the field that should be used for sorting. 
+
+Example:
+
+```
+https://api.ecc.symsoft.com/ecc/v1/subscriptions?order-by=msisdn
+```
+
+If more than one `order-by` query parameter is specified the result will be sorted on the first field and then the next field etc.
+
+Example:
+
+```
+https://api.ecc.symsoft.com/ecc/v1/subscriptions?order-by=blocked&order-by=iccid
+```
 
 The following fields can be used for sorting:
 
@@ -49,11 +73,17 @@ The following fields can be used for sorting:
 
 Sort order is by default ascending, but this can be controlled by suffixing the field with `:asc` \(ascending\) or `:desc` \(descending\).
 
+Example:
+
+```
+https://api.ecc.symsoft.com/ecc/v1/subscriptions?order-by=iccid:asc
+```
+
 **Example Command:**
 
 ```
 curl --header "Accept: application/json" \
- https://user:password@api.ecc.symsoft.com/ecc/v1/subscriptions?order-by=iccid:asc&order-by=msisdn:desc
+ https://user:password@api.ecc.symsoft.com/ecc/v1/subscriptions?order-by=msisdn:desc
 ```
 
 **Example Response:**
@@ -82,13 +112,37 @@ curl --header "Accept: application/json" \
 
 #### Filtering
 
-It is possible to filter the returned subscriptions by including the following query parameters in the request:
+It is possible to filter the subscriptions by including the field as a query parameter in the request and then specifying the value that should be used for matching as the query parameter value. By default an exact match will be used when filtering subscriptions.
 
-| Query parameter | Description |
+Example:
+
+```
+https://api.ecc.symsoft.com/ecc/v1/subscriptions?blocked=true
+```
+
+Some fields also support prefix matching and this is indicated by prefixing the parameter value with `prefix:`. The prefix must be at least 1 digit.
+
+Example:
+
+```
+https://api.ecc.symsoft.com/ecc/v1/subscriptions?msisdn=prefix:46708
+```
+
+The following fields can be used as a filter:
+
+| Field | Filtering type |
 | :--- | :--- |
-| iccid-prefix | Match subscriptions with an iccid starting with these digits |
-| msisdn-prefix | Match subscriptions with an msisdn starting with these digits |
-| blocked | Is the subscription blocked true/false |
+| iccid | Exact or prefix matching |
+| msisdn | Exact or prefix matching |
+| blocked | Exact match using 'true' or 'false' |
+
+It is possible to filter on multiple fields by including each filters in the query. The query will then only return subscriptions that matches all of the given filters. It is not possible to include a field multiple times.
+
+Example:
+
+```
+https://api.ecc.symsoft.com/ecc/v1/subscriptions?blocked=true&msisdn=prefix:46708
+```
 
 **Example Command:**
 
