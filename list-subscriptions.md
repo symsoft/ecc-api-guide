@@ -57,19 +57,19 @@ Example:
 https://api.ecc.symsoft.com/ecc/v1/subscriptions?order-by=msisdn
 ```
 
-If more than one `order-by` query parameter is specified the result will be sorted on the first field and then the next field etc.
-
-Example:
-
-```
-https://api.ecc.symsoft.com/ecc/v1/subscriptions?order-by=blocked&order-by=iccid
-```
-
 The following fields can be used for sorting:
 
 * iccid
 * msisdn
 * blocked
+
+It is possible to sort on more than one field by including more than one `order-by` query parameter in the request. The subscription list will then be sorted on the first field and then the next field etc.
+
+Example:
+
+```
+https://api.ecc.symsoft.com/ecc/v1/subscriptions?order-by=blocked&order-by=msisdn
+```
 
 Sort order is by default ascending, but this can be controlled by suffixing the field with `:asc` \(ascending\) or `:desc` \(descending\).
 
@@ -107,7 +107,7 @@ curl --header "Accept: application/json" \
     "odb-profile" : 10,
     "ongoing-orders" : [ ]
   } ]
-}Filtering
+}
 ```
 
 #### Filtering
@@ -136,7 +136,7 @@ The following fields can be used as a filter:
 | msisdn | Exact or prefix matching |
 | blocked | Exact match using 'true' or 'false' |
 
-It is possible to filter on multiple fields by including each filters in the query. The query will then only return subscriptions that matches all of the given filters. It is not possible to include a field multiple times.
+It is possible to filter on multiple fields by including multiple fields in the query. The query will then only return subscriptions that matches all of the given filters. It is not possible to include a field multiple times.
 
 Example:
 
