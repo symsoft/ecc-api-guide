@@ -2,7 +2,7 @@
 
 Subscriptions can be retrieved by issuing a GET request on the _/ecc/v1/subscriptions_ path.
 
-The response contains of a list of Subscriptions with the following fields populated per subscription:
+The response contains a list of Subscriptions with the following fields populated per subscription:
 
 * msisdn
 * iccid
@@ -14,7 +14,7 @@ The response contains of a list of Subscriptions with the following fields popul
 
 See [Get Basic Subscription Information](/get_basic_subscription_information.md) and [List Assigned Services with Usage Details ](/list_assigned_services_with_usage_details.md)for information on how to retrieve the rest of the data for a subscription.
 
-The subscriptions are by default sorted by ICCID and the returned list of subscriptions is limited to at most 100 subscriptions. 
+The subscriptions are by default sorted by ICCID and the returned list of subscriptions is limited to at most 100 subscriptions.
 
 **Example Command:**
 
@@ -49,7 +49,7 @@ curl --header "Accept: application/json" \
 
 #### Sorting
 
-The subscriptions are by default sorted by iccid but it is possible to change this by adding an `order-by` query parameter that controls the field that should be used for sorting. 
+The subscriptions are by default sorted by iccid but it is possible to change this by adding an `order-by` query parameter that controls the field that should be used for sorting.
 
 Example:
 
