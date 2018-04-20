@@ -14,8 +14,6 @@ The response contains a list of Subscriptions with the following fields populate
 
 See [Get Basic Subscription Information](/get_basic_subscription_information.md) and [List Assigned Services with Usage Details ](/list_assigned_services_with_usage_details.md)for information on how to retrieve the rest of the data for a subscription.
 
-The subscriptions are by default sorted by ICCID and the returned list of subscriptions is limited to at most 100 subscriptions.
-
 **Example Command:**
 
 ```
