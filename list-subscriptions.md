@@ -146,7 +146,7 @@ https://api.ecc.symsoft.com/ecc/v1/subscriptions?blocked=true&msisdn=prefix:4670
 
 ```
 curl --header "Accept: application/json" \
- https://user:password@api.ecc.symsoft.com/ecc/v1/subscriptions?iccid-prefix=8946117771&msisdn-prefix=4670842&blocked=true
+ https://user:password@api.ecc.symsoft.com/ecc/v1/subscriptions?iccid=prefix:8946117771&msisdn=prefix:4670842&blocked=true
 ```
 
 **Example Response:**
