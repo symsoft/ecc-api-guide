@@ -118,7 +118,7 @@ Example:
 https://api.ecc.symsoft.com/ecc/v1/subscriptions?blocked=true
 ```
 
-Some fields also support prefix matching and this is indicated by prefixing the parameter value with `prefix:`. The prefix must be at least 1 digit.
+Some fields also support prefix matching and this is indicated by prefixing the parameter value with `prefix:`.
 
 Example:
 
