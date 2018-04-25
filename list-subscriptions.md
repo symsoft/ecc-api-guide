@@ -7,7 +7,6 @@ The response contains a list of Subscriptions with the following fields populate
 * msisdn
 * iccid
 * blocked
-* imsi
 * subscription-type
 * odb-profile
 * ongoing-orders
@@ -29,7 +28,6 @@ curl --header "Accept: application/json" \
     "msisdn" : "46708421488",
     "iccid" : "89461177710001700003",
     "blocked" : false,
-    "imsi" : [ "244141000170000" ],
     "subscription-type" : "Blue",
     "odb-profile" : 10,
     "ongoing-orders" : [ ]
@@ -37,7 +35,6 @@ curl --header "Accept: application/json" \
     "msisdn" : "46708421489",
     "iccid" : "89461177710001700004",
     "blocked" : false,
-    "imsi" : [ "244141000170001" ],
     "subscription-type" : "Blue",
     "odb-profile" : 10,
     "ongoing-orders" : [ ]
@@ -92,7 +89,6 @@ curl --header "Accept: application/json" \
     "msisdn" : "46708421488",
     "iccid" : "89461177710001700003",
     "blocked" : false,
-    "imsi" : [ "244141000170000" ],
     "subscription-type" : "Blue",
     "odb-profile" : 10,
     "ongoing-orders" : [ ]
@@ -100,7 +96,6 @@ curl --header "Accept: application/json" \
     "msisdn" : "46708421489",
     "iccid" : "89461177710001700004",
     "blocked" : false,
-    "imsi" : [ "244141000170001" ],
     "subscription-type" : "Blue",
     "odb-profile" : 10,
     "ongoing-orders" : [ ]
@@ -157,7 +152,6 @@ curl --header "Accept: application/json" \
     "msisdn" : "46708421488",
     "iccid" : "89461177710001700003",
     "blocked" : false,
-    "imsi" : [ "244141000170000" ],
     "subscription-type" : "Blue",
     "odb-profile" : 10,
     "ongoing-orders" : [ ]
@@ -165,7 +159,6 @@ curl --header "Accept: application/json" \
     "msisdn" : "46708421489",
     "iccid" : "89461177710001700004",
     "blocked" : false,
-    "imsi" : [ "244141000170001" ],
     "subscription-type" : "Blue",
     "odb-profile" : 10,
     "ongoing-orders" : [ ]
@@ -197,7 +190,6 @@ curl --header "Accept: application/json" \
     "msisdn" : "46708421488",
     "iccid" : "89461177710001700003",
     "blocked" : false,
-    "imsi" : [ "244141000170000" ],
     "subscription-type" : "Blue",
     "odb-profile" : 10,
     "ongoing-orders" : [ ]
@@ -205,7 +197,6 @@ curl --header "Accept: application/json" \
     "msisdn" : "46708421489",
     "iccid" : "89461177710001700004",
     "blocked" : false,
-    "imsi" : [ "244141000170001" ],
     "subscription-type" : "Blue",
     "odb-profile" : 10,
     "ongoing-orders" : [ ]
