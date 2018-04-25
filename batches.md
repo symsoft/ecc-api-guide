@@ -63,7 +63,7 @@ API requests for services has two different request formats. You can either spec
 
 ```
 POST /ecc/v1/batches HTTP/1.1
-Host: 172.16.20.14:8081
+Host: api.ecc.symsoft.com
 Authorization: Basic c3VwZXI6c3VwZXI=
 User-Agent: curl/7.43.0
 Accept: application/json
@@ -177,7 +177,7 @@ Please note that if a provisioning order fails the request status will still be 
 
 ```
 GET /ecc/v1/batches/f81d4fae-7dec-11d0-a765-00a0c91e6bf6 HTTP/1.1
-Host: 172.16.20.14:8081
+Host: api.ecc.symsoft.com
 Authorization: Basic c3VwZXI6c3VwZXI=
 User-Agent: curl/7.43.0
 Accept: application/json
