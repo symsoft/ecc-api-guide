@@ -32,6 +32,8 @@ curl --header "Accept: application/json" \
     "blocked" : false,
     "subscription-type" : "Blue",
     "odb-profile" : 10,
+    "a2p-voice-app-key": "appkey",
+    "static-ip": "192.168.10.3",
     "ongoing-orders" : [ ]
   }, {
     "msisdn" : "46708421489",
@@ -39,6 +41,8 @@ curl --header "Accept: application/json" \
     "blocked" : false,
     "subscription-type" : "Blue",
     "odb-profile" : 10,
+    "a2p-voice-app-key": "appkey",
+    "static-ip": "192.168.10.4",
     "ongoing-orders" : [ ]
   } ]
 }
@@ -93,6 +97,8 @@ curl --header "Accept: application/json" \
     "blocked" : false,
     "subscription-type" : "Blue",
     "odb-profile" : 10,
+    "a2p-voice-app-key": "appkey",
+    "static-ip": "192.168.10.3",
     "ongoing-orders" : [ ]
   }, {
     "msisdn" : "46708421489",
@@ -100,6 +106,8 @@ curl --header "Accept: application/json" \
     "blocked" : false,
     "subscription-type" : "Blue",
     "odb-profile" : 10,
+    "a2p-voice-app-key": "appkey",
+    "static-ip": "192.168.10.4",
     "ongoing-orders" : [ ]
   } ]
 }
@@ -156,6 +164,8 @@ curl --header "Accept: application/json" \
     "blocked" : false,
     "subscription-type" : "Blue",
     "odb-profile" : 10,
+    "a2p-voice-app-key": "appkey",
+    "static-ip": "192.168.10.3",
     "ongoing-orders" : [ ]
   }, {
     "msisdn" : "46708421489",
@@ -163,6 +173,8 @@ curl --header "Accept: application/json" \
     "blocked" : false,
     "subscription-type" : "Blue",
     "odb-profile" : 10,
+    "a2p-voice-app-key": "appkey",
+    "static-ip": "192.168.10.4",
     "ongoing-orders" : [ ]
   } ]
 }
@@ -194,6 +206,8 @@ curl --header "Accept: application/json" \
     "blocked" : false,
     "subscription-type" : "Blue",
     "odb-profile" : 10,
+    "a2p-voice-app-key": "appkey",
+    "static-ip": "192.168.10.3",
     "ongoing-orders" : [ ]
   }, {
     "msisdn" : "46708421489",
@@ -201,6 +215,8 @@ curl --header "Accept: application/json" \
     "blocked" : false,
     "subscription-type" : "Blue",
     "odb-profile" : 10,
+    "a2p-voice-app-key": "appkey",
+    "static-ip": "192.168.10.4",
     "ongoing-orders" : [ ]
   } ]
 }
