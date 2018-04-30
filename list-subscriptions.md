@@ -10,6 +10,8 @@ The response contains a list of Subscriptions with the following fields populate
 * subscription-type
 * odb-profile
 * ongoing-orders
+* a2p-voice-app-key
+* static-ip
 
 See [Get Basic Subscription Information](/get_basic_subscription_information.md) and [List Assigned Services with Usage Details ](/list_assigned_services_with_usage_details.md)for information on how to retrieve the rest of the data for a subscription.
 
