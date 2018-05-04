@@ -29,7 +29,7 @@
   * [Change ODB Profile](change_odb_profile.md)
   * [Change A2P Voice Application Key](change_a2p_voice_app_key.md)
   * [Mobile Network Information](get_mobile_network.md)
-  * [Get IMEI](get_imei.md)
+  * [Get IMEI](get-imei.md)
   * [Assign a Service](assign_a_service.md)
   * [Get Service Details](get_service_details.md)
   * [List Assigned Services with Usage Details](list_assigned_services_with_usage_details.md)
