@@ -1,6 +1,6 @@
 ### List Subscriptions
 
-Subscriptions can be retrieved by issuing a GET request on the _/ecc/v1/subscriptions_ path.
+Multiple subscriptions can be retrieved by issuing a GET request on the _/ecc/v1/subscriptions_ path.
 
 The response contains a list of Subscriptions with the following fields populated per subscription:
 
