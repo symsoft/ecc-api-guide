@@ -12,6 +12,7 @@
   * [Parameters](parameters.md)
   * [Data Formats](data_formats.md)
   * [Error codes](error_codes.md)
+  * [Tags](tags.md)
 * [Prerequisites](prerequisites.md)
   * [Onboarding](onboarding.md)
   * [SIM ordering](sim_ordering.md)
