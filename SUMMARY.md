@@ -38,6 +38,7 @@
   * [Get IMEI Information](get-imei.md)
   * [Set/Get APN Identifiers](set-apn-ids.md)
   * [Replace Tags on a Subscription](remove-tag-from-subscription/set-tags-on-a-subscription.md)
+  * [Add Tag on Subscription](add-tag-to-subscription.md)
 * [API Specification](swagger_specification.md)
 * [API change history](api_change_history.md)
 * [Apache License](license.md)
