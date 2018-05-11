@@ -139,7 +139,7 @@ The following fields can be used as a filter:
 | msisdn | Exact or prefix matching |
 | blocked | Exact match using 'true' or 'false' |
 
-It is possible to filter on multiple fields by including multiple fields in the query. The query will then only return subscriptions that matches all of the given filters. It is not possible to include a field multiple times.
+It is possible to filter on multiple fields by including multiple fields in the query. The query will then only return subscriptions that matches all of the given filters. At most 10 filters can be applied in a single query.
 
 Example:
 
