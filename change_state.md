@@ -1,24 +1,25 @@
 ### Change State
 
-Change the state of a Subscription by issue a PATCH request on the _/ecc/v1/subscriptions/{type}:{id}_ path. The body of the request shall include the desired state. States can be **BEFORE_FIRST_USE** or **IN_USE**. Please find definition of states below:
+Change the state of a Subscription by issue a PATCH request on the _/ecc/v1/subscriptions/{type}:{id}_ path. The body of the request shall include the desired state. States can be **BEFORE\_FIRST\_USE** or **IN\_USE**. Please find definition of states below:
 
-- **BEFORE_FIRST_USE**: Initial state of a Subscription. When state has been changed, it can never go back to **BEFORE_FIRST_USE**
-- **IN_USE**: The state where the Subscription use services,
+* **BEFORE\_FIRST\_USE**: Initial state of a Subscription. When state has been changed, it can never go back to **BEFORE\_FIRST\_USE**
+* **IN\_USE**: The state where the Subscription use services,
 
+**Example Command:**
 
-__Example Command:__
 ```
 curl --request PATCH \
  --data '{"state" : "IN_USE"}' \
  --header "Content-type: application/json" \
  --header "Accept: application/json" \
- https://user:password@172.16.20.14:8081/ecc/v1/subscriptions/msisdn:46708421488
+ https://user:password@api.ecc.symsoft.com/ecc/v1/subscriptions/msisdn:46708421488
 ```
 
-__Example Request:__
+**Example Request:**
+
 ```
 PATCH /ecc/v1/subscriptions/msisdn:46708421488 HTTP/1.1
-Host: 172.16.20.14:8081
+Host: api.ecc.symsoft.com
 Authorization: Basic c3VwZXI6c3VwZXI=
 User-Agent: curl/7.43.0
 Accept: application/json
@@ -30,7 +31,8 @@ Content-Length: 61
 }
 ```
 
-__Example Response:__
+**Example Response:**
+
 ```
 HTTP/1.1 202 Accepted
 Server: Nobill/5.3.0
@@ -44,3 +46,6 @@ Content-Length: 26
   ]
 }
 ```
+
+
+

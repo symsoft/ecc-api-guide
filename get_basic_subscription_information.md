@@ -6,14 +6,14 @@ The basic information associated with a Subscription can be retrieved by issuing
 
 ```
 curl --header "Accept: application/json" \
- https://user:password@172.16.20.14:8081/ecc/v1/subscriptions/msisdn:46708421488
+ https://user:password@api.ecc.symsoft.com/ecc/v1/subscriptions/msisdn:46708421488
 ```
 
 **Example Request:**
 
 ```
 GET /ecc/v1/subscriptions/msisdn:46708421488 HTTP/1.1
-Host: 172.16.20.14:8081
+Host: api.ecc.symsoft.com
 Authorization: Basic c3VwZXI6c3VwZXI=
 User-Agent: curl/7.43.0
 Accept: application/json

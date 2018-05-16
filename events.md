@@ -24,14 +24,14 @@ The `first-element` parameter can be used to list events starting from a specifi
 
 ```
 curl --header "Accept: application/json" \
- https://user:password@172.16.20.14:8081/ecc/v1/events/{event-type}?long-polling=30
+ https://user:password@api.ecc.symsoft.com/ecc/v1/events/{event-type}?long-polling=30
 ```
 
 **Example Command To List 50 Events Starting With Element 1000:**
 
 ```
 curl --header "Accept: application/json" \
- https://user:password@172.16.20.14:8081/ecc/v1/events/{event-type}?limit=50&first-element=1000
+ https://user:password@api.ecc.symsoft.com/ecc/v1/events/{event-type}?limit=50&first-element=1000
 ```
 
 #### Event-Type
@@ -64,7 +64,7 @@ Description of Events general Properties
 ```
 GET /ecc/v1/events/threshold HTTP/1.1
 If-None-Match: "9f3b76784171ed59bc1df0bb9964f1df"
-Host: 172.16.20.14:8081
+Host: api.ecc.symsoft.com
 Authorization: Basic c3VwZXI6c3VwZX=I
 User-Agent: curl/7.43.0
 Accept: application/json
@@ -292,7 +292,7 @@ the value of the ETag header received in the previous response from the server
 ```
 GET /ecc/v1/subscriptions/event/threshold HTTP/1.1
 If-None-Match: "d3b11ce788cc203b8175af70cf8fbb41"
-Host: 172.16.20.14:8081
+Host: api.ecc.symsoft.com
 Authorization: Basic c3VwZXI6c3VwZX=I
 User-Agent: curl/7.43.0
 Accept: application/json
