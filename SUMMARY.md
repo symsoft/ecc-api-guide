@@ -47,5 +47,4 @@
 * [API Specification](swagger_specification.md)
 * [API change history](api_change_history.md)
 * [Apache License](license.md)
-* dummy.md
 
