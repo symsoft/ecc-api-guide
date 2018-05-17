@@ -1,5 +1,10 @@
 ## API change history
 
+## 1.3.0
+
+* Add support for [listing subscriptions](/list-subscriptions.md)
+* Add support for [tags](/tags.md)
+
 ## 1.2.0
 
 * Define the order statuses
