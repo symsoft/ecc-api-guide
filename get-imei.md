@@ -3,7 +3,7 @@
 IMEI information can be retrieved by issuing a GET request on the _/ecc/v1/subscriptions/{type}:{id}/imei_ path.  
 On success, the response contains the following information:
 
-* imei: current device imei
+* **imei**: current device imei
 
 Note: the IMEI is not always available.
 
