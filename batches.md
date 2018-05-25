@@ -55,7 +55,7 @@ The following API requests are supported in a Batch request:
 | Modify a service               | PATCH  | subscriptions/{type}:{id}/services          |
 |                                | PATCH  | subscriptions/{type}:{id}/services/_{sid}_  |
 | Tag a subscription             | POST   | subscriptions/{type}:{id}/tags              |
-|                                | PATCH  | subscriptions/{type}:{id}/tags/_{tag}_      |
+|                                | POST   | subscriptions/{type}:{id}/tags/_{tag}_      |
 | Remove tag from subscription   | DELETE | subscriptions/{type}:{id}/tags/_{tag}_      |
 
 If the batch is of type _multi_, the requests will be handled sequentially in the order they appear in the batch request. If a request completes with status CANCELED the execution of the batch is stopped. The requests that have not been executed will have status APPROVED.
