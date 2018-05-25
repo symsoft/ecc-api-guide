@@ -22,7 +22,7 @@ Note that an individual API request, contained in the batch, will also generate 
 A batch may be of type:
 
 * _single_ - executes API requests in parallell. This is the default if no type is specified.
-* _multi_ -  executes API requests sequentially _per subscription_ \(grouped by _iccid_\) in the order they appear in the batch. This can be useful when performing operations that are logically connected on a specific subscription. For example creating a subscription and adding services. All requests in a _multi_ batch must specify an _iccid_.
+* _multi_ -  executes API requests sequentially in the order they appear in the batch. This can be useful when performing operations that are logically connected on a specific subscription. For example creating a subscription and adding services. All requests in a _multi_ batch must specify an _iccid_.
 
 Each API request contained in a batch can have one of the following statuses:
 
@@ -43,19 +43,22 @@ A new Batch is created by issuing a POST request on the _/ecc/v1/batches_ path. 
 
 The following API requests are supported in a Batch request:
 
-| API request | Method | Resource |
-| --- | --- | --- |
-| Create subscription | POST | subscriptions |
-| Block/Unblock subscription | PATCH | subscriptions/{type}:{id} |
-| Change state of a subscription | PATCH | subscriptions/{type}:{id} |
-| Assign a service | POST | subscriptions/{type}:{id}/services |
-|  | POST | subscriptions/{type}:{id}/services/_{sid}_ |
-| Withdraw a service | DELETE | subscriptions/{type}:{id}/services |
-|  | DELETE | subscriptions/{type}:{id}/services/_{sid}_ |
-| Modify a service | PATCH | subscriptions/{type}:{id}/services |
-|  | PATCH | subscriptions/{type}:{id}/services/_{sid}_ |
+| API request                    | Method | Resource                                    |
+| ------------------------------ | ------ | ------------------------------------------- |
+| Create subscription            | POST   | subscriptions                               |
+| Block/Unblock subscription     | PATCH  | subscriptions/{type}:{id}                   |
+| Change state of a subscription | PATCH  | subscriptions/{type}:{id}                   |
+| Assign a service               | POST   | subscriptions/{type}:{id}/services          |
+|                                | POST   | subscriptions/{type}:{id}/services/_{sid}_  |
+| Withdraw a service             | DELETE | subscriptions/{type}:{id}/services          |
+|                                | DELETE | subscriptions/{type}:{id}/services/_{sid}_  |
+| Modify a service               | PATCH  | subscriptions/{type}:{id}/services          |
+|                                | PATCH  | subscriptions/{type}:{id}/services/_{sid}_  |
+| Tag a subscription             | POST   | subscriptions/{type}:{id}/tags              |
+|                                | PATCH  | subscriptions/{type}:{id}/tags/_{tag}_      |
+| Remove tag from subscription   | DELETE | subscriptions/{type}:{id}/tags/_{tag}_      |
 
-If the batch is of type _multi_, the requests will be handled sequentially _per subscription_ \(grouped by _iccid_\) in the order they appear in the list. This means that a subsequent request will not be handled until all earlier requests for a subscription have successfully completed. If one request completes with status CANCELED the execution of the requests for this subscription is stopped. The requests that have not been executed will have status APPROVED.
+If the batch is of type _multi_, the requests will be handled sequentially in the order they appear in the batch request. If a request completes with status CANCELED the execution of the batch is stopped. The requests that have not been executed will have status APPROVED.
 
 API requests for services has two different request formats. You can either specify the _sid_ directly in the resource field or in the _id_ field in the body of the request.
 
@@ -229,6 +232,3 @@ Content-Length: XXX
   ]
 }
 ```
-
-
-
