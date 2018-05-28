@@ -8,32 +8,32 @@ When a batch is created it will be given an unique _batch id_ which later can be
 
 A batch can have one of the following statuses:
 
-| Status | Description |
-| --- | --- |
-| INITIALISING | The batch and the contained API requests are being verified |
-| PROCESSING | API requests are being processed |
-| COMPLETED | Orders for all API requests have completed successfully |
-| PARTIALLY\_COMPLETED | All API requests have been executed, but at least one API request completed with status REJECTED, FAILED or CANCELED. |
+| Status               | Description                                                 |
+| -------------------- | ----------------------------------------------------------- |
+| INITIALISING         | The batch and the contained API requests are being verified |
+| PROCESSING           | API requests are being processed                            |
+| COMPLETED            | Orders for all API requests have completed successfully     |
+| PARTIALLY\_COMPLETED | All API requests have been executed, but at least one API request completed with status `REJECTED`, `FAILED` or `CANCELED`. |
 
 When a batch is completed, or partially completed, an event will be generated which can be retrieved via the [events](events.md) resource.
 
 Note that an individual API request, contained in the batch, will also generate an _order complete_ event when the corresponding order has completed. This _order complete_ event will contain the _batch id_ corresponding to the batch that contained the API request.
 
-A batch may be of type:
-
-* _single_ - executes API requests in parallell. This is the default if no type is specified.
-* _multi_ -  executes API requests sequentially in the order they appear in the batch. This can be useful when performing operations that are logically connected on a specific subscription. For example creating a subscription and adding services. All requests in a _multi_ batch must specify an _iccid_.
-
 Each API request contained in a batch can have one of the following statuses:
 
-| Status | Description |
-| --- | --- |
-| APPROVED | API request is approved, but no order has been created yet |
-| REJECTED | API request is rejected. e.g due to formatting error |
-| FAILED | No order could be created for the request, e.g. due to that the subscription was not found |
-| PROCESSING | An order has been created and provisioning is ongoing |
-| COMPLETED | The order has successfully completed |
-| CANCELED | The order execution failed, contact support for more information. |
+| Status     | Description                                                                                |
+| ---------- | ------------------------------------------------------------------------------------------ |
+| APPROVED   | API request is approved, but no order has been created yet                                 |
+| REJECTED   | API request is rejected. e.g due to formatting error                                       |
+| FAILED     | No order could be created for the request, e.g. due to that the subscription was not found |
+| PROCESSING | An order has been created and provisioning is ongoing                                      |
+| COMPLETED  | The order has successfully completed                                                       |
+| CANCELED   | The order execution failed, contact support for more information.                          |
+
+A batch may be of type:
+
+* _single_ - executes API requests in parallell. This is the default if no type is specified. Only one request per subscription is allowed. All requests must specify an _iccid_.
+* _multi_ -  executes API requests sequentially in the order they appear in the batch. This can be useful when performing operations that are logically connected on a specific subscription. For example creating a subscription and adding services. If a request completes with status `REJECTED`, `CANCELED` or `FAILED` the execution of the batch is stopped and the batch will be set as `PARTIALLY_COMPLETED`.
 
 Batches will be automatically removed after 60 days.
 
@@ -49,17 +49,14 @@ The following API requests are supported in a Batch request:
 | Block/Unblock subscription     | PATCH  | subscriptions/{type}:{id}                   |
 | Change state of a subscription | PATCH  | subscriptions/{type}:{id}                   |
 | Assign a service               | POST   | subscriptions/{type}:{id}/services          |
-|                                | POST   | subscriptions/{type}:{id}/services/_{sid}_  |
 | Withdraw a service             | DELETE | subscriptions/{type}:{id}/services          |
 |                                | DELETE | subscriptions/{type}:{id}/services/_{sid}_  |
 | Modify a service               | PATCH  | subscriptions/{type}:{id}/services          |
-|                                | PATCH  | subscriptions/{type}:{id}/services/_{sid}_  |
 | Tag a subscription             | POST   | subscriptions/{type}:{id}/tags              |
 |                                | POST   | subscriptions/{type}:{id}/tags/_{tag}_      |
 | Remove tag from subscription   | DELETE | subscriptions/{type}:{id}/tags/_{tag}_      |
 
-If the batch is of type _multi_, the requests will be handled sequentially in the order they appear in the batch request. If a request completes with status CANCELED the execution of the batch is stopped. The requests that have not been executed will have status APPROVED.
-
+If the batch is of type _multi_, the requests will be handled sequentially in the order they appear in the batch request. 
 API requests for services has two different request formats. You can either specify the _sid_ directly in the resource field or in the _id_ field in the body of the request.
 
 **Example of type **_**single**_** Request:**
@@ -174,7 +171,7 @@ The response contains information about the batch as well as information about e
 
 The _status_ parameter for the batch indicates the status of the batch.
 
-Please note that if a provisioning order fails the request status will still be PROCESSING. The status of an order can be checked by issuing a request using the [orders](orders.md) end-point with the order id corresponding to the request. Provisioning failures requires manual intervention in order to resolve.
+Please note that if a provisioning order fails the request status will still be `PROCESSING`. The status of an order can be checked by issuing a request using the [orders](orders.md) end-point with the order id corresponding to the request. Provisioning failures requires manual intervention in order to be resolved.
 
 **Example Request:**
 
