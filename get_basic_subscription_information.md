@@ -32,6 +32,7 @@ Content-Length: 121
   "msisdn" : "46708421488",
   "iccid" : "89461177710001700003",
   "blocked" : false,
+  "main-imsi" : "244141000170000"
   "imsi": [
     "244141000170000"
   ]

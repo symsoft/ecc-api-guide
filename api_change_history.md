@@ -4,6 +4,7 @@
 
 * Add support for [listing subscriptions](/list-subscriptions.md)
 * Add support for [tags](/tags.md)
+* Add main-imsi to [basic subscription information] (/get_basic_subscription_information.md)
 
 ## 1.2.0
 
