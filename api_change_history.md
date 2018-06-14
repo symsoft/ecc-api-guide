@@ -1,5 +1,9 @@
 ## API change history
 
+## 1.4.0
+
+* Add support for retrieving the [cell-id](/get_mobile_network.md)
+
 ## 1.3.0
 
 * Add support for [listing subscriptions](/list-subscriptions.md)
