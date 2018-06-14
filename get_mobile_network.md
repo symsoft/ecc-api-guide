@@ -48,11 +48,11 @@ Content-Length: 121
 }
 ```
 
-#### Including Location \(Cell-Id\)
+#### Lookup Location \(Cell-Id\)
 
-The returned Mobile Network information can optionally include the location \(lac and cell-id\) of the subscription by adding a _include=location_ query parameter to the request.
+The returned Mobile Network information can optionally include the location \(lac and cell-id\) of the subscription by adding a _include=location_ query parameter to the request. A location lookup will be slower than just returning the basic mobile network information.
 
-The location object or parts of the location can be excluded if the network cannot supply this information.
+The returned _location_ object or parts of it can be excluded if the network cannot supply this information.
 
 The lac and cell-id can be mapped to a geographical location using e.g. [http://www.opencellid.org.](http://www.opencellid.org)
 
