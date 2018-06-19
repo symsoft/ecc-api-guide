@@ -52,7 +52,7 @@ Content-Length: 121
 
 The returned Mobile Network information can optionally include the location \(lac and cell-id\) of a device by adding a _include=location_ query parameter to the request. A location lookup will be slower than just returning the basic mobile network information.
 
-Parts of the returned _location_ object can be excluded if the network cannot supply this information. If the network cannot supply the location information the returned location object will be empty.
+Parts of the returned _location_ object can be excluded if the network cannot supply this information. If the network cannot provide a location the returned location object will include an _info_ parameter with further information.
 
 The lac and cell-id can be mapped to a geographical location using e.g. [http://www.opencellid.org.](http://www.opencellid.org)
 
@@ -112,7 +112,9 @@ Content-Length: 121
   "eps-node" : { "host" : "mms-1", "realm" : "epc.mnc001.mcc244.3gppnetwork.org" },
   "mcc" : "244",
   "mnc": "001",
-  "location" : {}
+  "location" : {
+     "info": "Subscriber absent"
+  }
 }
 ```
 
