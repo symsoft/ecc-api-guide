@@ -113,7 +113,7 @@ Content-Length: 121
   "mcc" : "244",
   "mnc": "001",
   "location" : {
-     "info": "Subscriber absent"
+     "info": "'ATI not allowed' from HLR"
   }
 }
 ```
