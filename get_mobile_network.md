@@ -48,11 +48,11 @@ Content-Length: 121
 }
 ```
 
-#### Lookup Location \(Cell-Id\)
+#### Location Lookup \(Cell-Id\)
 
-The returned Mobile Network information can optionally include the location \(lac and cell-id\) of the subscription by adding a _include=location_ query parameter to the request. A location lookup will be slower than just returning the basic mobile network information.
+The returned Mobile Network information can optionally include the location \(lac and cell-id\) of a device by adding a _include=location_ query parameter to the request. A location lookup will be slower than just returning the basic mobile network information.
 
-The returned _location_ object or parts of it can be excluded if the network cannot supply this information.
+Parts of the returned _location_ object can be excluded if the network cannot supply this information. If the network cannot supply the location information the returned location object will be empty.
 
 The lac and cell-id can be mapped to a geographical location using e.g. [http://www.opencellid.org.](http://www.opencellid.org)
 
@@ -93,6 +93,26 @@ Content-Length: 121
     "lac": "6",
     "cell-id": "23423"
   }
+}
+```
+
+##### **Example Response \(no location information available\):**
+
+```
+HTTP/1.1 200 OK
+Server: Nobill/5.3.0
+Content-Type: application/json;charset=UTF-8
+Date: Thu, 10 Mar 2016 09:52:43 GMT
+Content-Length: 121
+
+{
+  "imsi": "244141000170000",
+  "cs-node" : "4828132801",
+  "ps-node" : { "number" : "4828130051"},
+  "eps-node" : { "host" : "mms-1", "realm" : "epc.mnc001.mcc244.3gppnetwork.org" },
+  "mcc" : "244",
+  "mnc": "001",
+  "location" : {}
 }
 ```
 
