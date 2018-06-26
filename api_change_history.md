@@ -3,7 +3,7 @@
 ## 1.4.0
 
 * Add support for retrieving the [cell-id](/get_mobile_network.md)
-* Minor changes in the returned JSON objects:
+*  Insignificant changes in the returned JSON objects:
   * Optional fields with null values are not included \(this was a bit inconsistent in the previous releases\)
   * Extra white space is not included in the JSON \(it was previously "pretty-printed"\)
 
