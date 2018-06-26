@@ -3,6 +3,7 @@
 ## 1.4.0
 
 * Add support for retrieving the [cell-id](/get_mobile_network.md)
+* The returned JSON is without any extra white space \(it was previously "pretty-printed"\)
 
 ## 1.3.0
 
